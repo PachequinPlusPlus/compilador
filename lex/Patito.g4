@@ -4,10 +4,83 @@ import pprint
 import sys
 }
 programa: 
-    'program' ID PUNTOCOMA bloque {print("Accepted")};
+    'program' ID PUNTOCOMA vars? classes? functions? main {print("Accepted")};
+
+
+main:
+    'main' LLA stmt+ LLC;
+
+functions:
+    'func' returntype ID PA parameters PC LLA functionbloque LLC;
+
+functionbloque:
+    vars? stmt+ 'return' exp 
+    | vars? stmt+ 
+    ;
+
+stmt:
+    assignment PUNTOCOMA
+    | loop
+    | condition PUNTOCOMA
+    | print PUNTOCOMA
+    | input PUNTOCOMA
+    | funccall PUNTOCOMA
+    | method PUNTOCOMA
+    ;
+    
+
+returntype:
+    type
+    | 'void';
+
+parameters:
+    type ID ',' parameters
+    | ID ID ',' parameters
+    |
+    ;
+
+vars:
+    'var' LLA varsaux LLC;
+
+varsaux:
+    typevar varsAux
+    |
+    ;
+
+typevar:
+    ID typevaraux PUNTOCOMA
+    | type typevaraux PUNTOCOMA;
+
+
+type:
+    'int'
+    | 'float'
+    | 'char'
+    ;
+
+classes:
+    'class' ID LLA private? public? LLC
+    | 'class' ID PP ID LLA private? public? LLC;
+
+public:
+    'public' classdef;
+    
+private:
+    'private' classdef;
+
+classdef:
+    vars? functions?;
+    
+    
+typevaraux:
+    ID LB INT RB ',' typevaraux
+    | ID typevaraux
+    | 
+    ;
+
 bloque : LLA estatuto LLC;
 estatuto : asignacion estatuto
-            | condicion estatuto
+            | con,.dicion estatuto
             | escritura estatuto
             |
             ;
@@ -59,6 +132,11 @@ CMP : '>'
 	| '<'
 	| '<>';
 IGUAL : '=';
+
+PP = ':';
+LB = '[';
+RB = ']';
+
 PA : '(';
 PC : ')';
 
