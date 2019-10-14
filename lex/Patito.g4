@@ -40,16 +40,22 @@ parameters:
     ;
 
 vars:
-    'var' LLA varsaux LLC;
+    'var' LLA typevar+ LLC;
 
-varsaux:
-    typevar varsAux
-    |
-    ;
 
 typevar:
-    ID typevaraux PUNTOCOMA
-    | type typevaraux PUNTOCOMA;
+    ID typevaraux  secondType+ PUNTOCOMA
+    | type typevaraux secondType+ PUNTOCOMA;
+
+typevaraux:
+    ID LB INT RB 
+    | ID;
+
+secondType:
+    ',' ID LB INT RB 
+    | ',' ID;
+
+
 
 
 type:
@@ -72,12 +78,6 @@ classdef:
     vars? functions?;
     
     
-typevaraux:
-    ID LB INT RB ',' typevaraux
-    | ID typevaraux
-    | 
-    ;
-
 bloque : LLA estatuto LLC;
 estatuto : asignacion estatuto
             | condicion estatuto
