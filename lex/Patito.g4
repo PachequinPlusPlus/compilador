@@ -59,13 +59,13 @@ type:
     ;
 
 classes:
-    'class' ID LLA private? public? LLC
-    | 'class' ID PP ID LLA private? public? LLC;
+    'class' ID LLA pv? pu? LLC
+    | 'class' ID PP ID LLA pv? pu? LLC;
 
-public:
+pu:
     'public' classdef;
     
-private:
+pv:
     'private' classdef;
 
 classdef:
@@ -80,7 +80,7 @@ typevaraux:
 
 bloque : LLA estatuto LLC;
 estatuto : asignacion estatuto
-            | con,.dicion estatuto
+            | condicion estatuto
             | escritura estatuto
             |
             ;
@@ -131,12 +131,11 @@ DIV : '/';
 CMP : '>'
 	| '<'
 	| '<>';
+
 IGUAL : '=';
-
-PP = ':';
-LB = '[';
-RB = ']';
-
+PP : ':';
+LB : '[';
+RB : ']';
 PA : '(';
 PC : ')';
 
