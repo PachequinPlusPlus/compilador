@@ -3,6 +3,9 @@ grammar PPCDSALVC;
 import pprint
 import sys
 }
+
+
+
 programa: 
     'program' ID PUNTOCOMA variables? classes* functions* main {print("Accepted")};
 
