@@ -1,0 +1,98 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c;
+}
+
+class persona{
+    private:
+        var { 
+            char nombre[100];
+        }
+}
+class mascota {
+    private:
+        var {
+            persona owner;
+        }
+}
+
+class gato : mascota {
+	private:
+		var {
+			int edad, peso;		
+			char inicial;
+		}
+	public:
+		func int getEdad(){
+			var{	
+				int x;
+			}
+			print(x);
+			x = edad;
+			return edad;
+		}
+}
+
+class perro : mascota {
+	public:
+		func void woaf(){
+			print('w', 'o', 'a', 'f');
+		}
+}
+
+func void sayX(int x){
+	print(x);
+}
+
+func void printEdad(gato mycat){
+	print(mycat.getEdad());
+	print(mycat.edad);
+}
+
+func int getEdadSquare(gato mycat){
+	var {
+		int temp;
+	}
+	temp = mycat.edad * mycat.getEdad();
+	return temp;
+}
+
+main {
+	var {
+		gato ravioli;
+        perro blacky;
+		int a;
+        int n;
+        int i;
+        int arr[100];
+	}
+    input(n);
+    for(i = 0; i < 100; i = i + 1){
+        input(arr[i]);
+        arr[i] = arr[i/2] + 1;
+    }
+	a = 5;
+	while(a < ravioli.edad && a < 100){
+		a = a + 123;
+		print(a);
+	}
+
+    for(a = -5; a < 10 || a != 3; a = a * 3 - 77){
+        if(a - 10 == 0) {
+            print(a);
+        }else{
+            a = 10 + 33;
+        }
+
+        if(!(a * 2 * 3 - (x + 3) > 0)){
+            print('o', 'k');
+        }elseif(-a + a + 42 / (3 + 7) > 2){
+            print('w', 'h', 'a', 't');
+        }else{
+            a = 33333;
+            blacky.woaf();
+        }
+    }
+}
