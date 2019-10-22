@@ -111,15 +111,6 @@ class PPCDSALVCListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PPCDSALVCParser#types.
-    def enterTypes(self, ctx:PPCDSALVCParser.TypesContext):
-        pass
-
-    # Exit a parse tree produced by PPCDSALVCParser#types.
-    def exitTypes(self, ctx:PPCDSALVCParser.TypesContext):
-        pass
-
-
     # Enter a parse tree produced by PPCDSALVCParser#classes.
     def enterClasses(self, ctx:PPCDSALVCParser.ClassesContext):
         pass

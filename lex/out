@@ -1,0 +1,2 @@
+Accepted
+"{'global': {'attr': [{'name': 'x', 'direccion': 1000}, {'name': 'y', 'direccion': 1000}, {'name': 'miChar', 'direccion': 1000}, {'name': 'miFlotante', 'direccion': 1000}, {'name': 'c', 'direccion': 1000}], 'metodos': {'main': {'attr': [{'name': 'ravioli', 'direccion': 1000}, {'name': 'a', 'direccion': 1000}], 'tipo': 'void'}}, 'parent': None}, 'gato': {'attr': [{'name': 'edad', 'direccion': 1000}, {'name': 'peso', 'direccion': 1000}, {'name': 'inicial', 'direccion': 1000}], 'metodos': {'getEdad': {'attr': [{'name': 'x', 'direccion': 1000}]}}}}"

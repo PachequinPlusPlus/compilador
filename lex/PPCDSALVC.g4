@@ -31,13 +31,13 @@ stmt:
     ;
     
 returntypes:
-    types
+    TYPES
     | 'void';
 
 parameters:
-    types ID COMA parameters
+    TYPES ID COMA parameters
     | ID ID COMA parameters
-    | types ID
+    | TYPES ID
     | ID ID
     |;
 
@@ -47,7 +47,7 @@ variables:
 
 typesvar:
     ID typesvaraux  secondType* PUNTOCOMA
-    | types typesvaraux secondType* PUNTOCOMA;
+    | TYPES typesvaraux secondType* PUNTOCOMA;
 
 typesvaraux:
     ID LB INT RB 
@@ -57,7 +57,7 @@ secondType:
     COMA ID LB INT RB 
     | COMA ID;
 
-types:
+TYPES:
     'int'
     | 'float'
     | 'char'
