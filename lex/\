@@ -22,40 +22,11 @@ class semantics:
             }
 
 
-
-    def tope(self, lista):
-        if len(lista) == 0:
-            return -1
-        fr = lista[len(lista)-1]
-        return fr
-
-    def addMethod(self, name):
-        clss = self.tope(self.scopes)
-        self.classes.setdefault(clss, {}).setdefault("metodos", {})[name] = {}
-
-    def addFunction(self, name):
-        self.classes.setdefault("global", {})["metodos"][name] = {}
-
-
-    def addAttrFunction(self, funcName, varName, tipo):
-        scope = self.tope(self.scopes)
-
-        self.classes.setdefault(scope, {}).setdefault("metodos", {}).setdefault(funcName, {}).setdefault("attr", []).append({"name" : varName, "direccion" : 1000, "tipo" : tipo})
-
-    def addAttrGlobal(self, varName, tipo):
-        scope = self.tope(self.scopes)
-
-        self.classes.setdefault(scope, {}).setdefault("attr", []).append({"name" : varName, "direccion" : 1000, "tipo" : tipo})
-
-        
-
-
     def appendVariable(self, name):
         topScopes = self.scopes[len(self.scopes)-1]
         parent = "global"
 
-        #TODO(ADD TIPOS)
-        tipo = None #self.types[len(self.scopes)-1]
+        tipo = self.types[len(self.scopes)-1]
 
         if len(self.funcs) == 0:
             self.classes.setdefault(topScopes, {}).setdefault("attr", []).append({"name" : name, "direccion" : 1000, "tipo" : tipo})

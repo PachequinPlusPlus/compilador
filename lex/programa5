@@ -24,7 +24,7 @@ class gato {
 
 class perro{
 	public:
-		func void woaf(){
+		func void woaf(int times){
 			print('w', 'o', 'a', 'f');
 		}
 }

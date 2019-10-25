@@ -13,7 +13,7 @@ main:
     'main' LLA variables? stmt+ LLC;
 
 functions:
-    'func' returntypes ID PA parameters PC LLA functionbloque LLC;
+    'func' returntypes ID PA parameters? PC LLA functionbloque LLC;
 
 functionbloque:
     variables? stmt+ 'return' exp PUNTOCOMA
@@ -34,12 +34,17 @@ returntypes:
     TYPES
     | 'void';
 
+params:
+    COMA TYPES ID
+    | COMA ID ID;
+
+paramfirst:
+    TYPES ID params*
+    | ID ID params*;
+
+// check here
 parameters:
-    TYPES ID COMA parameters
-    | ID ID COMA parameters
-    | TYPES ID
-    | ID ID
-    |;
+    paramfirst;
 
 variables:
     'var' LLA typesvar+ LLC;
