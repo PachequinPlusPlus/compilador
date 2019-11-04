@@ -1,0 +1,12 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c;
+}
+main {
+var{
+     x;
+}
+a = 5;
+}

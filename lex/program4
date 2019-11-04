@@ -8,13 +8,14 @@ var {
 class gato {
 	private:
 		var {
-			int edad, peso;		
+			int edad;
 			char inicial;
+            int peso;
 		}
 	public:
 		func int getEdad(){
 			var{	
-				int x;
+				int x2;
 			}
 			print(x);
 			x = edad;

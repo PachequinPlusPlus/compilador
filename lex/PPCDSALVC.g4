@@ -7,7 +7,7 @@ import sys
 
 
 programa: 
-    'program' ID PUNTOCOMA variables? classes* functions* main {print("Accepted")};
+    'program' ID PUNTOCOMA variables? classes* functions* main ;
 
 main:
     'main' LLA variables? stmt+ LLC;

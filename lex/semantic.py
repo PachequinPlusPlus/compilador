@@ -1,8 +1,18 @@
+from memory import myMemory
 # nombre | direcion
 class semantics:
     scopes = ["global"]
     types = []
     funcs = []
+
+    def __init__(self):
+        self.globales = myMemory(5000, 8000, 11000)
+        self.locales = myMemory(14000, 17000, 19000)
+        self.temporales = myMemory(25000, 27000, 29000)
+        self.constantes = myMemory(30000, 30500, 31000)
+
+
+
 
     direcionesGlobales = [1000, 2000, 3000]
     direccionesLocales = [4000, 5000, 6000]
@@ -22,6 +32,71 @@ class semantics:
             }
 
 
+    def getAddress(self, tipo):
+        #TODO(que hacer para las clases?)
+        scope = self.tope(self.scopes)
+        if scope == "global":
+            if tipo == "int":
+                return self.globales.getEntera()
+            elif tipo == "float":
+                return self.globales.getFlotante()
+            elif tipo == "char":
+                return self.globales.getChar() 
+        else: 
+            if tipo == "int":
+                return self.locales.getEntera()
+            elif tipo == "float":
+                return self.locales.getFlotante()
+            elif tipo == "char":
+                return self.locales.getChar()
+
+
+
+    def setDefaultFunction(self, funcName):
+        scope = self.tope(self.scopes)
+        self.classes.setdefault(scope, {}).setdefault("metodos", {}).setdefault(funcName, {}).setdefault("attr", [])
+
+    def existInFunction(self, funcName, varName):
+        scope = self.tope(self.scopes)
+        self.setDefaultFunction(funcName)
+
+        tmp = self.classes.get(scope).get("metodos").get(funcName).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return True
+
+       # tmp = self.classes.get(scope).get("attr")
+       # for elem in tmp:
+       #     if elem["name"] == varName:
+       #         return True
+
+      #  parent = self.classes.get(scope).get("parent")
+
+#        while parent != None:
+#            tmp = self.classes.get(parent).get("attr")
+#            for elem in tmp:
+#                if elem["name"] == varName:
+#                    return True
+#            parent = self.classes.get(parent).get("parent")
+
+        return False
+
+    def setDefault(self, scope):
+        self.classes.setdefault(scope, {}).setdefault("attr", [])
+
+    def exists(self, varName):
+        scope = self.tope(self.scopes)
+        # set the default for the actual scope
+#        while scope != None:
+        self.setDefault(scope)
+        tmp = self.classes.get(scope).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return True
+        return False
+
+        
+
 
     def tope(self, lista):
         if len(lista) == 0:
@@ -39,39 +114,23 @@ class semantics:
 
     def addAttrFunction(self, funcName, varName, tipo):
         scope = self.tope(self.scopes)
+        addr = self.getAddress(tipo)
 
-        self.classes.setdefault(scope, {}).setdefault("metodos", {}).setdefault(funcName, {}).setdefault("attr", []).append({"name" : varName, "direccion" : 1000, "tipo" : tipo})
+        self.classes.setdefault(scope, {}).setdefault("metodos", {}).setdefault(funcName, {}).setdefault("attr", []).append({"name" : varName, "direccion" : addr, "tipo" : tipo})
 
     def addAttrGlobal(self, varName, tipo):
         scope = self.tope(self.scopes)
+        addr = self.getAddress(tipo)
 
-        self.classes.setdefault(scope, {}).setdefault("attr", []).append({"name" : varName, "direccion" : 1000, "tipo" : tipo})
+        self.classes.setdefault(scope, {}).setdefault("attr", []).append({"name" : varName, "direccion" : addr, "tipo" : tipo})
 
         
-
-
-    def appendVariable(self, name):
-        topScopes = self.scopes[len(self.scopes)-1]
-        parent = "global"
-
-        #TODO(ADD TIPOS)
-        tipo = None #self.types[len(self.scopes)-1]
-
-        if len(self.funcs) == 0:
-            self.classes.setdefault(topScopes, {}).setdefault("attr", []).append({"name" : name, "direccion" : 1000, "tipo" : tipo})
-        else:
-            topFuncs = self.funcs[len(self.funcs)-1]
-            self.classes.setdefault(topScopes, {}).setdefault("metodos", {}).setdefault(topFuncs, {}).setdefault("attr", []).append({"name" : name, "direccion" : 1000, "tipo" : tipo})
-            
-        self.classes[topScopes].setdefault("parent", parent)
-
 
     def appendType(self, tipo):
         self.types.append(tipo)
 
     def popType(self):
         self.types.pop()
-
     def appendParentForClasses(self, classe, parent):
         self.classes.setdefault(classe, {}).setdefault("parent", parent)
 
