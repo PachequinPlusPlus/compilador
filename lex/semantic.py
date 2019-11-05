@@ -12,19 +12,16 @@ class semantics:
         self.constantes = myMemory(30000, 30500, 31000)
 
 
-
-
-    direcionesGlobales = [1000, 2000, 3000]
-    direccionesLocales = [4000, 5000, 6000]
-    direccionesTemporales = [7000, 8000, 9000]
-
     classes = {
                 "global" : {
                     "attr" : [],
                     "metodos" : {
                           "main" : {
                               "attr" : [],
-                              "tipo" : "void"
+                              "tipo" : "void",
+                              "params" : 0,
+                              "isArray" : False,
+                              "size" : 0
                            }
                     },
                     "parent" : None
@@ -32,9 +29,17 @@ class semantics:
             }
 
 
-    def getAddress(self, tipo):
+    def getAddress(self, tipo, isTemp = False):
         #TODO(que hacer para las clases?)
         scope = self.tope(self.scopes)
+        if isTemp:
+            if tipo == "int":
+                return self.temporales.getEntera()
+            elif tipo == "float":
+                return self.temporales.getFlotante()
+            elif tipo == "char":
+                return self.temporales.getChar() 
+ 
         if scope == "global":
             if tipo == "int":
                 return self.globales.getEntera()
@@ -51,6 +56,21 @@ class semantics:
                 return self.locales.getChar()
 
 
+
+    def checkFunctionExists(self, funcName):
+        scope = self.tope(self.scopes)
+        tmp = self.classes.get(scope).get("metodos").get(funcName)
+        if tmp is not None:
+            return True
+        parent = self.classes.get(scope).get("parent")
+        while parent is not None:
+            tmp = self.classes.get(parent).get("metodos").get(funcName)
+            if tmp is not None:
+                return True
+            parent = self.classes.get(parent).get("parent")
+
+        return False
+        
 
     def setDefaultFunction(self, funcName):
         scope = self.tope(self.scopes)
@@ -95,7 +115,71 @@ class semantics:
                 return True
         return False
 
+
+    def updateNumberParams(self, funcName, numberParams):
+        scope = self.tope(self.scopes)
+        self.classes.get(scope).get("metodos").get(funcName).setdefault("params", 0)
+        self.classes.get(scope).get("metodos").get(funcName)["params"] = numberParams
+
+    def updateReturnType(self, funcName, returnType):
+        scope = self.tope(self.scopes)
+        self.classes.get(scope).get("metodos").get(funcName).setdefault("tipo", 'void')
+        self.classes.get(scope).get("metodos").get(funcName)["tipo"] = returnType
+        if returnType != 'void':
+            self.addAttrFunction(funcName, "_"+funcName, returnType)
+
+
         
+
+    # TODO(que matche los parametros)
+    def deepLookingFunction(self, funcName, varName):
+        scope = self.tope(self.scopes)
+        self.setDefaultFunction(funcName)
+
+        tmp = self.classes.get(scope).get("metodos").get(funcName).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return elem 
+
+        tmp = self.classes.get(scope).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return elem
+
+        parent = self.classes.get(scope).get("parent")
+
+        while parent != None:
+            tmp = self.classes.get(parent).get("attr")
+            for elem in tmp:
+                if elem["name"] == varName:
+                    return elem
+            parent = self.classes.get(parent).get("parent")
+        return None
+
+    
+
+    def deepLookingRest(self, varName):
+        scope = self.tope(self.scopes)
+        self.setDefault(scope)
+
+        tmp = self.classes.get(scope).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return True
+
+        parent = self.classes.get(scope).get("parent")
+
+        while parent != None:
+            tmp = self.classes.get(parent).get("attr")
+            for elem in tmp:
+                if elem["name"] == varName:
+                    return True
+            parent = self.classes.get(parent).get("parent")
+
+        return False
+
+
+
 
 
     def tope(self, lista):
@@ -131,6 +215,7 @@ class semantics:
 
     def popType(self):
         self.types.pop()
+
     def appendParentForClasses(self, classe, parent):
         self.classes.setdefault(classe, {}).setdefault("parent", parent)
 

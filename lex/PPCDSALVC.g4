@@ -79,7 +79,7 @@ pv:
     'private' PP classdef;
 
 classdef:
-    variables? functions?;
+    variables? functions*;
     
 
 assignment:

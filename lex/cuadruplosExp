@@ -5,6 +5,6 @@ var {
 	float miFlotante, c, a;
 }
 main {
-a = miFlotante + c;
+a = miFlotante * c * a + c * a - c / (a+c);
 print(a);
 }

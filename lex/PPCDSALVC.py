@@ -29,7 +29,11 @@ def main(argv):
     if len(err.errors) > 0:
         for elem in err.errors:
             print(elem.msg)
-        sys.exit()
+       # sys.exit()
+
+    print(len(printer.cuadruplos))
+    for quad in printer.cuadruplos:
+        quad.imprimirCuadruplo()
 
     print("Accepted")
 

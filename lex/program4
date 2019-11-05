@@ -10,14 +10,18 @@ class gato {
 		var {
 			int edad;
 			char inicial;
+            int x2;
             int peso;
 		}
 	public:
+        func int saludos(int a, int b, char x){
+            print(1);
+        }
 		func int getEdad(){
 			var{	
 				int x2;
 			}
-			print(x);
+			print(x, x+c, x+d);
 			x = edad;
 			return edad;
 		}
@@ -28,8 +32,10 @@ main {
 		gato ravioli;
 		int a;
 	}
-	a = 5;
-	while(a < 10){
+	a = 123;
+    uno(a, 123);
+    ravioli.getDos();
+	while(a < uno(a, 123)){
 		a = a + 23;
 	}
 }
