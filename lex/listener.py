@@ -46,11 +46,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     def pop(self, stack):
         stack.pop()
 
-    # este deberia dar un resultado booleano, segun yo..?
-    def enterHyperexp(self, ctx):
-        pass
-
-
     def enterCte(self, ctx):
         if ctx.INT() is not None:
             val = ctx.INT()
@@ -158,6 +153,39 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.imprimeErrores()
                     sys.exit()
 
+    logical = ['&&', '||']
+
+    def resolveHyperExp(self, ctx):
+        if len(self.opStack) > 0:
+            operando = self.tope(self.opStack)
+            if operando in logical:
+                self.pop(self.opStack)
+
+                left = self.tope(self.expStack) 
+                self.pop(self.expStack)
+                right = self.tope(self.expStack) 
+                self.pop(self.expStack)
+
+                leftT = self.tope(self.tipoStack)
+                self.pop(self.tipoStack)
+                rightT = self.tope(self.tipoStack)
+                self.pop(self.tipoStack)
+
+                left, right = right, left
+                leftT, rightT = rightT, leftT
+
+                resultT = self.semantica.cube[leftT][rightT][operando]
+                if resultT != "err":
+                    resultAddress = self.semantica.getAddress(resultT, True)
+                    self.pushCuadruplo(operando, left, right, resultAddress)
+                    self.push(self.expStack, resultAddress)
+                    self.push(self.tipoStack, resultT)
+                else:
+                    self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
+                    self.imprimeErrores()
+                    sys.exit()
+
+
 
 
     def imprimeErrores(self):
@@ -182,7 +210,17 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         print(str(ctx.relationalop().getChild(0)))
         self.push(self.opStack, str(ctx.relationalop().getChild(0)))
 
+    def exitSuperexpaux(self, ctx):
+        self.resolveSuperExp(ctx)
 
+    # este deberia dar un resultado booleano, segun yo..?
+    # va a regresar int, no?
+    def enterHyperexpaux(self, ctx):
+        print(str(ctx.logicop().getChild(0)))
+        self.push(self.opStack, str(ctx.logicop().getChild(0)))
+
+    def exitHyperexpaux(self, ctx):
+        self.resolveHyperExp(ctx)
 
     def enterFunccall(self, ctx):
         if self.semantica.checkFunctionExists(str(ctx.ID())) == False:

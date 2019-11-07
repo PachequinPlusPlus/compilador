@@ -178,10 +178,6 @@ class semantics:
 
         return False
 
-
-
-
-
     def tope(self, lista):
         if len(lista) == 0:
             return -1
@@ -237,19 +233,43 @@ class semantics:
                             '+' : 'int',
                             '-' : 'int',
                             '/' : 'int',
-                            '*' : 'int'
+                            '*' : 'int',
+                            '<' : 'int',
+                            '<=' : 'int',
+                            '>' : 'int',
+                            '>=' : 'int',
+                            '==' : 'int',
+                            '!=' : 'int',
+                            '&&' : 'int',
+                            '||' : 'int'
                         },
                     'float' : {
                             '+' : 'float',
                             '-' : 'float',
                             '/' : 'float',
                             '*' : 'float'
+                            '<' : 'int',
+                            '<=' : 'int',
+                            '>' : 'int',
+                            '>=' : 'int',
+                            '==' : 'int',
+                            '!=' : 'int',
+                            '&&' : 'err',
+                            '||' : 'err'
                         },
                     'char' : {
                             '+' : 'err',
                             '-' : 'err',
                             '/' : 'err',
-                            '*' : 'err'
+                            '*' : 'err',
+                            '<' : 'err',
+                            '<=' : 'err',
+                            '>' : 'err',
+                            '>=' : 'err',
+                            '==' : 'err',
+                            '!=' : 'err',
+                            '&&' : 'err',
+                            '||' : 'err'
                         }
                 },
             'float' : {
@@ -257,19 +277,43 @@ class semantics:
                             '+' : 'float',
                             '-' : 'float',
                             '/' : 'float',
-                            '*' : 'float'
+                            '*' : 'float',
+                            '<' : 'int',
+                            '<=' : 'int',
+                            '>' : 'int',
+                            '>=' : 'int',
+                            '==' : 'int',
+                            '!=' : 'int',
+                            '&&' : 'err',
+                            '||' : 'err'
                         },
                     'float' : {
                             '+' : 'float',
                             '-' : 'float',
                             '/' : 'float',
-                            '*' : 'float'
+                            '*' : 'float',
+                            '<' : 'int',
+                            '<=' : 'int',
+                            '>' : 'int',
+                            '>=' : 'int',
+                            '==' : 'int',
+                            '!=' : 'int',
+                            '&&' : 'err',
+                            '||' : 'err'
                         },
                     'char' : {
                             '+' : 'err',
                             '-' : 'err',
                             '/' : 'err',
-                            '*' : 'err'
+                            '*' : 'err',
+                            '<' : 'err',
+                            '<=' : 'err',
+                            '>' : 'err',
+                            '>=' : 'err',
+                            '==' : 'err',
+                            '!=' : 'err',
+                            '&&' : 'err',
+                            '||' : 'err'
                         }
                 },
             'char' : {
@@ -277,19 +321,43 @@ class semantics:
                             '+' : 'err',
                             '-' : 'err',
                             '/' : 'err',
-                            '*' : 'err'
+                            '*' : 'err',
+                            '<' : 'err',
+                            '<=' : 'err',
+                            '>' : 'err',
+                            '>=' : 'err',
+                            '==' : 'err',
+                            '!=' : 'err',
+                            '&&' : 'err',
+                            '||' : 'err'
                         },
                     'float' : {
                             '+' : 'err',
                             '-' : 'err',
                             '/' : 'err',
-                            '*' : 'err'
+                            '*' : 'err',
+                            '<' : 'err',
+                            '<=' : 'err',
+                            '>' : 'err',
+                            '>=' : 'err',
+                            '==' : 'err',
+                            '!=' : 'err',
+                            '&&' : 'err',
+                            '||' : 'err'
                         },
                     'char' : {
                             '+' : 'err',
                             '-' : 'err',
                             '/' : 'err',
-                            '*' : 'err'
+                            '*' : 'err',
+                            '<' : 'int',
+                            '<=' : 'int',
+                            '>' : 'int',
+                            '>=' : 'int',
+                            '==' : 'int',
+                            '!=' : 'int',
+                            '&&' : 'err',
+                            '||' : 'err'
                         }
                 }
     }

@@ -150,7 +150,7 @@ hyperexpaux:
     logicop superexp;
 
 superexp:
-    exp superexpaux*;
+    exp superexpaux?;
 
 superexpaux:
     relationalop exp;
