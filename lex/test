@@ -1,8 +1,0 @@
-program Main; 
-{
-	if ( 51 <> 10){
-		print("hola");
-	} else {
-		aux = aux + 1;
-	};
-}

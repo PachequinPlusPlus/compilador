@@ -247,7 +247,7 @@ class semantics:
                             '+' : 'float',
                             '-' : 'float',
                             '/' : 'float',
-                            '*' : 'float'
+                            '*' : 'float',
                             '<' : 'int',
                             '<=' : 'int',
                             '>' : 'int',

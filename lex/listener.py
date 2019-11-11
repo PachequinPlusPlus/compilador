@@ -118,7 +118,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.push(self.tipoStack, resultT)
                 else:
                     self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
-                    self.imprimeErrores()
                     sys.exit()
 
     condicionales = ['<', '<=', '>', '>=', '==', '!=']
@@ -126,7 +125,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     def resolveSuperExp(self, ctx):
         if len(self.opStack) > 0:
             operando = self.tope(self.opStack)
-            if operando in condicionales:
+            if operando in self.condicionales:
                 self.pop(self.opStack)
 
                 left = self.tope(self.expStack) 
@@ -150,7 +149,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.push(self.tipoStack, resultT)
                 else:
                     self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
-                    self.imprimeErrores()
                     sys.exit()
 
     logical = ['&&', '||']
@@ -182,7 +180,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.push(self.tipoStack, resultT)
                 else:
                     self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
-                    self.imprimeErrores()
                     sys.exit()
 
 
