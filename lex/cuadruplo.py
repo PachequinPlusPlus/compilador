@@ -7,5 +7,8 @@ class cuadruplo:
         self.result = result
 
 
-    def imprimirCuadruplo(self):
-        print(""+str(self.op)+"\t\t|\t\t\t"+str(self.left)+"\t\t\t|\t\t\t"+str(self.right)+"\t\t|\t\t\t"+str(self.result))
+    def imprimirCuadruplo(self, directory):
+        quad = open(directory, 'a')
+        quad.write(""+str(self.op)+"\t\t|\t\t\t"+str(self.left)+"\t\t\t|\t\t\t"+str(self.right)+"\t\t|\t\t\t"+str(self.result))
+        quad.write('\n')
+        quad.close()

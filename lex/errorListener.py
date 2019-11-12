@@ -2,10 +2,14 @@ from antlr4.error.ErrorListener import ErrorListener
 import sys
 
 
-class myErrorListener( ErrorListener ):
+class myErrorListener( ErrorListener):
+
+    def __init__(self,log):
+        self.log = log
 
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        print (str(line) + ":" + str(column) + ": sintax ERROR, " + str(msg))
+        self.log.write (str(line) + ":" + str(column) + ": sintax ERROR, " + str(msg) + "\n")
+        raise Exception()
         sys.exit()
 
     def reportAmbiguity(self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs):

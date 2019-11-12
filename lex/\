@@ -2,8 +2,6 @@ from memory import myMemory
 from variable import variable
 from clases import clase
 from funcion import funcion
-
-import json
 # nombre | direcion
 class semantics:
     scopes = ["global"]
@@ -21,8 +19,7 @@ class semantics:
         self.constantes = myMemory(30000, 30500, 31000)
 
     def pr(self):
-        parsed =str(self.clases).replace("'", '"')
-        print(parsed)
+        print(str(self.clases).replace("'", "\""))
 
 
     classes = {
@@ -42,7 +39,6 @@ class semantics:
             }
 
 
-    #TODO(correguir las address temporales)
     def getAddress(self, tipo, isTemp = False):
         #TODO(que hacer para las clases?)
         scope = self.tope(self.scopes)
@@ -71,68 +67,20 @@ class semantics:
 
 
 
-    #TODO(checar que tenga el mismo numero de parametros)
-    def checkFunctionExists(self, clase, funcName, isPublic = True):
-        for cl in self.clases:
-            if cl.name == clase.name:
-                for func in cl.publicMetodos:
-                    if func.name == funcName:
-                        return True
-                for func in cl.privateMetodos:  
-                    if isPublic and func.name == funcName:
-                        return True
-                if cl.parent is not None:
-                    return checkFunctionExists(cl.parent, funcName, False)
+    def checkFunctionExists(self, funcName):
+        scope = self.tope(self.scopes)
+        tmp = self.classes.get(scope).get("metodos").get(funcName)
+        if tmp is not None:
+            return True
+        parent = self.classes.get(scope).get("parent")
+        while parent is not None:
+            tmp = self.classes.get(parent).get("metodos").get(funcName)
+            if tmp is not None:
+                return True
+            parent = self.classes.get(parent).get("parent")
+
         return False
-
-    def getClase(self, className):
-        for cl in self.clases:
-            if cl.name == className:
-                return cl
-
-    #TODO(optimizar esto)
-    # estamos mandando el nombre de la clase, en vez de mandar la instancia directamente duuhh
-    def existVariable(self, clase, funcName, varName):
-        for cl in self.clases:
-            if cl.name == clase.name:
-                for func in cl.publicMetodos:
-                    if func.name == funcName:
-                        for param in func.params:
-                            if param.name == varName:
-                                return param
-                        for var in func.vars:
-                            if var.name == varName:
-                                return var
-                        
-                for func in cl.privateMetodos:  
-                    if func.name == funcName:
-                        if func.name == funcName:
-                            for param in func.params:
-                                if param.name == varName:
-                                    return param
-                            for var in func.vars:
-                                if var.name == varName:
-                                    return var
-                for atr in cl.publicAtributos:
-                    if atr.name == varName:
-                        return atr
-                for atr in cl.privateAtributos:
-                    if atr.name == varName:
-                        return atr
-
-
-
-                actual = cl
-
-                while actual.parent is not None:
-                    actual = getClase(self, actual.parent)
-                    for atr in actual.publicAtributos:
-                        if atr.name == varName:
-                            return atr
-        return None
-
-
-       
+        
 
     def setDefaultFunction(self, funcName):
         scope = self.tope(self.scopes)
@@ -191,6 +139,32 @@ class semantics:
             self.addAttrFunction(funcName, "_"+funcName, returnType)
 
 
+        
+
+    # TODO(que matche los parametros)
+    def deepLookingFunction(self, funcName, varName):
+        scope = self.tope(self.scopes)
+        self.setDefaultFunction(funcName)
+
+        tmp = self.classes.get(scope).get("metodos").get(funcName).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return elem 
+
+        tmp = self.classes.get(scope).get("attr")
+        for elem in tmp:
+            if elem["name"] == varName:
+                return elem
+
+        parent = self.classes.get(scope).get("parent")
+
+        while parent != None:
+            tmp = self.classes.get(parent).get("attr")
+            for elem in tmp:
+                if elem["name"] == varName:
+                    return elem
+            parent = self.classes.get(parent).get("parent")
+        return None
 
     
 
@@ -234,14 +208,17 @@ class semantics:
 
     def addClass(self, className, parent):
         self.clases.append(clase(className, parent))
-        return self.tope(self.clases)
+        self.tope(self.clases)
 
     # add a function into a class
     def addFunction(self, clase, isPublic, funcName, tipoRetorno):
         for cls in self.clases:
+            print(clase, cls)
             if clase == cls:
+                print("yeah")
                 clase.appendFunction(funcion(funcName, tipoRetorno), isPublic)
-                return clase.getFunction(isPublic)
+                cls.appendFunction(funcion(funcName, tipoRetorno), isPublic)
+                return
 
 
     # add an attribute into a class

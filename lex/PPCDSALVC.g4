@@ -5,19 +5,21 @@ import sys
 }
 
 
+start:
+    programa;
 
 programa: 
     'program' ID PUNTOCOMA variables? classes* functions* main ;
 
 main:
-    'main' LLA variables? stmt+ LLC;
+    'main' LLA variables? stmt* LLC;
 
 functions:
     'func' returntypes ID PA parameters? PC LLA functionbloque LLC;
 
 functionbloque:
-    variables? stmt+ 'return' exp PUNTOCOMA
-    | variables? stmt+ 
+    variables? stmt* 'return' exp PUNTOCOMA
+    | variables? stmt* 
     ;
 
 stmt:
@@ -55,7 +57,7 @@ typesvar:
     | TYPES typesvaraux secondType* PUNTOCOMA;
 
 typesvaraux:
-    ID LB INT RB 
+    ID LB exp RB 
     | ID;
 
 secondType:
@@ -135,7 +137,10 @@ logicop:
     | '||';
 
 condition:
-    'if' PA hyperexp PC LLA stmt* LLC elseif? elseotr?;
+    'if' PA hyperexp PC conditionsecond;
+
+conditionsecond:
+     LLA stmt* LLC elseif? elseotr?;
 
 elseif:
     'elseif' PA hyperexp PC LLA stmt* LLC;
