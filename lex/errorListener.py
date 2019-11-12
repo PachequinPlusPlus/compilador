@@ -9,6 +9,7 @@ class myErrorListener( ErrorListener):
 
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         self.log.write (str(line) + ":" + str(column) + ": sintax ERROR, " + str(msg) + "\n")
+        raise Exception()
         sys.exit()
 
     def reportAmbiguity(self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs):

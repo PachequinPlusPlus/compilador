@@ -6,46 +6,38 @@ def main():
     fails = glob.glob("./fail/*")
     succ = glob.glob("./success/*")
 
-    configs = open("../../logs/config", "r")
 
-    times = int(configs.read())
-    configs.close()
+    times = 1
 
-    configW = open("../../logs/config", "w")
 
     for arch in fails:
         failed = False
-        try:
-            print("running test # {}".format(times))
-            print("expecting to throw\n")
-            times = times+1
-            os.system("python3 ../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
-        except:
-            print("SUCCESS: the program failed as expected, check logs. Program : {}\n".format(arch))
+        print("running test # {}".format(times))
+        print("expecting to throw\n")
+        val = os.system("python3 ./../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
+        if val != 0:
+            print('\33[42m' + "SUCCESS TEST #{}: the program failed as expected, check logs. Program : {}\33[0m\n".format(times, arch))
             failed = True
 
         if failed == False:
-            print("FAILURE: the program was suppose to throw but it didnt. program : {}\n".format(arch))
-
+            print('\33[41m'+"FAILURE TEST #{}: the program was suppose to throw but it didnt. program : {}\33[0m\n".format(times, arch))
+        times = times+1
             
 
 
     for arch in succ:
         failed = False
-        try:
-            print("running test # {}".format(times))
-            print("expecting NOT to throw\n")
-            times = self.times+1
-            os.system("python3 ../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
-        except:
-            print("FAILURE: the program failed but it wasnt suppose to throw, check logs. Program : {}\n".format(arch))
+        print("running test # {}".format(times))
+        print("expecting NOT to throw\n")
+        val = os.system("python3 ./../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
+        if val != 0:
+            print('\33[41m'+"FAILURE TEST #{}: the program failed but it wasnt suppose to throw, check logs. Program : {}\33[0m\n".format(times, arch))
             failed = True
 
         if failed == False:
-            print("SUCCESS: the program didnt throw as expected. program : {}\n".format(arch))
+            print('\33[42m'+"SUCCESS TEST #{}: the program didnt throw as expected. program : {}\33[0m\n".format(times, arch))
+        times = times+1
 
-    configW.write(str(times)+"\n")
-    configW.close()
 
 
 if __name__ == "__main__":

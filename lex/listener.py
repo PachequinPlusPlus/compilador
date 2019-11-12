@@ -88,7 +88,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.push(self.tipoStack, resultT)
                 else:
                     self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
-                    self.imprimeErrores()
                     sys.exit()
 
     def resolveTerm(self, ctx):
@@ -110,7 +109,13 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 left, right = right, left
                 leftT, rightT = rightT, leftT
 
-                resultT = self.semantica.cube[leftT][rightT][operando]
+                #TODO(TEMPORAL ERROR)
+                try:
+                    resultT = self.semantica.cube[leftT][rightT][operando]
+                except:
+                    self.err.push("tmp, err", 404)
+                    sys.exit()
+
                 if resultT != "err":
                     resultAddress = self.semantica.getAddress(resultT, True)
                     self.pushCuadruplo(operando, left, right, resultAddress)

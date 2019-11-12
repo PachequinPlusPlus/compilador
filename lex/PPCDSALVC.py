@@ -8,25 +8,37 @@ from errorListener import errores
 
 import json
 import sys
+import os
 
+DIR = './../../quad/'
 
 
 def main(argv):
     input = FileStream(argv[1])
-    logs = FileStream(argv[2])
+    
+    if len(argv) > 2:
+        logs = str(argv[2])
+    else:
+        logs = './../logs/err.txt'
 
+
+    
     lexer = PPCDSALVCLexer(input)
     stream = CommonTokenStream(lexer)
     parser = PPCDSALVCParser(stream)
     err = errores()
     semantica = semantics()
-    log = open('logs', 'a')
+    log = open(logs, 'a')
+    log.write("\n")
+
     parser._listeners = [ myErrorListener(log) ]
 
     try:
         tree = parser.programa()
     except:
+        log.write("\n")
         log.close()
+        sys.exit(1)
 
     printer = PPCDSALVCCustomListener(semantica, err)
     walker = ParseTreeWalker()
@@ -35,26 +47,25 @@ def main(argv):
     try:
         walker.walk(printer, tree)
     except:
-
         if len(err.errors) > 0:
             for elem in err.errors:
                 log.write(elem.msg+"\n")
-            log.close()
-            sys.exit()
-
-
-    
-
+        log.write("\n")
+        log.close()
+        sys.exit(1)
 
 
 
-    print(len(printer.cuadruplos))
+    fileName = DIR + "quad_"
+    fileName += str(len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))]))
+    fileName += ".PPCDSALVC"
+
     for quad in printer.cuadruplos:
-        quad.imprimirCuadruplo()
+        quad.imprimirCuadruplo(fileName)
 
     #print("Accepted")
 
-    parsed = (semantica.classes)
+    #parsed = (semantica.classes)
     #print (json.dumps(parsed, indent=2))
 
     log.close()
