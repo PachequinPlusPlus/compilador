@@ -9,8 +9,7 @@ from errorListener import errores
 import json
 import sys
 import os
-
-DIR = './../../quad/'
+import pprint
 
 
 def main(argv):
@@ -18,8 +17,10 @@ def main(argv):
     
     if len(argv) > 2:
         logs = str(argv[2])
+        DIR = './../../quad/'
     else:
         logs = './../logs/err.txt'
+        DIR = './../quad/'
 
 
     
@@ -34,8 +35,9 @@ def main(argv):
     parser._listeners = [ myErrorListener(log) ]
 
     try:
-        tree = parser.programa()
-    except:
+        tree = parser.start()
+    except ex:
+        print(ex)
         log.write("\n")
         log.close()
         sys.exit(1)
@@ -44,9 +46,12 @@ def main(argv):
     walker = ParseTreeWalker()
 
 
+
     try:
         walker.walk(printer, tree)
-    except:
+        semantica.pr()
+    except ex:
+        print(ex)
         if len(err.errors) > 0:
             for elem in err.errors:
                 log.write(elem.msg+"\n")
@@ -65,8 +70,9 @@ def main(argv):
 
     #print("Accepted")
 
-    #parsed = (semantica.classes)
-    #print (json.dumps(parsed, indent=2))
+     
+#    parsed = str(semantica.clases)
+
 
     log.close()
 

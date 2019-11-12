@@ -1,0 +1,73 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+
+class mascota{
+    public:
+        var{
+            int edad;
+            char nombre[100];
+        }
+}
+
+class persona{
+    private:
+        var{
+            char inicial;
+        }
+        func void hi(){
+            print('h', 'i');
+        }
+    public:
+        var {
+            int ret;
+        }
+        func void suma(int x){
+            var{
+                int y;
+            }
+        }
+}
+
+class gato : mascota{
+    private:
+        var{
+            int x;
+            persona owner;
+        }
+    public:
+        var{
+            float x;
+        }
+        func void sayMeow(){
+           var {
+            int x;
+           }
+        }
+}
+
+func int suma(int a, int b){
+    var{
+        int i;
+    }
+    return a;
+}
+
+func void resta(int a, int b){
+    var{
+        char z;
+    }
+}
+
+main {
+    var{
+        int y;
+    }
+    y = x + c;
+    if ( x + y > x && c < miFlotante || miChar == miChar ){
+        x = x * y + c / ( x + y - c);
+    }
+}

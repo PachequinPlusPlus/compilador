@@ -12,6 +12,15 @@ import sys
 # This class defines a complete listener for a parse tree produced by PPCDSALVCParser.
 class PPCDSALVCListener(ParseTreeListener):
 
+    # Enter a parse tree produced by PPCDSALVCParser#start.
+    def enterStart(self, ctx:PPCDSALVCParser.StartContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#start.
+    def exitStart(self, ctx:PPCDSALVCParser.StartContext):
+        pass
+
+
     # Enter a parse tree produced by PPCDSALVCParser#programa.
     def enterPrograma(self, ctx:PPCDSALVCParser.ProgramaContext):
         pass
@@ -288,6 +297,15 @@ class PPCDSALVCListener(ParseTreeListener):
 
     # Exit a parse tree produced by PPCDSALVCParser#condition.
     def exitCondition(self, ctx:PPCDSALVCParser.ConditionContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#conditionsecond.
+    def enterConditionsecond(self, ctx:PPCDSALVCParser.ConditionsecondContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#conditionsecond.
+    def exitConditionsecond(self, ctx:PPCDSALVCParser.ConditionsecondContext):
         pass
 
 

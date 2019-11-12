@@ -1,0 +1,42 @@
+from funcion import funcion
+from variable import variable
+
+class clase:
+    def __init__(self, name, parent):
+        self.name = name
+        self.parent = parent
+
+        # public stuff
+        self.publicMetodos = [] #lista de funciones
+        self.publicAtributos = [] #lista de atributos
+
+        # private stuff
+        self.privateMetodos = [] # lista de funciones privadas
+        self.privateAtributos = [] # lista de atributos privados
+
+    def appendFunction(self, funcA, isPublic):
+        if isPublic:
+            self.publicMetodos.append(funcA)
+        else:
+            self.privateMetodos.append(funcA)
+
+    def appendAtributo(self, varA, isPublic):
+        if isPublic:
+            self.publicAtributos.append(varA)
+        else:
+            self.privateAtributos.append(varA)
+
+    def getFunction(self, isPublic):
+        if isPublic:
+            return self.publicMetodos[len(self.publicMetodos)-1]
+        else:
+            return self.privateMetodos[len(self.publicMetodos)-1]
+
+        
+    def __str__(self):
+        return str(self.__dict__)
+
+    def __repr__(self):
+        return str(self.__dict__)
+
+
