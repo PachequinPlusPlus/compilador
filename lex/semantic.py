@@ -4,6 +4,7 @@ from clases import clase
 from funcion import funcion
 
 import json
+
 # nombre | direcion
 class semantics:
     scopes = ["global"]
@@ -22,7 +23,11 @@ class semantics:
 
     def pr(self):
         parsed =str(self.clases).replace("'", '"')
-        print(parsed)
+        parsed = parsed.replace("False", 'false')
+        parsed = parsed.replace("True", 'true')
+        parsed = parsed.replace("None", '"None"')
+        parsed2 = json.loads(parsed)
+        #print(json.dumps(parsed2, indent=4))
 
 
     classes = {
@@ -70,6 +75,44 @@ class semantics:
                 return self.locales.getChar()
 
 
+    def reverseStack(self, stack):
+        reversed = []
+        while len(stack) > 0:
+            self.push(reversed, self.tope(stack))
+            self.pop(stack)
+        return reversed
+
+
+    #ideally, this should be call after checking with checkFunction Exists
+    def getFunc(self, clase, funcName, isPublic = True):
+        for cl in self.clases:
+            if cl.name == clase.name:
+                for func in cl.publicMetodos:
+                    if func.name == funcName:
+                        return func
+                for func in cl.privateMetodos:  
+                    if isPublic and func.name == funcName:
+                        return func
+                if cl.parent is not None:
+                    return self.getFunc(self.getClase(cl.parent), funcName, False)
+
+        #because of 73, this should never return None
+        return None
+
+
+    #check if you can call funcA with params and types
+    def canUseFunction(self, funcA, params, tipos):
+        if len(funcA.params) != len(params):
+            return False
+
+        
+        for i in range(len(params)):
+            if funcA.params[len(params) - i - 1].tipo != tipos[i]:
+                return False
+
+        return True
+
+
 
     #TODO(checar que tenga el mismo numero de parametros)
     def checkFunctionExists(self, clase, funcName, isPublic = True):
@@ -82,13 +125,35 @@ class semantics:
                     if isPublic and func.name == funcName:
                         return True
                 if cl.parent is not None:
-                    return checkFunctionExists(cl.parent, funcName, False)
+                    return self.checkFunctionExists(self.getClase(cl.parent), funcName, False)
         return False
 
     def getClase(self, className):
         for cl in self.clases:
             if cl.name == className:
                 return cl
+        return None
+
+    def existInClass(self, clase, varName):
+        for cl in self.clases:
+            if cl.name == clase.name:
+                for atr in cl.publicAtributos:
+                    if atr.name == varName:
+                        return atr
+                for atr in cl.privateAtributos:
+                    if atr.name == varName:
+                        return atr
+
+                actual = cl
+
+                while actual.parent is not None:
+                    actual = self.getClase(actual.parent)
+                    for atr in actual.publicAtributos:
+                        if atr.name == varName:
+                            return atr
+        return None
+
+
 
     #TODO(optimizar esto)
     # estamos mandando el nombre de la clase, en vez de mandar la instancia directamente duuhh
@@ -125,7 +190,7 @@ class semantics:
                 actual = cl
 
                 while actual.parent is not None:
-                    actual = getClase(self, actual.parent)
+                    actual = self.getClase(actual.parent)
                     for atr in actual.publicAtributos:
                         if atr.name == varName:
                             return atr

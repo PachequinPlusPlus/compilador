@@ -1,0 +1,27 @@
+program ravioli; 
+var {
+	int x, y[300];
+    int z;
+	char miChar;
+	float miFlotante, c, a;
+}
+
+class rav{
+    public:
+        var{
+            int edad;
+        }
+}
+
+func int foo(int a, int b){
+    return a;
+}
+
+main {
+    var{
+        rav mycat; 
+    }
+    if( x > mycat.edad && x < 100){
+
+    }
+}
