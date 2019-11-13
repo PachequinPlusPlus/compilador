@@ -57,7 +57,7 @@ typesvar:
     | TYPES typesvaraux secondType* PUNTOCOMA;
 
 typesvaraux:
-    ID LB exp RB 
+    ID LB scte RB 
     | ID;
 
 secondType:
@@ -99,12 +99,14 @@ foraux:
 
 method:
     ID PUNTO method
-    | ID PUNTO funccall;
+    | ID PUNTO mcall;
+
+mcall:
+    ID PA fparam PC;
 
 // todo(try to change funcaux to (COMA exp)*
 funccall:
-    ID PA exp multipleexp* PC
-    | ID PA PC;
+    ID PA fparam PC;
 
 multipleexp:
     COMA exp;
@@ -193,12 +195,27 @@ factor:
 factorclases:
     ID
     | ID arreglo
-    | ID PA exp multipleexp* PC
-    | ID PUNTO ID metodoaux?;
+    | ID PA fparam PC
+    | ID PUNTO ID PA fparam PC
+    | ID PUNTO ID;
+
 
 metodoaux:
     PA exp multipleexp* PC
     | PA PC;
+
+fparam:
+    exp nparam*
+    |
+    ;
+nparam:
+    COMA exp
+    ;
+
+scte:
+    INT
+    | FLOAT
+    | CHAR;
 
 cte:
     INT

@@ -36,8 +36,7 @@ def main(argv):
 
     try:
         tree = parser.start()
-    except ex:
-        print(ex)
+    except:
         log.write("\n")
         log.close()
         sys.exit(1)
@@ -50,8 +49,7 @@ def main(argv):
     try:
         walker.walk(printer, tree)
         semantica.pr()
-    except ex:
-        print(ex)
+    except SystemExit:
         if len(err.errors) > 0:
             for elem in err.errors:
                 log.write(elem.msg+"\n")
@@ -65,13 +63,11 @@ def main(argv):
     fileName += str(len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))]))
     fileName += ".PPCDSALVC"
 
+    ret = 0
     for quad in printer.cuadruplos:
-        quad.imprimirCuadruplo(fileName)
+        quad.imprimirCuadruplo(fileName, ret)
+        ret = ret + 1
 
-    #print("Accepted")
-
-     
-#    parsed = str(semantica.clases)
 
 
     log.close()

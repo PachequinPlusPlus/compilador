@@ -251,3 +251,718 @@ tmp, err
 
 
 
+
+
+
+14:0: sintax ERROR, missing ';' at '}'
+
+15:0: sintax ERROR, missing ';' at '}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
+
+
+
+
+
+
+49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+
+31:24: sintax ERROR, mismatched input '&&' expecting '('
+
+54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
+
+
+
+
+
+
+49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+
+31:24: sintax ERROR, mismatched input '&&' expecting '('
+
+54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
+
+
+
+
+
+
+49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
+
+
+31:24: sintax ERROR, mismatched input '&&' expecting '('
+
+31:24: sintax ERROR, mismatched input '&&' expecting '('
+
+
+
+
+
+
+
+
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 18
+
+
+
+
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 18
+
+
+
+
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'suma' the function doesnt not match | line : 18
+
+
+'suma' the function doesnt not match | line : 18
+
+
+
+
+
+
+'suma' the function doesnt not match | line : 18
+
+
+
+'suma' the function doesnt not match | line : 19
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' class not declared | line : 54
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'mycat' function not declared | line : 37
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'mycat' class not declared | line : 49
+
+
+
+'ravioli' class not declared | line : 31
+
+
+'mycat' function not declared | line : 37
+
+
+'mycat' class not declared | line : 37
+
+
+'mycat' class not declared | line : 37
+
+
+'mycat' class not declared | line : 37
+
+
+
+'mycat' variable not declared | line : 37
+
+
+'mycat' variable not declared | line : 37
+
+
+'mycat' variable not declared | line : 37
+
+
+
+
+
+
+
+
+
+'woaf' function not declared | line : 102
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+'rav' variable not declared | line : 21
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'woaf' function not declared | line : 96
+
+
+
+
+'rav' variable not declared | line : 21
+
+
+
+'woaf' function not declared | line : 102
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'woaf' function not declared | line : 96
+
+
+
+
+'suma' the function doesnt not match | line : 17
+
+
+'suma' the function doesnt not match | line : 17
+
+
+
+'woaf' function not declared | line : 102
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'woaf' function not declared | line : 96
+
+
+
+
+
+
+
+
+'woaf' function not declared | line : 102
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'woaf' function not declared | line : 96
+
+
+
+
+'d' is not defined | line : 24
+'uno' function not declared | line : 36
+
+
+'getDos' function not declared | line : 43
+
+
+'getEdad' function not declared | line : 43
+
+
+'uno' the function has type return void | line : 44
+
+
+'uno' the function has type return void | line : 44
+
+
+
+
+
+
+
+
+
+
+'mytoy' method is not defined | line : 56
+
+
+'mytoy' method is not defined | line : 56
+
+
+'juega' method is not defined | line : 56
+
+
+'juega' method is not defined | line : 56
+
+
+'juega' method is not defined | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+'juega' function not declared | line : 56
+
+
+
+
+
+
+
+
+
+'juega' the function doesnt not match | line : 56
+
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+

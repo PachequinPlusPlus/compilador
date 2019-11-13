@@ -4,7 +4,15 @@ var {
 	char miChar;
 	float miFlotante, c, a;
 }
+
+func int suma(int a, char b){
+    print(b);
+    return a;
+}
+
 main {
-a = miFlotante + c;
-print(a);
+    var{
+        int i, b;
+    }
+    suma(b, 'c');
 }

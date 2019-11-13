@@ -210,6 +210,15 @@ class PPCDSALVCListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PPCDSALVCParser#mcall.
+    def enterMcall(self, ctx:PPCDSALVCParser.McallContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#mcall.
+    def exitMcall(self, ctx:PPCDSALVCParser.McallContext):
+        pass
+
+
     # Enter a parse tree produced by PPCDSALVCParser#funccall.
     def enterFunccall(self, ctx:PPCDSALVCParser.FunccallContext):
         pass
@@ -450,6 +459,33 @@ class PPCDSALVCListener(ParseTreeListener):
 
     # Exit a parse tree produced by PPCDSALVCParser#metodoaux.
     def exitMetodoaux(self, ctx:PPCDSALVCParser.MetodoauxContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fparam.
+    def enterFparam(self, ctx:PPCDSALVCParser.FparamContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fparam.
+    def exitFparam(self, ctx:PPCDSALVCParser.FparamContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#nparam.
+    def enterNparam(self, ctx:PPCDSALVCParser.NparamContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#nparam.
+    def exitNparam(self, ctx:PPCDSALVCParser.NparamContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#scte.
+    def enterScte(self, ctx:PPCDSALVCParser.ScteContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#scte.
+    def exitScte(self, ctx:PPCDSALVCParser.ScteContext):
         pass
 
 

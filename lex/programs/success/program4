@@ -5,6 +5,14 @@ var {
 	float miFlotante, c;
 }
 
+
+class toy{
+    public:
+        func void juega(int a, char x){
+            print('g', 'a', 'm', 'e');
+        }
+}
+
 class gato {
 	private:
 		var {
@@ -14,17 +22,28 @@ class gato {
             int peso;
 		}
 	public:
+        var{
+            toy mytoy;
+        }
+        
         func int saludos(int a, int b, char x){
             print(1);
         }
 		func int getEdad(){
 			var{	
 				int x2;
+                int d;
 			}
 			print(x, x+c, x+d);
 			x = edad;
 			return edad;
 		}
+}
+
+func int uno(int a, int b){
+    print(a);
+    print(b);
+    return a;
 }
 
 main {
@@ -34,7 +53,7 @@ main {
 	}
 	a = 123;
     uno(a, 123);
-    ravioli.getDos();
+    ravioli.mytoy.juega(a, 'x');
 	while(a < uno(a, 123)){
 		a = a + 23;
 	}
