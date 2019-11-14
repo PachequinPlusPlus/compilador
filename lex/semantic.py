@@ -1,4 +1,3 @@
-from memory import myMemory
 from variable import variable
 from clases import clase
 from funcion import funcion
@@ -16,10 +15,8 @@ class semantics:
         self.clases = []
 
 
-        self.globales = myMemory(5000, 8000, 11000)
-        self.locales = myMemory(14000, 17000, 19000)
-        self.temporales = myMemory(25000, 27000, 29000)
-        self.constantes = myMemory(30000, 30500, 31000)
+
+
 
     def pr(self):
         parsed =str(self.clases).replace("'", '"')
@@ -30,32 +27,26 @@ class semantics:
         #print(json.dumps(parsed2, indent=4))
 
 
-    #TODO(correguir las address temporales)
-    def getAddress(self, tipo, isTemp = False):
+    def getAddressGlobal(self, tipo, globalClass):
         #TODO(que hacer para las clases?)
-        scope = self.tope(self.scopes)
-        if isTemp:
-            if tipo == "int":
-                return self.temporales.getEntera()
-            elif tipo == "float":
-                return self.temporales.getFlotante()
-            elif tipo == "char":
-                return self.temporales.getChar() 
- 
-        if scope == "global":
-            if tipo == "int":
-                return self.globales.getEntera()
-            elif tipo == "float":
-                return self.globales.getFlotante()
-            elif tipo == "char":
-                return self.globales.getChar() 
-        else: 
-            if tipo == "int":
-                return self.locales.getEntera()
-            elif tipo == "float":
-                return self.locales.getFlotante()
-            elif tipo == "char":
-                return self.locales.getChar()
+        if tipo == "int":
+            return globalClass.memoriaGlobal.getEntera()
+        elif tipo == "float":
+            return globalClass.memoriaGlobal.getFlotante()
+        elif tipo == "char":
+            return globalClass.memoriaGlobal.getChar() 
+
+
+    
+    #TODO(correguir las address temporales)
+    def getAddressFunc(self, tipo, func):
+        #TODO(que hacer para las clases?)
+        if tipo == "int":
+            return func.memory.getEntera()
+        elif tipo == "float":
+            return func.memory.getFlotante()
+        elif tipo == "char":
+            return func.memory.getChar() 
 
 
     def reverseStack(self, stack):
@@ -195,25 +186,26 @@ class semantics:
         return self.tope(self.clases)
 
     # add a function into a class
-    def addFunction(self, clase, isPublic, funcName, tipoRetorno):
+    def addFunction(self, clase, isPublic, funcName, tipoRetorno, ip):
         for cls in self.clases:
             if clase == cls:
-                clase.appendFunction(funcion(funcName, tipoRetorno), isPublic)
+                clase.appendFunction(funcion(funcName, tipoRetorno, ip), isPublic)
                 return clase.getFunction(isPublic)
 
 
     # add an attribute into a class
-    def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic):
-        clase.appendAtributo(variable(varName, tipo, direccion, isArray), isPublic)
+    def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic, arrSize):
+        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize), isPublic)
 
     # add param into a function
+    #is array is always suppose to be false!!
     def addParameter(self, func, name, tipo, direccion, isArray):
-        func.appendParam(variable(name, tipo, direccion, isArray))
+        func.appendParam(variable(name, tipo, direccion, isArray, -1))
 
 
     # add var into a function
-    def addVarFunc(self, func, name, tipo, direccion, isArray):
-        func.appendVar(variable(name, tipo, direccion, isArray))
+    def addVarFunc(self, func, name, tipo, direccion, isArray, arrSize = -1):
+        func.appendVar(variable(name, tipo, direccion, isArray, arrSize))
 
     #-------------------------------------------------------------------------------
         

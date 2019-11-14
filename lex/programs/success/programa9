@@ -13,8 +13,8 @@ class rav{
         }
 }
 
-func int foo(int a, int b){
-    return a;
+func int foo(int xx, int b){
+    return xx;
 }
 
 main {

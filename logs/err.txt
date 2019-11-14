@@ -998,3 +998,1381 @@ type mismatch : float and char | line 8
 
 
 
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 5
+
+
+2:0: sintax ERROR, mismatched input 'variable' expecting {'main', 'func', 'var', 'class'}
+
+
+'pi' is already declared | line : 7
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+'x' is already declared | line : 17
+
+
+'a' is already declared | line : 16
+
+
+'x' is already declared | line : 17
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'x' is already declared | line : 17
+
+
+'a' is already declared | line : 16
+
+
+'x' is already declared | line : 17
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'x' is already declared | line : 17
+
+
+'a' is already declared | line : 16
+
+
+'x' is already declared | line : 17
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'x' is already declared | line : 17
+
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+'a' is already declared | line : 16
+
+
+'x' is already declared | line : 17
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+'x' is already declared | line : 17
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+'a' is already declared | line : 8
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 11
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 28
+
+
+'x' is already declared | line : 17
+
+
+'nombre' is already declared | line : 14
+
+
+'nombre' is already declared | line : 14
+
+
+'x' is already declared | line : 35
+
+
+'x' is already declared | line : 55
+
+
+
+'x' is already declared | line : 11
+
+
+'x2' is already declared | line : 34
+
+
+
+
+'x' is already declared | line : 30
+
+
+'x' is already declared | line : 50
+
+
+
+'x' is already declared | line : 28
+
+
+'y' is already declared | line : 30
+
+
+
+'x' is already declared | line : 38
+
+
+'x' is already declared | line : 38
+
+
+'x' is already declared | line : 42
+
+
+'x' is already declared | line : 46
+
+
+'x2' is already declared | line : 46
+
+
+'a' is already declared | line : 51
+
+
+'a' is already declared | line : 58
+
+
+'y' is already declared | line : 66
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+'x' is already declared | line : 17
+
+
+'x' is already declared | line : 17
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+'float' was found but the function is expecting to return int | line : 52
+
+
+
+'pi' is already declared | line : 7
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+12:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+
+
+
+
+
+
+
+
+
+
+12:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'return' was found but the function is void | line : 8
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'x' is already declared | line : 3
+
+
+'x' is already declared | line : 3
+
+
+'x' is already declared | line : 3
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+

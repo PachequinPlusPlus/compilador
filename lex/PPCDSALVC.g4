@@ -18,9 +18,12 @@ functions:
     'func' returntypes ID PA parameters? PC LLA functionbloque LLC;
 
 functionbloque:
-    variables? stmt* 'return' exp PUNTOCOMA
+    variables? stmt* rt exp PUNTOCOMA
     | variables? stmt* 
     ;
+
+rt:
+    'return';
 
 stmt:
     assignment PUNTOCOMA
@@ -61,7 +64,7 @@ typesvaraux:
     | ID;
 
 secondType:
-    COMA ID LB INT RB 
+    COMA ID LB scte RB 
     | COMA ID;
 
 TYPES:
@@ -213,9 +216,7 @@ nparam:
     ;
 
 scte:
-    INT
-    | FLOAT
-    | CHAR;
+    INT;
 
 cte:
     INT

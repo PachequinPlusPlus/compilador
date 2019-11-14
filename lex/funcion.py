@@ -1,18 +1,16 @@
 from variable import variable
+from memory import memoria
 class funcion:
-    def __init__(self, name, tipoRetorno):
+    def __init__(self, name, tipoRetorno, ip):
         self.name = name
         self.tipoRetorno = tipoRetorno
         self.numberParams = 0
         self.params = [] # lista de variables de parametros
         self.vars = [] # lista de variables declarados
-        
-    def getReturnDir(self):
-        if self.tipoRetorno == 'void':
-            return None
+        self.memory = memoria(15000, 17000, 19000)
+        self.ip = ip;
 
-        #TODO(introducir memoria, para que esta misma pueda ser regresada desde ahi)
-        return -1
+        
     
     def appendParam(self, varA):
         self.numberParams = self.numberParams + 1

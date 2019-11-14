@@ -14,9 +14,10 @@ class gato {
 	public:
 		func int getEdad(){
 			var{	
-				int x;
+				int x2;
 			}
 			print(x);
+            miChar = 'b';
 			x = edad;
 			return edad;
 		}

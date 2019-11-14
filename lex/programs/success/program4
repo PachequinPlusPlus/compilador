@@ -8,7 +8,7 @@ var {
 
 class toy{
     public:
-        func void juega(int a, char x){
+        func void juega(int a, char xx){
             print('g', 'a', 'm', 'e');
         }
 }
@@ -26,12 +26,11 @@ class gato {
             toy mytoy;
         }
         
-        func int saludos(int a, int b, char x){
+        func int saludos(int a, int b, char xx){
             print(1);
         }
 		func int getEdad(){
 			var{	
-				int x2;
                 int d;
 			}
 			print(x, x+c, x+d);

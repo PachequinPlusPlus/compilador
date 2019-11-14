@@ -25,9 +25,9 @@ class persona{
         var {
             int ret;
         }
-        func void suma(int x){
+        func void suma(){
             var{
-                int y;
+                int yy;
             }
         }
 }
@@ -35,28 +35,27 @@ class persona{
 class gato : mascota{
     private:
         var{
-            int x;
             persona owner;
         }
     public:
         var{
-            float x;
+            float x2;
         }
         func void sayMeow(){
            var {
-            int x;
+            int xxxxx;
            }
         }
 }
 
-func int suma(int a, int b){
+func int suma(int a2, int b){
     var{
         int i;
     }
-    return a;
+    return a2;
 }
 
-func void resta(int a, int b){
+func void resta(int a2, int b){
     var{
         char z;
     }
@@ -64,7 +63,7 @@ func void resta(int a, int b){
 
 main {
     var{
-        int y;
+        int yy;
     }
     y = x + c;
     if ( x + y > x && c < miFlotante || miChar == miChar ){

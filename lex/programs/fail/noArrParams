@@ -1,0 +1,14 @@
+program ravioli; 
+var{
+    float pi;
+}
+func void test(int arr[300]){
+    print('h');
+}
+main {
+    var{
+        float pi;
+    }
+    pi = 3.14;
+    print(pi);
+}

@@ -14,10 +14,10 @@ class gato {
 	public:
 		func int getEdad(){
 			var{	
-				int x;
+				int xx;
 			}
-			print(x);
-			x = edad;
+			print(xx);
+			xx = edad;
 			return edad;
 		}
 }
