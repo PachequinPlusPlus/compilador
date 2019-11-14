@@ -26,9 +26,6 @@ class gato : mascota {
 		}
 	public:
 		func int getEdad(){
-			var{	
-				int x;
-			}
 			print(x);
 			x = edad;
 			return edad;
@@ -50,7 +47,7 @@ func int getEdadSquare(gato mycat){
 	return temp;
 }
 
-func void sayX(int x){
+func void sayX(){
 	print(x);
 }
 

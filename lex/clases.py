@@ -1,7 +1,9 @@
 from funcion import funcion
 from variable import variable
+from memory import memoria
 
 class clase:
+    memoriaGlobal = memoria(5000, 8000, 11000)
     def __init__(self, name, parent):
         self.name = name
         self.parent = parent
@@ -13,6 +15,8 @@ class clase:
         # private stuff
         self.privateMetodos = [] # lista de funciones privadas
         self.privateAtributos = [] # lista de atributos privados
+
+
 
     def appendFunction(self, funcA, isPublic):
         if isPublic:

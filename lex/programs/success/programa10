@@ -11,8 +11,8 @@ class persona{
             char nombre[100];
         }
     public:
-        func void imprimirNombre(int nombre){
-            print(nombre);
+        func void imprimirNombre(int name){
+            print(name);
         }
  
 }
@@ -31,9 +31,6 @@ class gato : mascota {
 		}
 	public:
 		func int getEdad(){
-			var{	
-				int x;
-			}
 			print(x);
 			x = edad;
 			return edad;
@@ -55,8 +52,8 @@ func int getEdadSquare(gato mycat){
 	return temp;
 }
 
-func void sayX(int x){
-	print(x);
+func void sayX(int xx){
+	print(xx);
 }
 
 func void printEdad(gato mycat){
@@ -72,7 +69,6 @@ main {
 		int a;
         int n;
         int i;
-        int x;
         int arr[100];
 	}
     input(n);

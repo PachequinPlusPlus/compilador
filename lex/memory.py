@@ -1,4 +1,4 @@
-class myMemory:
+class memoria:
 
     def __init__(self, enteras, flotantes, chars):
         self.enteras = enteras
@@ -19,4 +19,8 @@ class myMemory:
     def getChar(self):
         self.c = self.c + 1
         return self.chars + self.c - 1
-
+    def __str__(self):
+        return str(self.__dict__)
+    
+    def __repr__(self):
+        return str(self.__dict__)

@@ -5,9 +5,9 @@ var {
 	float miFlotante, c, a;
 }
 
-func int suma(int a, char b){
+func int suma(int aa, char b){
     print(b);
-    return a;
+    return aa;
 }
 
 main {

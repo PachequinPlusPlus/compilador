@@ -1,0 +1,11 @@
+program ravioli; 
+var{
+    float pi;
+}
+main {
+    var{
+        float pi;
+    }
+    pi = 3.14;
+    print(pi);
+}

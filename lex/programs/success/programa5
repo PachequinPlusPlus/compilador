@@ -14,10 +14,10 @@ class gato {
 	public:
 		func int getEdad(){
 			var{	
-				int x;
+				int xx;
 			}
-			print(x);
-			x = edad;
+			print(xx);
+			xx = edad;
 			return edad;
 		}
 }
@@ -29,8 +29,8 @@ class perro{
 		}
 }
 
-func void sayX(int x){
-	print(x);
+func void sayX(int xx){
+	print(xx);
 }
 
 func void printEdad(gato mycat){
