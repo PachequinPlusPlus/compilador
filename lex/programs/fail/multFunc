@@ -1,0 +1,17 @@
+program ravioli; 
+var{
+    int ret;
+    char x;
+}
+
+func int one(char a, int b){
+    return b+b;
+}
+
+main {
+    var{
+        int b;
+    }
+    ret = one(b, x);
+
+}
