@@ -74,7 +74,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 sys.exit(1)
             tipo = self.tope(self.tipoStack)
             if tipo != self.returnType:
-                self.pushError(tipo, "was found but the function is expecting to return {}".format(self.returnType), ctx.start.line, 488)
+                self.pushError(tipo, f"was found but the function is expecting to return {self.returnType}", ctx.start.line, 488)
                 sys.exit(1)
 
                 

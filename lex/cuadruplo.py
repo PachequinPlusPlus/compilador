@@ -9,7 +9,7 @@ class cuadruplo:
 
     def imprimirCuadruplo(self, directory, ind, toConsole):
         quad = open(directory, 'a')
-        myquad = "{0:<4} : {1:<10} {2:<10} {3:<10} {4:<10}".format(str(ind), str(self.op), str(self.left), str(self.right), str(self.result))
+        myquad = f"{ind:04} : {self.op:10} {self.left:10} {self.right:10} {self.result:10}"
         if toConsole:
             print(myquad)
         quad.write(myquad)
