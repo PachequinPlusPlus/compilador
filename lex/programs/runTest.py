@@ -6,7 +6,14 @@ def main():
     fails = glob.glob("./fail/*")
     succ = glob.glob("./success/*")
 
+    LOGS = "./../../logs/err.txt"
+    QUADS = "./../../quad/"
 
+    EXECUTABLE_PATH = "./../PPCDSALVC.py"
+
+    
+
+    #number of test
     times = 1
 
 
@@ -14,7 +21,7 @@ def main():
         failed = False
         print("running test # {}".format(times))
         print("expecting to throw\n")
-        val = os.system("python3 ./../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
+        val = os.system("python3 {} --programa {} --logs {} --quads {}".format(EXECUTABLE_PATH, arch, LOGS, QUADS))
         if val != 0:
             print('\33[42m' + "SUCCESS TEST #{}: the program failed as expected, check logs. Program : {}\33[0m\n".format(times, arch))
             failed = True
@@ -29,7 +36,7 @@ def main():
         failed = False
         print("running test # {}".format(times))
         print("expecting NOT to throw\n")
-        val = os.system("python3 ./../PPCDSALVC.py {} {}".format(arch, "./../../logs/err.txt") )
+        val = os.system("python3 {} --programa {} --logs {} --quads {}".format(EXECUTABLE_PATH, arch, LOGS, QUADS))
         if val != 0:
             print('\33[41m'+"FAILURE TEST #{}: the program failed but it wasnt suppose to throw, check logs. Program : {}\33[0m\n".format(times, arch))
             failed = True

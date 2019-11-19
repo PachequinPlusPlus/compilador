@@ -10,18 +10,33 @@ import json
 import sys
 import os
 import pprint
+import argparse
+
+
+#default logs
 
 
 def main(argv):
-    input = FileStream(argv[1])
     
-    if len(argv) > 2:
-        logs = str(argv[2])
-        DIR = './../../quad/'
-    else:
-        logs = './../logs/err.txt'
-        DIR = './../quad/'
+    parser = argparse.ArgumentParser()
 
+    parser.add_argument("--logs", help = "path to logs", default="./../logs/err.txt")
+    parser.add_argument("--programa", help = "path to program")
+    parser.add_argument("--quads", help = "path to quads", default="./../quad/")
+    parser.add_argument("--show_quads", help = "if flag is on, show quads", type=bool, default=True)
+    parser.add_argument("--show_logs", help = "if flag is on, show logs", type=bool, default=False)
+
+    args = parser.parse_args()
+
+
+
+
+    # input file
+    input = FileStream(args.programa)
+    # logs path
+    logs = args.logs
+    # quads path
+    DIR = args.quads
 
     
     lexer = PPCDSALVCLexer(input)
@@ -32,11 +47,11 @@ def main(argv):
     log = open(logs, 'a')
     log.write("\n")
 
-    parser._listeners = [ myErrorListener(log) ]
+    parser._listeners = [ myErrorListener(log, args.show_logs) ]
 
     try:
         tree = parser.start()
-    except:
+    except SystemExit:
         log.write("\n")
         log.close()
         sys.exit(1)
@@ -52,6 +67,8 @@ def main(argv):
     except SystemExit:
         if len(err.errors) > 0:
             for elem in err.errors:
+                if args.show_logs:
+                    print(elem.msg)
                 log.write(elem.msg+"\n")
         log.write("\n")
         log.close()
@@ -65,7 +82,7 @@ def main(argv):
 
     ret = 0
     for quad in printer.cuadruplos:
-        quad.imprimirCuadruplo(fileName, ret)
+        quad.imprimirCuadruplo(fileName, ret, args.show_quads)
         ret = ret + 1
 
 
