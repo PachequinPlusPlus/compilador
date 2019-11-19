@@ -4,11 +4,15 @@ import sys
 
 class myErrorListener( ErrorListener):
 
-    def __init__(self,log):
+    def __init__(self,log, toConsole):
         self.log = log
+        self.toConsole = toConsole
 
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        self.log.write (str(line) + ":" + str(column) + ": sintax ERROR, " + str(msg) + "\n")
+        msg = str(line) + ":" + str(column) + ": sintax ERROR, " + str(msg);
+        self.log.write (msg+"\n")
+        if self.toConsole:
+            print(msg)
         sys.exit(1)
 
     def reportAmbiguity(self, recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs):
