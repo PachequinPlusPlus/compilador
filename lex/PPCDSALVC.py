@@ -13,7 +13,6 @@ import pprint
 import argparse
 
 
-#default logs
 
 
 def main(argv):
