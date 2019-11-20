@@ -81,6 +81,7 @@ def main(argv):
 
     ret = 0
     for quad in printer.cuadruplos:
+        print(args.show_quads)
         quad.imprimirCuadruplo(fileName, ret, args.show_quads)
         ret = ret + 1
 

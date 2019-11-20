@@ -5,6 +5,9 @@ var {
 	float miFlotante, c, a;
 }
 main {
+var{
+    x;
+}
 a = miFlotante + c;
 print(a);
 }
