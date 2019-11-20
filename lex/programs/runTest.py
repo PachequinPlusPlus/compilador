@@ -43,7 +43,10 @@ def main():
 
         if failed == False:
             print('\33[42m'+ f"SUCCESS TEST #{times}: the program didnt throw as expected. program : {arch}\33[0m\n")
+        else:
+            val = os.system(f"python3 {EXECUTABLE_PATH} --programa {arch} --logs {LOGS} --quads {QUADS} --show_logs")
         times = times+1
+
 
 
 

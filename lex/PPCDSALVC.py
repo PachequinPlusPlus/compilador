@@ -22,8 +22,8 @@ def main(argv):
     parser.add_argument("--logs", help = "path to logs", default="./../logs/err.txt")
     parser.add_argument("--programa", help = "path to program")
     parser.add_argument("--quads", help = "path to quads", default="./../quad/")
-    parser.add_argument("--show_quads", help = "if flag is on, show quads", type=bool, default=True)
-    parser.add_argument("--show_logs", help = "if flag is on, show logs", type=bool, default=False)
+    parser.add_argument("--show_quads", help = "if flag is on, show quads", action='store_true')
+    parser.add_argument("--show_logs", help = "if flag is on, show logs", action='store_true')
 
     args = parser.parse_args()
 
@@ -81,7 +81,6 @@ def main(argv):
 
     ret = 0
     for quad in printer.cuadruplos:
-        print(args.show_quads)
         quad.imprimirCuadruplo(fileName, ret, args.show_quads)
         ret = ret + 1
 

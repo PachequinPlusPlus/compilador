@@ -6,7 +6,7 @@ var {
 }
 main {
 var{
-    x;
+    int xx;
 }
 a = miFlotante + c;
 print(a);
