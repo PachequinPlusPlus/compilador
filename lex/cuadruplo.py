@@ -6,10 +6,14 @@ class cuadruplo:
         self.right = right
         self.result = result
 
+    def convert(self, val):
+        if val == None:
+            return "None"
+        return val
 
     def imprimirCuadruplo(self, directory, ind, toConsole):
         quad = open(directory, 'a')
-        myquad = f"{ind:04} : {self.op:10} {self.left:10} {self.right:10} {self.result:10}"
+        myquad = f"{self.convert(ind):04} : {self.convert(self.op):10} {self.convert(self.left):10} {self.convert(self.right):10} {self.convert(self.result):10}"
         if toConsole:
             print(myquad)
         quad.write(myquad)
