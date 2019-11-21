@@ -94,8 +94,33 @@ assignment:
 
 // todo(try to change foraux)
 loop:
-    'while' PA hyperexp PC LLA stmt* LLC
-    | 'for' PA assignment foraux* PUNTOCOMA hyperexp PUNTOCOMA assignment foraux* PC LLA stmt* LLC;
+    ciclo
+    | fciclo;
+
+ciclo:
+    'while' whilecond whilestmt;
+
+whilecond:
+    PA hyperexp PC ;
+
+whilestmt:
+    LLA stmt* LLC;
+
+fciclo:
+    'for' PA fassign PUNTOCOMA fciclocond PUNTOCOMA fcicloupd PC fciclobody;
+
+fciclobody:
+    LLA stmt* LLC;
+
+
+fcicloupd:
+    assignment foraux*;
+
+fciclocond:
+    hyperexp;
+
+fassign:
+    assignment foraux*;
 
 foraux:
     COMA assignment;
@@ -145,10 +170,13 @@ condition:
     'if' PA hyperexp PC conditionsecond;
 
 conditionsecond:
-     LLA stmt* LLC elseif? elseotr?;
+     LLA stmt* LLC elseif* elseotr?; 
 
 elseif:
-    'elseif' PA hyperexp PC LLA stmt* LLC;
+    'elseif' PA hyperexp PC conditionthird;
+
+conditionthird:
+    LLA stmt* LLC ;
 
 elseotr:
     'else' LLA stmt* LLC;

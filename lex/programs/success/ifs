@@ -1,0 +1,22 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+main {
+var{
+    int xx;
+}
+    if(x * x > 4 && x < 3){
+        if ( 5 > x ) {
+            print('j');
+        }elseif(miFlotante < c){
+            print('y');
+        }else{
+            print('n');
+        }
+    }else{
+        print(4);
+    }
+}

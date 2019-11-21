@@ -201,6 +201,78 @@ class PPCDSALVCListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PPCDSALVCParser#ciclo.
+    def enterCiclo(self, ctx:PPCDSALVCParser.CicloContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#ciclo.
+    def exitCiclo(self, ctx:PPCDSALVCParser.CicloContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#whilecond.
+    def enterWhilecond(self, ctx:PPCDSALVCParser.WhilecondContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#whilecond.
+    def exitWhilecond(self, ctx:PPCDSALVCParser.WhilecondContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#whilestmt.
+    def enterWhilestmt(self, ctx:PPCDSALVCParser.WhilestmtContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#whilestmt.
+    def exitWhilestmt(self, ctx:PPCDSALVCParser.WhilestmtContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fciclo.
+    def enterFciclo(self, ctx:PPCDSALVCParser.FcicloContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fciclo.
+    def exitFciclo(self, ctx:PPCDSALVCParser.FcicloContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fciclobody.
+    def enterFciclobody(self, ctx:PPCDSALVCParser.FciclobodyContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fciclobody.
+    def exitFciclobody(self, ctx:PPCDSALVCParser.FciclobodyContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fcicloupd.
+    def enterFcicloupd(self, ctx:PPCDSALVCParser.FcicloupdContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fcicloupd.
+    def exitFcicloupd(self, ctx:PPCDSALVCParser.FcicloupdContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fciclocond.
+    def enterFciclocond(self, ctx:PPCDSALVCParser.FciclocondContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fciclocond.
+    def exitFciclocond(self, ctx:PPCDSALVCParser.FciclocondContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#fassign.
+    def enterFassign(self, ctx:PPCDSALVCParser.FassignContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#fassign.
+    def exitFassign(self, ctx:PPCDSALVCParser.FassignContext):
+        pass
+
+
     # Enter a parse tree produced by PPCDSALVCParser#foraux.
     def enterForaux(self, ctx:PPCDSALVCParser.ForauxContext):
         pass
@@ -333,6 +405,15 @@ class PPCDSALVCListener(ParseTreeListener):
 
     # Exit a parse tree produced by PPCDSALVCParser#elseif.
     def exitElseif(self, ctx:PPCDSALVCParser.ElseifContext):
+        pass
+
+
+    # Enter a parse tree produced by PPCDSALVCParser#conditionthird.
+    def enterConditionthird(self, ctx:PPCDSALVCParser.ConditionthirdContext):
+        pass
+
+    # Exit a parse tree produced by PPCDSALVCParser#conditionthird.
+    def exitConditionthird(self, ctx:PPCDSALVCParser.ConditionthirdContext):
         pass
 
 
