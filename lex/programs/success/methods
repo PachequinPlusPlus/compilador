@@ -1,0 +1,44 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+
+class gato{
+    public:
+        var {
+            int edad;
+        }
+        func int getEdad(){
+            return edad;
+        }
+        func void sayX(int xx){
+            print(xx);
+        }
+}
+
+func int getSquare(int yy, char miChar2){
+    print(miChar2);
+    return yy*yy;
+}
+
+
+func void sayHi(int xx, char cc){
+    print(xx);
+    print('h', 'o', 'l', 'a');
+}
+
+
+
+
+main {
+var{
+    gato ravs;
+    int xx;
+}
+    ravs.edad = 5;
+    xx = ravs.getEdad();
+
+    ravs.sayX(99);
+}

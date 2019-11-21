@@ -48,6 +48,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     opStack = []
     jmpStack = []
     jmpLoop = []
+    assStack = []
 
     parameters = []
     tipos = []
@@ -58,11 +59,49 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     classStack = []
     funcStack = []
 
+    def enterAssignment(self, ctx):
+        #meter todos los ids
+        self.push(self.assStack, str(ctx.ID()))
+
+
+
+    def exitAssignment(self, ctx):
+        if ctx.IGUAL() is not None:
+            # clase en donde empieza
+            cls = self.tope(self.classStack)
+            func = self.tope(self.funcStack).name
+            for i in range(len(self.assStack)-1):
+                left = self.semantica.existVariable(cls, func, self.assStack[i])
+                if left == None:
+                    self.pushError(self.assStack[i], "is not declared", ctx.start.line, 499)
+                    sys.exit(1)
+                elif left.tipo == 'int' or left.tipo == 'char' or left.tipo == 'float':
+                    self.pushError(self.assStack[i], "is not a class", ctx.start.line, 501)
+                    sys.exit(1)
+                cls = self.semantica.getClase(left.tipo)
+                func = None
+
+            left = self.semantica.existVariable(cls, func, self.tope(self.assStack))
+            if left is None:
+                self.pushError(self.tope(self.assStack), "is not declared", ctx.start.line, 499)
+                sys.exit(1)
+
+            self.pushCuadruplo('=', None , self.tope(self.expStack), left.direccion)
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+
+            self.assStack = []
+
+
+
 
     # simbolos especiales
     condicionales = ['<', '<=', '>', '>=', '==', '!=']
     logical = ['&&', '||']
 
+    def enterPrograma(self, ctx):
+        self.push(self.classStack, self.semantica.addClass("global", None))
+        self.pushCuadruplo('goto', None , None, -1)
 
     def enterCiclo(self, ctx):
         self.push(self.jmpLoop, len(self.cuadruplos))
@@ -142,6 +181,11 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
         
 
+        
+    def getReturnAddrs(self, funcName, clase):
+        funcName = 'r_'+funcName
+        return self.semantica.existVariable(clase, self.tope(self.funcStack).name, funcName).direccion
+
 
 
 
@@ -157,6 +201,16 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             if tipo != self.returnType:
                 self.pushError(tipo, f"was found but the function is expecting to return {self.returnType}", ctx.start.line, 488)
                 sys.exit(1)
+
+            print(self.tope(self.funcStack).name, self.tope(self.classStack).name)
+            addr = self.getReturnAddrs(self.tope(self.funcStack).name, self.tope(self.classStack))
+            print(addr)
+            right = self.tope(self.expStack)
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+
+            self.pushCuadruplo('=', None, right, addr)
+        
 
                 
 
@@ -314,8 +368,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         self.isClass = False
         self.pop(self.classStack)
 
-    def enterPrograma(self, ctx):
-        self.push(self.classStack, self.semantica.addClass("global", None))
 
 
     def enterParameters(self, ctx):
@@ -627,7 +679,15 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         if len(self.parameters) > 0 and self.tope(self.parameters) == 'T':
             self.pop(self.parameters)
 
-        return self.semantica.canUseFunction(funcA, myParameters, myTypes)
+        
+        if self.semantica.canUseFunction(funcA, myParameters, myTypes):
+            for i in range(len(myParameters)):
+                self.pushCuadruplo('param', myParameters[i], None, 'param'+str(i))
+
+            self.pushCuadruplo('gosub', funcA.name, None, funcA.ip)
+            return True
+
+        return False
 
 
     def exitFunccall(self, ctx):
@@ -636,31 +696,17 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             self.err.push("\'"+str(fToken)+"\' function not declared | line : "+str(ctx.start.line), 402)
             sys.exit(1)
         else:
+            #create function
             myFunc = self.semantica.getFunc(self.tope(self.classStack),  str(ctx.ID()))
+            self.pushCuadruplo('ERA', None , myFunc.numberParams + len(myFunc.vars), myFunc.name)
+
             if self.compareFunctions(myFunc) == False:
                 self.pushError(str(ctx.ID()), "the function doesnt not match", ctx.start.line, 409)
                 sys.exit(1)
 
-            self.push(self.expStack, self.getReturnAddrs(myFunc.name, self.tope(self.classStack)))
-            self.push(self.tipoStack, myFunc.tipoRetorno)
 
 
 
-
-    def exitAssignment(self, ctx):
-        if ctx.IGUAL() is not None:
-            # need to check if left exist
-            left = self.semantica.existVariable(self.tope(self.classStack), self.tope(self.funcStack).name, str(ctx.ID()))
-            if left is None:
-                self.pushError(left, "is not declared", ctx.start.line, 499)
-                sys.exit(1)
-            self.pushCuadruplo('=', None , self.tope(self.expStack), left.direccion)
-            self.pop(self.expStack)
-            self.pop(self.tipoStack)
-
-
-
-        
 
     def exitFactorclases(self, ctx):
         # func call
@@ -672,6 +718,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             else:
                 #ok, it does exist, but is it the same?
                 myFunc = self.semantica.getFunc(self.tope(self.classStack), str(ctx.ID(0)))
+                self.pushCuadruplo('ERA', None , myFunc.numberParams + len(myFunc.vars), myFunc.name)
                 if self.compareFunctions(myFunc) == False:
                     self.pushError(str(ctx.ID(0)), "the function doesnt not match", ctx.start.line, 409)
                     sys.exit(1)
@@ -714,11 +761,13 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     sys.exit(1)
                 else:
                     #ok, it does exist, but is it the same?
+                    myFunc = self.semantica.getFunc(cls, metodoName)
+
+                    self.pushCuadruplo('ERA', None , myFunc.numberParams + len(myFunc.vars), myFunc.name)
                     if self.compareFunctions(myFunc) == False:
                         self.pushError(metodoName, "the function doesnt not match", ctx.start.line, 409)
                         sys.exit(1)
 
-                    myFunc = self.semantica.getFunc(cls, metodoName)
                     if myFunc.tipoRetorno == 'void':
                         self.pushError(metodoName, "the method has type return void", ctx.start.line, 408)
                         sys.exit(1)
@@ -753,11 +802,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.push(self.expStack, elemento.direccion) # str(ctx.ID(0)))
                 self.push(self.tipoStack, elemento.tipo)
      
-
-
-    def getReturnAddrs(self, funcName, clase):
-        funcName = 'r_'+funcName
-        return self.semantica.existVariable(clase, self.tope(self.funcStack).name, funcName).direccion
 
 
     def insertScope(self, scopeStyle, scope):
@@ -800,6 +844,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
 
     def enterMain(self, ctx):
+        self.cuadruplos[0].result = len(self.cuadruplos)
         self.isFunction=True
 #        self.push(self.funcStack, funcion('main', 'void'))
         self.push(self.funcStack, self.semantica.addFunction(self.tope(self.classStack), True, 'main', 'void', self.getActualIP()))
@@ -820,6 +865,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         self.push(self.funcStack, self.semantica.addFunction(self.tope(self.classStack), self.isPublic, nameFunction, self.returnType, self.getActualIP()))
 
     def exitFunctions(self, ctx):
+        self.pushCuadruplo('endproc', None , None, None)
         self.isFunction = False
         self.pop(self.funcStack)
 

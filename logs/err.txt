@@ -3821,3 +3821,106 @@ type mismatch : float and char | line 8
 
 
 
+
+
+
+
+
+'miChar' is already declared | line : 8
+
+
+'miChar' is already declared | line : 8
+
+
+'x' is already declared | line : 8
+
+
+'y' is already declared | line : 8
+
+
+
+
+
+
+
+
+
+
+
+'getSquare' the function doesnt not match | line : 25
+
+
+'getSquare' the function doesnt not match | line : 25
+
+
+'getSquare' the function doesnt not match | line : 25
+
+
+
+
+'None' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'edad' is not declared | line : 40
+
+
+'ravs' is not declared | line : 40
+
+
+'ravs' is not declared | line : 40
+
+
+'ravs' is not declared | line : 40
+
+
+'ravs' is not declared | line : 40
+
+
+'ravs' is not declared | line : 40
+
+
+
+
+
+'ravs' is not declared | line : 40
+
+
+'datos' is not declared | line : 40
+
+
+
+
+
+
+
+
+
+
+
+
+
+
