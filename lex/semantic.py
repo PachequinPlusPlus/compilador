@@ -39,6 +39,7 @@ class semantics:
 
     
     #TODO(correguir las address temporales)
+    #TODO(agregar memoria para los metodos con return?)
     def getAddressFunc(self, tipo, func):
         #TODO(que hacer para las clases?)
         if tipo == "int":

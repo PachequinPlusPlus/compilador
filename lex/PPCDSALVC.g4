@@ -89,8 +89,10 @@ classdef:
 
 assignment:
     ID IGUAL exp |
-    ID LB exp RB IGUAL exp |
-    ID PUNTO assignment;
+    ID PUNTO assignment |
+    ID LB exp RB IGUAL exp ;
+
+
 
 // todo(try to change foraux)
 loop:
