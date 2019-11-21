@@ -1,0 +1,15 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+main {
+var{
+    int xx;
+}
+    for(xx = 5, x = 9; xx + x < 9; xx = x + 1, x = x + 1){
+        print('x');
+        print(miChar);
+    }
+}

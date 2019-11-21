@@ -47,6 +47,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     tipoStack = []
     opStack = []
     jmpStack = []
+    jmpLoop = []
 
     parameters = []
     tipos = []
@@ -61,6 +62,86 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     # simbolos especiales
     condicionales = ['<', '<=', '>', '>=', '==', '!=']
     logical = ['&&', '||']
+
+
+    def enterCiclo(self, ctx):
+        self.push(self.jmpLoop, len(self.cuadruplos))
+
+
+    def exitWhilecond(self, ctx):
+        expType = self.tope(self.tipoStack)
+        if expType != 'int':
+            self.pushError(expType, "is returned instead of an int", ctx.start.line, 411)
+            sys.exit(1)
+        else:
+            result = self.tope(self.expStack)
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+            self.pushCuadruplo('gotof', result , None, -1)
+            self.push(self.jmpLoop, len(self.cuadruplos)-1)
+
+    def exitCiclo(self, ctx):
+        jmp = self.tope(self.jmpLoop)
+        self.pop(self.jmpLoop)
+        
+        jmp2 = self.tope(self.jmpLoop)
+        self.pop(self.jmpLoop)
+
+        self.pushCuadruplo('goto', None , None, jmp2)
+        self.cuadruplos[jmp].result = len(self.cuadruplos)
+
+
+        
+
+    #quiero sacar de la pila a donde empieza la cond
+    def exitfciclo(self, ctx):
+        self.pop(self.jmpLoop)
+
+
+    def enterFciclocond(self, ctx):
+        self.push(self.jmpLoop, len(self.cuadruplos))
+
+    def exitFciclocond(self, ctx):
+        expType = self.tope(self.tipoStack)
+        if expType != 'int':
+            self.pushError(expType, "is returned instead of an int", ctx.start.line, 411)
+            sys.exit(1)
+        else:
+            result = self.tope(self.expStack)
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+            self.pushCuadruplo('gotof', result , None, -1)
+            self.push(self.jmpLoop, len(self.cuadruplos)-1)
+
+            #goto to the body
+            self.pushCuadruplo('goto', None, None, -1)
+            self.push(self.jmpLoop, len(self.cuadruplos)-1)
+
+    def enterFcicloupd(self, ctx):
+        #a donde debe ir el body
+        self.push(self.jmpLoop, len(self.cuadruplos))
+    
+    def exitFcicloupd(self, ctx):
+        jmp = self.jmpLoop[len(self.jmpLoop) - 4]
+        self.pushCuadruplo('goto', None, None, jmp)
+        
+
+    def enterFciclobody(self, ctx):
+        jmp = self.jmpLoop[len(self.jmpLoop) - 2]
+        self.cuadruplos[jmp].result = len(self.cuadruplos)
+        
+    def exitFciclobody(self, ctx):
+        jmp = self.jmpLoop[len(self.jmpLoop) - 1]
+
+        self.pop(self.jmpLoop);
+        self.pop(self.jmpLoop);
+        self.pushCuadruplo('goto', None, None, jmp)
+
+        jmp = self.jmpLoop[len(self.jmpLoop) - 1]
+        self.cuadruplos[jmp].result = len(self.cuadruplos)
+
+        
+
 
 
 
@@ -140,6 +221,8 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     def exitPv(self, ctx):
         self.isPublic = True
 
+    def enterCondition(self, ctx):
+        self.push(self.jmpStack, 'F')
 
 
     def enterConditionsecond(self, ctx):
@@ -149,15 +232,74 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             sys.exit(1)
         else:
             result = self.tope(self.expStack)
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+
             self.pushCuadruplo('gotof', result , None, -1)
             self.push(self.jmpStack, len(self.cuadruplos)-1)
 
-    def exitConditionsecond(self, ctx):
+    # entrando al elseif es cuando ya sabes cual es la exp, es cuando termina de hacer los statements, ya sabemos a donde va el primer if
+    def enterElseif(self, ctx):
+        #goto from the last condition
+        #terminaste el primer if, ya salta al final
+        self.pushCuadruplo('goto', None, None, -1)
+
+
+        #goto from the first if( if it's false, move here)
+        #lo que siga despues del goto ya no esta dentro de lif, so yeah
+        jmp = self.tope(self.jmpStack)
+        self.pop(self.jmpStack)
+        self.cuadruplos[jmp].result = len(self.cuadruplos)
+
+
+        #mete el goto que tenias pendiente a la pila de saltos
+        #aun necesitamos saber a donde va
+        self.push(self.jmpStack, len(self.cuadruplos)-1)
+
+
+    # ok tenemos un elseif
+    def enterConditionthird(self, ctx):
+        expType = self.tope(self.tipoStack)
+        if expType != 'int':
+            self.pushError(expType, "is returned instead of an int", ctx.start.line, 411)
+            sys.exit(1)
+        else:
+            # el gotof del elseif
+            result = self.tope(self.expStack)
+            #sacamos la exp y el tipo
+            self.pop(self.expStack)
+            self.pop(self.tipoStack)
+
+            self.pushCuadruplo('gotof', result , None, -1)
+            self.push(self.jmpStack, len(self.cuadruplos)-1)
+
+
+    def enterElseotr(self, ctx):
+        #goto from the else if
+        #ya terminaste el elseif, salte hasta el final de la condicional
+        self.pushCuadruplo('goto', None, None, -1)
+
+
+        
+        # jmp en falso
         jmp = self.tope(self.jmpStack)
         self.pop(self.jmpStack)
         self.cuadruplos[jmp].result = len(self.cuadruplos)
 
         
+        self.push(self.jmpStack, len(self.cuadruplos)-1)
+
+
+    def exitCondition(self, ctx):
+        while( self.tope(self.jmpStack) != 'F'):
+            #goto del if/ goto del elseif
+            jmp = self.tope(self.jmpStack)
+            self.pop(self.jmpStack)
+            self.cuadruplos[jmp].result = len(self.cuadruplos)
+        self.pop(self.jmpStack)
+
+
+
 
     def enterClasses(self, ctx):
         self.isClass = True

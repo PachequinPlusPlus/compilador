@@ -1,0 +1,30 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+
+func int get5(){
+    return 5;
+}
+
+main {
+var{
+    int xx;
+}
+    if(x+5 < 3){
+        if ( 5 > x ) {
+            print('j');
+        }elseif(miFlotante < c){
+            print('y');
+        }
+        elseif(x + y < get5()){
+            print(get5());
+        }else{
+            print('n');
+        }
+    }else{
+        print(c+a);
+    }
+}
