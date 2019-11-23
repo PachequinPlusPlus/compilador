@@ -7,6 +7,9 @@ class funcion:
         self.numberParams = 0
         self.params = [] # lista de variables de parametros
         self.vars = [] # lista de variables declarados
+        # local memory for this scope
+        # will be handled by the virtual machine
+                            # enteros, float, char, clases
         self.memory = memoria(15000, 17000, 19000)
         self.ip = ip;
 

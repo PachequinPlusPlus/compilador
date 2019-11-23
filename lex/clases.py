@@ -3,7 +3,6 @@ from variable import variable
 from memory import memoria
 
 class clase:
-    memoriaGlobal = memoria(5000, 8000, 11000)
     def __init__(self, name, parent):
         self.name = name
         self.parent = parent
@@ -17,6 +16,20 @@ class clase:
         self.privateAtributos = [] # lista de atributos privados
 
 
+        self.memoriaGlobal = memoria(5000, 8000, 11000)
+
+
+    def szEnteros():
+        return self.memoriaGlobal.i
+
+    def szFlotantes():
+        return self.memoriaGlobal.f
+
+    def szChars():
+        return self.memoriaGlobal.c
+
+    def getVariables(self):
+        return len(self.privateAtributos) + len(self.publicAtributos)
 
     def appendFunction(self, funcA, isPublic):
         if isPublic:

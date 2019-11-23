@@ -32,6 +32,11 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     numberParams = 0
     arrSize = 0
 
+    offSetI = 0
+    offSetf = 0
+    offSetc = 0
+
+
 
     # Strings
     nameFunction = None
@@ -184,7 +189,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         
     def getReturnAddrs(self, funcName, clase):
         funcName = 'r_'+funcName
-        return self.semantica.existVariable(clase, self.tope(self.funcStack).name, funcName).direccion
+        return self.semantica.existVariable(clase, self.tope(self.funcStack).name, funcName).direccion 
 
 
 
@@ -202,9 +207,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.pushError(tipo, f"was found but the function is expecting to return {self.returnType}", ctx.start.line, 488)
                 sys.exit(1)
 
-            print(self.tope(self.funcStack).name, self.tope(self.classStack).name)
             addr = self.getReturnAddrs(self.tope(self.funcStack).name, self.tope(self.classStack))
-            print(addr)
             right = self.tope(self.expStack)
             self.pop(self.expStack)
             self.pop(self.tipoStack)
@@ -360,13 +363,16 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         name = str(ctx.ID(0))
         if ctx.PP() is not None:
             parent = str(ctx.ID(1))
+            cl = self.tope(self.classStack)
             self.push(self.classStack, self.semantica.addClass(name, parent))
         else:
-            self.push(self.classStack, self.semantica.addClass(name, "global"))
+            cl = self.tope(self.classStack)
+            self.push(self.classStack, self.semantica.addClass(name, "global",))
 
     def exitClasses(self, ctx):
         self.isClass = False
         self.pop(self.classStack)
+            
 
 
 
@@ -784,7 +790,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.pushError(attrName, "attribute not declared inside the class", ctx.start.line, 406)
                     sys.exit(1)
 
-                self.push(self.expStack, elem.direccion)
+                self.push(self.expStack, self.semantica.getDireccion(myVar.direccion , elem.pos))
                 self.push(self.tipoStack, elem.tipo)
                 
 
@@ -860,6 +866,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         self.returnType = str(ctx.returntypes().getChild(0))
         if self.returnType != 'void':
             #i need a global variable named the same
+            self.lastType = self.returnType
             self.insertVar('r_'+nameFunction, ctx, False, 0)
         self.isFunction = True
         self.push(self.funcStack, self.semantica.addFunction(self.tope(self.classStack), self.isPublic, nameFunction, self.returnType, self.getActualIP()))

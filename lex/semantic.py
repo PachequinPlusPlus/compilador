@@ -1,6 +1,7 @@
 from variable import variable
 from clases import clase
 from funcion import funcion
+from memory import memoria
 
 import json
 
@@ -11,10 +12,23 @@ class semantics:
     funcs = []
 
 
+
+                    # consider just integers
+    classes = []
+
+    memo = memoria(100000, 110000, 120000)
+
+
+
+
+
     def __init__(self):
         self.clases = []
 
 
+    
+    def getDireccion(self, base, pos):
+        return self.classes[base+pos]
 
 
 
@@ -24,7 +38,8 @@ class semantics:
         parsed = parsed.replace("True", 'true')
         parsed = parsed.replace("None", '"None"')
         parsed2 = json.loads(parsed)
-        #print(json.dumps(parsed2, indent=4))
+        #print(self.memo)
+
 
 
     def getAddressGlobal(self, tipo, globalClass):
@@ -35,8 +50,45 @@ class semantics:
             return globalClass.memoriaGlobal.getFlotante()
         elif tipo == "char":
             return globalClass.memoriaGlobal.getChar() 
+        else:
+            #it's a class! 
+            cl = self.getClase(tipo)
+            initial = len(self.classes)
+            sz = cl.getVariables()
+            while ( sz > 0):
+                sz = sz - 1
+                self.classes.append(0)
+
+            idx = int(initial)
+            for elem in cl.publicAtributos:
+                if elem.tipo == 'int':
+                    self.classes[idx] = (self.memo.getEntera())
+                elif elem.tipo == 'char':
+                    self.classes[idx] = (self.memo.getChar())
+                elif elem.tipo == 'float':
+                    self.classes[idx] = (self.memo.getFloat())
+                else:
+                    self.classes[idx] = getAddressGlobal(elem.tipo, globalClass)
+                    # it's a class, wtf?
+                idx = idx + 1
+
+            for elem in cl.privateAtributos:
+                if elem.tipo == 'int':
+                    self.classes[idx] = (self.memo.getEntera())
+                elif elem.tipo == 'char':
+                    self.classes[idx] = (self.memo.getChar())
+                elif elem.tipo == 'float':
+                    self.classes[idx] = (self.memo.getFloat())
+                else:
+                    self.classes[idx] = self.getAddressGlobal(elem.tipo, globalClass)
+                    # it's a class, wtf?
+                idx = idx + 1
 
 
+
+            return initial
+
+                
     
     #TODO(correguir las address temporales)
     #TODO(agregar memoria para los metodos con return?)
@@ -48,6 +100,45 @@ class semantics:
             return func.memory.getFlotante()
         elif tipo == "char":
             return func.memory.getChar() 
+        else:
+            #it's a class! 
+            cl = self.getClase(tipo)
+            initial = len(self.classes)
+            sz = cl.getVariables()
+            while ( sz > 0):
+                sz = sz - 1
+                self.classes.append(0)
+
+            idx = int(initial)
+            for elem in cl.publicAtributos:
+                if elem.tipo == 'int':
+                    self.classes[idx] = (self.memo.getEntera())
+                elif elem.tipo == 'char':
+                    self.classes[idx] = (self.memo.getChar())
+                elif elem.tipo == 'float':
+                    self.classes[idx] = (self.memo.getFloat())
+                else:
+                    self.classes[idx] = self.getAddressFunc(elem.tipo, func)
+                    # it's a class, wtf?
+                idx = idx + 1
+
+            for elem in cl.privateAtributos:
+                if elem.tipo == 'int':
+                    self.classes[idx] = (self.memo.getEntera())
+                elif elem.tipo == 'char':
+                    self.classes[idx] = (self.memo.getChar())
+                elif elem.tipo == 'float':
+                    self.classes[idx] = (self.memo.getFloat())
+                else:
+                    self.classes[idx] = self.getAddressFunc(elem.tipo, func)
+                    # it's a class, wtf?
+                idx = idx + 1
+
+
+
+            return initial
+
+             
 
 
     def reverseStack(self, stack):
@@ -196,17 +287,17 @@ class semantics:
 
     # add an attribute into a class
     def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic, arrSize):
-        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize), isPublic)
+        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize, clase.getVariables()), isPublic)
 
     # add param into a function
     #is array is always suppose to be false!!
     def addParameter(self, func, name, tipo, direccion, isArray):
-        func.appendParam(variable(name, tipo, direccion, isArray, -1))
+        func.appendParam(variable(name, tipo, direccion, isArray, -1, func.numberParams))
 
 
     # add var into a function
     def addVarFunc(self, func, name, tipo, direccion, isArray, arrSize = -1):
-        func.appendVar(variable(name, tipo, direccion, isArray, arrSize))
+        func.appendVar(variable(name, tipo, direccion, isArray, arrSize, len(func.vars)))
 
     #-------------------------------------------------------------------------------
         
