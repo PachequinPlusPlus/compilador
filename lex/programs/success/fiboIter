@@ -1,0 +1,26 @@
+program fiborec;
+
+func int fibonacciIt(int n){
+    var {
+      int retorno, i, num1, num2;;
+    }
+    if (n == 0) {
+      retorno = 0;
+    } elseif(n == 1 || n == 2) {
+      retorno = 1;
+    }
+    for(i = 3; i <= n; i = i + 1) {
+      retorno = fibo1 + fibo2;
+      fibo1 = fibo2;
+      fibo2 = retorno;
+    }
+    return retorno;
+}
+
+main {
+    var{
+        int n;
+    }
+    n = 5
+    print(fibonacciIt(n));
+}
