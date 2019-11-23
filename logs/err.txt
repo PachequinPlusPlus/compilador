@@ -1,0 +1,198 @@
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+
+
+
+
+
+
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+
+
+
+
+
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'fibo1' is not defined | line : 13
+
+
+
+
+
+
+
+
+
+
+
+

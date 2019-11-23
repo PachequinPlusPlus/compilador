@@ -93,7 +93,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             if left is None:
                 self.pushError(self.tope(self.assStack), "is not declared", ctx.start.line, 499)
                 sys.exit(1)
-            if lst.direccion > 5000:
+            if lst.direccion >= 5000:
                 self.pushCuadruplo('=', None , self.tope(self.expStack), lst.direccion)
             else:
                 self.pushCuadruplo('=', None , self.tope(self.expStack), self.semantica.getDireccion(lst.direccion, left.pos))
@@ -478,7 +478,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             operando = self.tope(self.opStack)
             if operando == '+' or operando == '-':
                 self.pop(self.opStack)
-
                 left = self.tope(self.expStack) 
                 self.pop(self.expStack)
                 right = self.tope(self.expStack) 
@@ -659,7 +658,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     
 
     def exitFparam(self, ctx):
-        while len(self.expStack) > 0 and self.tope(self.expStack) != '#':
+        while len(self.expStack) > 0 and self.tope(self.expStack) != '#' and len(self.tipoStack) > 0:
             param1 = self.tope(self.expStack)
             tipo1 = self.tope(self.tipoStack)
             self.pop(self.expStack)
@@ -807,6 +806,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             if elemento == None:
                 fToken = ctx.ID(0)
                 self.err.push("\'"+str(fToken)+"\' is not defined | line : " + str(ctx.start.line), 401)
+                sys.exit(1)
             else:
                 #TODO(FIX)
                 #TODO(Cte doesnt have a tipo)
