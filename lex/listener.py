@@ -75,6 +75,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             # clase en donde empieza
             cls = self.tope(self.classStack)
             func = self.tope(self.funcStack).name
+            left = self.semantica.existVariable(cls, func, self.tope(self.assStack))
             for i in range(len(self.assStack)-1):
                 left = self.semantica.existVariable(cls, func, self.assStack[i])
                 if left == None:
@@ -86,12 +87,16 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 cls = self.semantica.getClase(left.tipo)
                 func = None
 
+            lst = left
             left = self.semantica.existVariable(cls, func, self.tope(self.assStack))
+            self.pop(self.assStack)
             if left is None:
                 self.pushError(self.tope(self.assStack), "is not declared", ctx.start.line, 499)
                 sys.exit(1)
-
-            self.pushCuadruplo('=', None , self.tope(self.expStack), left.direccion)
+            if lst.direccion > 5000:
+                self.pushCuadruplo('=', None , self.tope(self.expStack), lst.direccion)
+            else:
+                self.pushCuadruplo('=', None , self.tope(self.expStack), self.semantica.getDireccion(lst.direccion, left.pos))
             self.pop(self.expStack)
             self.pop(self.tipoStack)
 
