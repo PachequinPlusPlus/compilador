@@ -1,0 +1,23 @@
+program factRec;
+
+func int factorial(int n) {
+  var {
+    int retorno;
+  }
+  if (n == 0) {
+    retorno = 0;
+  } elseif (n == 1) {
+    retorno = 1;
+  } else {
+    retorno = n*factorial(n-1);
+  }
+  return retorno;
+}
+
+main {
+  var {
+    int n;
+  }
+  n = 10
+  print(factorial(10), '\n');
+}

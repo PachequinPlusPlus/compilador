@@ -1,4 +1,4 @@
-program fiborec;
+program fiboIter;
 
 func int fibonacciIt(int n){
     var {
@@ -22,5 +22,5 @@ main {
         int n;
     }
     n = 5
-    print(fibonacciIt(n));
+    print(fibonacciIt(n), '\n');
 }

@@ -18,5 +18,5 @@ main {
     }
     n = 5
     fibo = fibonacci(n);
-    print(fibo);
+    print(fibo, '\n');
 }
