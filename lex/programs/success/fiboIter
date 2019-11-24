@@ -1,4 +1,4 @@
-program fiborec;
+program fiboIter;
 
 func int fibonacciIt(int n){
     var {
@@ -11,9 +11,9 @@ func int fibonacciIt(int n){
       retorno = 1;
     }
     for(i = 3; i <= n; i = i + 1) {
-      retorno = fibo1 + fibo2;
-      fibo1 = fibo2;
-      fibo2 = retorno;
+      retorno = num1 + num2;
+      num1 = num2;
+      num2 = retorno;
     }
     return retorno;
 }
@@ -23,5 +23,5 @@ main {
         int n;
     }
     n = 5;
-    print(fibonacciIt(n));
+    print(fibonacciIt(n), '\n');
 }
