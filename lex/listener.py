@@ -113,6 +113,9 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         self.push(self.classStack, self.semantica.addClass("global", None))
         self.pushCuadruplo('goto', None , None, -1)
 
+    def exitPrograma(self, ctx):
+        pass
+
     def enterCiclo(self, ctx):
         self.push(self.jmpLoop, len(self.cuadruplos))
 
@@ -227,11 +230,16 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         if self.myCte.get(val) is not None:
             return self.myCte[val]
         if tipo == 'int':
+            op = 'CI'
             self.myCte[val] = self.constantes.getEntera()
         elif tipo == 'float':
+            op = 'CF'
             self.myCte[val] = self.constantes.getFlotante()
         elif tipo == 'char':
+            op = 'CC'
             self.myCte[val] = self.constantes.getChar()
+
+        self.pushCuadruplo(op, None , val, self.myCte[val])
         return self.myCte[val]
 
 
@@ -439,17 +447,22 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
     def enterCte(self, ctx):
         tipos = 'void'
+        op = ''
         if ctx.INT() is not None:
             val = ctx.INT()
             tipos = 'int'
+            op = 'CI'
         elif ctx.FLOAT() is not None:
             val = ctx.FLOAT()
             tipos = 'float'
+            op = 'CF'
         elif ctx.CHAR() is not None:
             val = ctx.CHAR()
             tipos = 'char'
-#        self.push(self.expStack, str(val))
-        self.push(self.expStack, self.getCteDir(str(val), tipos))
+            op = 'CC'
+
+        cteDir = self.getCteDir(str(val), tipos)
+        self.push(self.expStack, cteDir)
         self.push(self.tipoStack, tipos)
 
 
@@ -651,6 +664,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
     def enterFparam(self, ctx):
         self.push(self.expStack, '#')
+        self.push(self.opStack, '#')
         self.push(self.parameters, 'T')
         self.push(self.tipos, 'T')
 
@@ -668,6 +682,9 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
         if len(self.expStack) > 0 and self.tope(self.expStack) == '#':
             self.pop(self.expStack)
+
+        if len(self.opStack) > 0 and self.tope(self.opStack) == '#':
+            self.pop(self.opStack)
 
 
         
@@ -737,7 +754,11 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.pushError(str(ctx.ID(0)), "the function has type return void", ctx.start.line, 408)
                     sys.exit(1)
                 else:
-                    self.push(self.expStack , self.getReturnAddrs(myFunc.name, self.tope(self.classStack)))
+                    #put the result from r_funcName into a temp
+                    resultAddress = self.getAddress(myFunc.tipoRetorno)
+                    rtn = self.getReturnAddrs(myFunc.name, self.tope(self.classStack))
+                    self.pushCuadruplo('=',None , rtn, resultAddress)
+                    self.push(self.expStack , resultAddress)
                     self.push(self.tipoStack, myFunc.tipoRetorno)
 
 

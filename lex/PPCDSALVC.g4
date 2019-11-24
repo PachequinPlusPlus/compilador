@@ -260,7 +260,38 @@ parent:
 
 INT : [1-9][0-9]* | [0];
 FLOAT : [0-9]*'.'[0-9]+;
-CHAR : '\''.'\'';
+CHAR: '\'' (~['\\\r\n\u0085\u2028\u2029] | CommonCharacter) '\'';
+
+fragment CommonCharacter
+    : SimpleEscapeSequence
+    | HexEscapeSequence
+    | UnicodeEscapeSequence
+    ;
+    fragment SimpleEscapeSequence
+    : '\\\''
+    | '\\"'
+    | '\\\\'
+    | '\\0'
+    | '\\a'
+    | '\\b'
+    | '\\f'
+    | '\\n'
+    | '\\r'
+    | '\\t'
+    | '\\v'
+    ;
+    fragment HexEscapeSequence
+    : '\\x' [0-9a-fA-F]
+    | '\\x' [0-9a-fA-F][0-9a-fA-F]
+    | '\\x' [0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]
+    | '\\x' [0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]
+    ;
+
+fragment UnicodeEscapeSequence
+    : '\\u' [0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]
+    | '\\U' [0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]
+            [0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]
+    ;
 MAS : '+';
 MENOS : '-';
 MULT : '*';

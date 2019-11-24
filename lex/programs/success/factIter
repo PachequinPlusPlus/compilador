@@ -7,7 +7,7 @@ func int factorial(int n) {
   if (n == 0) {
     retorno = 0;
   } else {
-    retorno = 1
+    retorno = 1;
     for (i = 2; i <= n; i = i+1) {
       retorno = retorno*i;
     }
@@ -19,6 +19,6 @@ main {
   var {
     int n;
   }
-  n = 10
+  n = 10;
   print(factorial(10), '\n');
 }

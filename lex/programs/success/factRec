@@ -18,6 +18,6 @@ main {
   var {
     int n;
   }
-  n = 10
+  n = 10;
   print(factorial(10), '\n');
 }

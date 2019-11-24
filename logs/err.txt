@@ -197,3 +197,266 @@ type mismatch : float and char | line 8
 
 
 
+
+22:0: sintax ERROR, mismatched input '}' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+22:0: sintax ERROR, mismatched input '}' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+
+
+
+
+
+
+
+22:4: sintax ERROR, extraneous input 'print' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+22:4: sintax ERROR, extraneous input 'print' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+11:4: sintax ERROR, no viable alternative at input 'var{inti,retorno;}if(n==0){retorno=0;}else{retorno=1for'
+
+
+11:4: sintax ERROR, no viable alternative at input 'var{inti,retorno;}if(n==0){retorno=0;}else{retorno=1for'
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+23:2: sintax ERROR, missing ';' at 'print'
+
+
+23:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
