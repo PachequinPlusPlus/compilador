@@ -59,9 +59,7 @@ class VM:
   def execute(self, quads):
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
-      print(self.ip[len(self.ip)-1])
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
-      print(self.ip[len(self.ip)-1], current_quad)
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
@@ -114,9 +112,11 @@ class VM:
         left_operand = self.convert_left(current_quad[1])
         self.dict_params.append((current_quad[3], left_operand))
       elif current_quad[0] == mappingQuads.ERA_I:
-        self.local_memory.append([[], [], []])
+        # self.local_memory.append([[], [], []])
+        pass
       elif current_quad[0] == mappingQuads.GOSUB_I:
         self.ip.append(current_quad[3] - 1)
+        self.local_memory.append([[], [], []])
         for val in self.dict_params:
           self.set_value(val[0], val[1])
       elif current_quad[0] == mappingQuads.ENDPROC_I:
