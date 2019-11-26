@@ -69,7 +69,7 @@ class VM:
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
 
-#      print(self.ip[len(self.ip)-1])   
+     # print(self.ip[len(self.ip)-1])   
       
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
       # Start mapping of operations
@@ -193,6 +193,7 @@ class VM:
           raise IndexError(f"PPC The index {index} is out of range")
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
         left_operand = self.convert_left(current_quad[1])
+        print(left_operand, current_quad[2], current_quad[3])
         self.set_value(current_quad[3], self.get_value(left_operand + int(current_quad[2])))
 
       elif current_quad[0] == mappingQuads.IGUAL_I:
@@ -223,6 +224,7 @@ class VM:
       self.quadruples = pickle.load(file)
 
   def get_value(self, direccion):
+    direccion = int(direccion)
     memory_type = self.get_memory_type(direccion)
     self.generateChunkMemory(direccion)
     if (memory_type == "global"):
@@ -235,6 +237,7 @@ class VM:
       return self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset]  
     
   def set_value(self, direccion, value):
+    direccion = int(direccion)
     self.generateChunkMemory(direccion)
     memory_type = self.get_memory_type(direccion)
     tipo = self.get_type(direccion)
@@ -262,6 +265,7 @@ class VM:
       self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset] = newValue
       
   def generateChunkMemory(self, direccion):
+    direccion = int(direccion)
     memory_type = self.get_memory_type(direccion) 
     default = self.get_default_type(direccion)
     if (memory_type == "global"):

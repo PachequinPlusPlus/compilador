@@ -435,17 +435,23 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
 
     def getCteDir(self, val, tipo):
-        if self.myCte.get(val) is not None:
-            return self.myCte[val]
-        if tipo == 'int':
+        if self.myCte.get(val) is None  and tipo == 'int':
             op = 'CI'
             self.myCte[val] = self.constantes.getEntera()
-        elif tipo == 'float':
+        elif self.myCte.get(val) is None and tipo == 'float':
             op = 'CF'
             self.myCte[val] = self.constantes.getFlotante()
-        elif tipo == 'char':
+        elif self.myCte.get(val) is None and tipo == 'char':
             op = 'CC'
             self.myCte[val] = self.constantes.getChar()
+
+        if tipo == 'int':
+            op = 'CI'
+        elif tipo == 'float':
+            op = 'CF'
+        elif tipo == 'char':
+            op = 'CC'
+
         self.pushCuadruplo(op, None , val, self.myCte[val])
         self.myCteB[self.myCte[val]] = val
         return self.myCte[val]

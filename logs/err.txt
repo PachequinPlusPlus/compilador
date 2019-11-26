@@ -7061,3 +7061,26 @@ type mismatch : char and int | line 7
 
 
 
+
+15:16: sintax ERROR, no viable alternative at input 'var{intaux[100000],m,left,right,k;}if(l<r){m=(l+r)/2;mergeSort(l,m);mergeSort(m+1,r);left=0,'
+
+
+41:27: sintax ERROR, no viable alternative at input 'var{intaux[100000],m,left,right,k;}if(l<r){m=(l+r)/2;mergeSort(l,m);mergeSort(m+1,r);left=0;right=m+1;k=0;while(left<=m&&right<=r){if(arreglo[left]<=arreglo[right]){aux[k]=arreglo[left];left=left+1;}else{aux[k]=arreglo[right];right=right+1;}k=k+1;}while(left<=m){aux[k]=arreglo[left];left=left+1;k=k+1;}while(right<=r){aux[k]=arreglo[right];right=right+1;k=k+1;}for(i=0;i<k;i+'
+
+
+57:2: sintax ERROR, missing ';' at '}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
