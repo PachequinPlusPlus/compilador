@@ -269,22 +269,22 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
                 resultAddress = -1
                 if sz >= 61000 and sz <= 71000:
-                    sz = int(self.myCteB[sz])
                     resultAddress = sz
+                    sz = int(self.myCteB[sz])
                 else:
                     resultAddress = self.getAddress('int')
                     self.pushCuadruplo('+_val_address', sz, direccion,  resultAddress)
                     sz = resultAddress
 
                 size = left.array.getSize()
-                self.pushCuadruplo('VALID', 0 , size, sz)
+                self.pushCuadruplo('VALID', 0 , sz, resultAddress)
 
                 self.push(self.expStack, rightValue)
                 self.push(self.tipoStack, 'void')
                 direccion = resultAddress
 
 
-            print(left.tipo, tipazo)
+           # print(left, left.tipo, tipazo)
             resultT = self.semantica.cube[left.tipo][tipazo]['='] 
             if resultT == "err":
                 self.err.push("type mismatch : "+left.tipo+" and "+tipazo+" | line "+str(ctx.start.line), 403)
