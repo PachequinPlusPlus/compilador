@@ -427,6 +427,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             self.pop(self.expStack)
             self.pop(self.tipoStack)
 
+            print(ctx.start.line)
             self.pushCuadruplo('=', None, right, addr)
         
 

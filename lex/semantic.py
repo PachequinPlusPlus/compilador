@@ -35,7 +35,7 @@ class semantics:
         parsed = parsed.replace("True", 'true')
         parsed = parsed.replace("None", '"None"')
         parsed2 = json.loads(parsed)
-        #print(json.dumps(parsed2, indent=4, sort_keys=True))
+#        print(json.dumps(parsed2, indent=4, sort_keys=True))
 
     #def getDireccion(self, dirr, pos):
     #    return -1
