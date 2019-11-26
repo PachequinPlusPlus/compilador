@@ -996,12 +996,12 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 #ok, it does exist, but is it the same?
                 myFunc = self.semantica.getFunc(self.tope(self.classStack), str(ctx.ID(0)))
                 self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
+                self.pushCuadruplo('SET', None , self.tope(self.classStack).name, self.tope(self.classStack).offSet)
                 if self.compareFunctions(myFunc) == False:
                     self.pushError(str(ctx.ID(0)), "the function doesnt not match", ctx.start.line, 409)
                     sys.exit(1)
 
                 #set offset to the going function
-                self.pushCuadruplo('SET', None , self.tope(self.classStack).name, self.tope(self.classStack).offSet)
 
                 if myFunc.tipoRetorno == 'void':
                     self.pushError(str(ctx.ID(0)), "the function has type return void", ctx.start.line, 408)
