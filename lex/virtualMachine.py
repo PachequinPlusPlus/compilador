@@ -60,6 +60,7 @@ class VM:
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
+      print(self.ip[len(self.ip)-1], current_quad)
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
@@ -125,7 +126,7 @@ class VM:
         # clear params
         self.params = {}
         self.offset.pop()
-        self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]         
+        self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]-1      
       elif current_quad[0] == mappingQuads.CI_I:
         self.set_value(current_quad[3], int(current_quad[2]))
       elif current_quad[0] == mappingQuads.CF_I:
@@ -212,7 +213,6 @@ class VM:
     except:
       # TODO(CorrectError??)
       raise ValueError(f"Failed at parsing value={value}")
-
     if (memory_type == "global"):
       self.global_memory[direccion//sizeMemory][direccion%sizeMemory-initialOffset] = newValue
     elif (memory_type == "local"):
