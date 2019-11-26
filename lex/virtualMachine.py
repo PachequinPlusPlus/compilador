@@ -59,6 +59,7 @@ class VM:
   def execute(self, quads):
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
+      print(self.ip[len(self.ip)-1])
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
@@ -160,7 +161,6 @@ class VM:
       elif current_quad[0] == mappingQuads.IGUAL_I:
         right_operand = self.convert_right(current_quad[2])
         typeOp = self.get_type(current_quad[2])
-        print(right_operand, typeOp)
         if (typeOp == "float"):
           right_operand = float(right_operand)
         elif (typeOp == "int"):
