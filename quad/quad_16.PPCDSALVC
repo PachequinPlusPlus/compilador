@@ -1,0 +1,5 @@
+0000 :            goto       None       None          1
+0001 :              CI       None          3      61000
+0002 :              CI       None         33      61001
+0003 :           VALID          0        300          3
+0004 :               =       None      61001          3
