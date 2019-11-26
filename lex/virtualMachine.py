@@ -102,11 +102,11 @@ class VM:
       elif current_quad[0] == mappingQuads.GOTO_I:
         self.ip[len(self.ip)-1] = current_quad[3] - 1
       elif current_quad[0] == mappingQuads.GOTOF_I:
-        left_operand = convert_left(current_quad[1])
+        left_operand = self.convert_left(current_quad[1])
         if not left_operand:
           self.ip[len(self.ip)-1] = current_quad[3] - 1
       elif current_quad[0] == mappingQuads.PARAM_I:
-        left_operand = convert_left(current_quad[1])
+        left_operand = self.convert_left(current_quad[1])
         self.dict_params[current_quad[3]] = self.get_value(left_operand)
       elif current_quad[0] == mappingQuads.GOSUB_I:
         self.ip.append(current_quad[3] - 1)
@@ -139,8 +139,11 @@ class VM:
         except:
           raise IndexError(f"The index {index} is out of range")
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
-        left_operand = convert_left(current_quad[1])
+        left_operand = self.convert_left(current_quad[1])
         self.set_value(current_quad[3], left_operand + int(current_quad[2]))
+      elif current_quad[0] == mappingQuads.IGUAL_I:
+        right_operand = self.convert_right(current_quad[2])
+        self.set_value(current_quad[3], right_operand)
       else:
         raise KeyError(f"{current_quad[0]} is not handled")
 
@@ -156,11 +159,11 @@ class VM:
   def get_value(self, direccion):
     memory_type = self.get_memory_type(direccion)
     if (memory_type == "global"):
-      return self.global_memory[direccion/sizeMemory][direccion%sizeMemory-initialOffset]
+      return self.global_memory[direccion//sizeMemory][direccion%sizeMemory-initialOffset]
     elif (memory_type == "local"):
-      return self.local_memory[len(self.local_memory)-1][direccion/sizeMemory-localOffset][direccion%sizeMemory-initialOffset]
+      return self.local_memory[len(self.local_memory)-1][direccion//sizeMemory-localOffset][direccion%sizeMemory-initialOffset]
     elif (memory_type == "char"):
-      return self.constant_memory[direccion/sizeMemory - constantOffset][direccion%sizeMemory-initialOffset]  
+      return self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset]  
     
   def set_value(self, direccion, value):
     self.generateChunkMemory(direccion)
