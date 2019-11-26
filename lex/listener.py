@@ -445,7 +445,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             myFunc = self.semantica.getFunc(self.semantica.getClase(self.mClass),  str(ctx.ID()))
             # ERA
             self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
-            self.pushCuadruplo('SET', None , None, self.offSet)
+            self.pushCuadruplo('SET', None , self.mClass, self.offSet)
             if self.compareFunctions(myFunc) == False:
                 self.pushError(str(ctx.ID()), "the function doesnt not match", ctx.start.line, 409)
                 sys.exit(1)
@@ -955,7 +955,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
             dirr = self.tope(self.classStack).offSet
             # set offset back to zero
-            self.pushCuadruplo('SET', None , None, dirr)
+            self.pushCuadruplo('SET', None , self.tope(self.classStack).name, dirr)
 
             if self.compareFunctions(myFunc) == False:
                 self.pushError(str(ctx.ID()), "the function doesnt not match", ctx.start.line, 409)
@@ -981,7 +981,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     sys.exit(1)
 
                 #set offset to the going function
-                self.pushCuadruplo('SET', None , None, self.tope(self.classStack).offSet)
+                self.pushCuadruplo('SET', None , self.tope(self.classStack).name, self.tope(self.classStack).offSet)
 
                 if myFunc.tipoRetorno == 'void':
                     self.pushError(str(ctx.ID(0)), "the function has type return void", ctx.start.line, 408)
@@ -1028,7 +1028,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     myFunc = self.semantica.getFunc(cls, metodoName)
 
                     self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
-                    self.pushCuadruplo('SET', None , None, cls.offSet)
+                    self.pushCuadruplo('SET', None , cls.name, cls.offSet)
                     if self.compareFunctions(myFunc) == False:
                         self.pushError(metodoName, "the function doesnt not match", ctx.start.line, 409)
                         sys.exit(1)
