@@ -25,6 +25,7 @@ DIFERENTE = "!="
 VALID = "VALID"
 SUM_VAL_ADDRESS = "+_val_address"
 SET = "SET"
+READ = "READ"
 # TODO(Do we have return)
 
 
@@ -55,7 +56,8 @@ mapQuadsList = [
   DIFERENTE,
   VALID,
   SUM_VAL_ADDRESS,
-  SET
+  SET,
+  READ
 ]
 
 GOTO_I = 0
@@ -85,3 +87,4 @@ DIFERENTE_I = 23
 VALID_I = 24
 SUM_VAL_ADDRESS_I = 25
 SET_I = 26
+READ_I = 27

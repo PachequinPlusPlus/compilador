@@ -73,6 +73,134 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     funcStack = []
 
 
+    def exitEntrada(self, ctx):
+        #attr
+        if(ctx.attr() is not None):
+            # ID is an instance, and its attr
+            claseName = str(ctx.ID())
+            varName = str(ctx.attr().ID())
+
+            cls = self.tope(self.classStack)
+            func = self.tope(self.funcStack).name
+
+            left = self.semantica.existVariable(cls, func, claseName)
+            if left is None:
+                self.pushError(claseName, "var is not defined", ctx.start.line, 401)
+                sys.exit(1)
+            right = self.semantica.existInClass(self.semantica.getClase(left.tipo), varName)
+            if right is None:
+                self.pushError(right, "var is not defined", ctx.start.line, 401)
+                sys.exit(1)
+            direccion = left.direccion + right.direccion
+            self.pushCuadruplo('READ', None , None, direccion)
+        else:
+            elemento  = self.semantica.existVariable(self.tope(self.classStack), self.tope(self.funcStack).name, str(ctx.ID()))
+            if elemento == None:
+                self.err.push("\'"+str(fToken)+"\' is not defined | line : " + str(ctx.start.line), 401)
+                sys.exit(1)
+            else:
+                direccion = elemento.direccion
+                if ( ctx.arreglo() is not None ):
+                    # getting array size ? arr[exp]
+
+                    if elemento.isArray is False:
+                        self.pushError(elemento, "is not an array", ctx.start.line, 513)
+                        sys.exit(1)
+
+
+                    size = elemento.array.getSize()
+                        # lo que apunet a esa direccion bro
+                    self.pushCuadruplo('VALID', 0 , size, self.tope(self.expStack))
+                    # sz to check
+
+                    pos = -1
+
+                    # dentro del rango de ctes enteras
+                    if self.tope(self.expStack) >= 61000 and self.tope(self.expStack) <= 71000:
+                        #  pos es el valor original de la cte
+                        pos = direccion + int(self.myCteB[self.tope(self.expStack)])
+                        self.pop(self.expStack)
+                    else:
+                        # i need to sum to elemento.direccion + X equivalent
+                        # i need a temporal address
+                        resultAddress = self.getAddress('int')
+                                                            # what is in this address  sumaselo a esto  to this one y ponlo aqui
+                        self.pushCuadruplo('+_val_address', self.tope(self.expStack), elemento.direccion,  resultAddress)
+                        self.pop(self.expStack)
+                        pos = resultAddress
+
+                    self.pushCuadruplo('READ', None , None, pos)
+                else:
+                    self.pushCuadruplo('READ', None , None, elemento.direccion)
+
+    def exitEntradaaux(self, ctx):
+        #attr
+        if(ctx.ID() is None):
+            return
+        if(ctx.attr() is not None):
+            # ID is an instance, and its attr
+            claseName = str(ctx.ID())
+            varName = str(ctx.attr().ID())
+
+            cls = self.tope(self.classStack)
+            func = self.tope(self.funcStack).name
+
+            left = self.semantica.existVariable(cls, func, claseName)
+            if left is None:
+                self.pushError(claseName, "var is not defined", ctx.start.line, 401)
+                sys.exit(1)
+            right = self.semantica.existInClass(self.semantica.getClase(left.tipo), varName)
+            if right is None:
+                self.pushError(right, "var is not defined", ctx.start.line, 401)
+                sys.exit(1)
+            direccion = left.direccion + right.direccion
+            self.pushCuadruplo('READ', None , None, direccion)
+        else:
+            elemento  = self.semantica.existVariable(self.tope(self.classStack), self.tope(self.funcStack).name, str(ctx.ID()))
+            if elemento == None:
+                fToken = ctx.ID()
+                self.err.push("\'"+str(fToken)+"\' is not defined | line : " + str(ctx.start.line), 401)
+                sys.exit(1)
+            else:
+                direccion = elemento.direccion
+                if ( ctx.arreglo() is not None ):
+                    # getting array size ? arr[exp]
+
+                    if elemento.isArray is False:
+                        self.pushError(elemento, "is not an array", ctx.start.line, 513)
+                        sys.exit(1)
+
+
+                    size = elemento.array.getSize()
+                        # lo que apunet a esa direccion bro
+                    self.pushCuadruplo('VALID', 0 , size, self.tope(self.expStack))
+                    # sz to check
+
+                    pos = -1
+
+                    # dentro del rango de ctes enteras
+                    if self.tope(self.expStack) >= 61000 and self.tope(self.expStack) <= 71000:
+                        #  pos es el valor original de la cte
+                        pos = direccion + int(self.myCteB[self.tope(self.expStack)])
+                        self.pop(self.expStack)
+                    else:
+                        # i need to sum to elemento.direccion + X equivalent
+                        # i need a temporal address
+                        resultAddress = self.getAddress('int')
+                                                            # what is in this address  sumaselo a esto  to this one y ponlo aqui
+                        self.pushCuadruplo('+_val_address', self.tope(self.expStack), elemento.direccion,  resultAddress)
+                        self.pop(self.expStack)
+                        pos = resultAddress
+
+                    self.pushCuadruplo('READ', None , None, pos)
+                else:
+                    self.pushCuadruplo('READ', None , None, elemento.direccion)
+
+
+
+
+
+
     def enterAssignment(self, ctx):
         #meter todos los ids
         self.push(self.assStack, str(ctx.ID()))
@@ -301,8 +429,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         self.pushCuadruplo(op, None , val, self.myCte[val])
         self.myCteB[self.myCte[val]] = val
         return self.myCte[val]
-
-
 
 
 
