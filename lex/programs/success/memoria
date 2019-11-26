@@ -1,0 +1,23 @@
+program ravioli; 
+var {
+	int x;
+}
+
+class a{
+    public:
+        var {
+            int xx;
+        }
+        func void printX(){
+            print(xx);
+        }
+}
+
+main {
+var{
+    int xx;
+    a first, second;
+}
+    print(xx);
+    print(first.xx, second.xx);
+}

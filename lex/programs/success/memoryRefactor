@@ -1,0 +1,26 @@
+program ravioli; 
+
+var {
+    int x;
+    char yy;
+}
+
+class owner{
+    public:
+        var {
+            int edad;
+            char initial;
+        }
+        func void printEdad(){
+            print(edad);
+        }
+}
+
+main {
+var{
+    int x2;
+    owner juan;
+}
+    print(juan.edad);
+    
+}

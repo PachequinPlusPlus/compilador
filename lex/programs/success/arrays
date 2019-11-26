@@ -1,0 +1,10 @@
+program ravioli; 
+var {
+	int y[300];
+}
+main {
+var{
+    int xx;
+}
+    y[3] = 33;
+}

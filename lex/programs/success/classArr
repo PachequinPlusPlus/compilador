@@ -1,0 +1,18 @@
+program ravioli; 
+
+class cat {
+    public:
+    var{
+        int edad;
+    }
+    func void printEdad(){
+        print(edad);
+    }
+}
+main {
+var{
+    cat ravioli, michi;
+}
+    ravioli.printEdad();
+    michi.printEdad();
+}

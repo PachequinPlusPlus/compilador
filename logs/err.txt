@@ -460,3 +460,1654 @@ type mismatch : float and char | line 8
 
 
 
+
+
+'xx' is not declared | line : 30
+
+
+'xx' is not declared | line : 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'juguete' class doesnt exists | line : 40
+
+
+
+
+
+
+
+
+
+
+'mascota' is not declared | line : 45
+
+
+
+
+
+
+
+
+
+45:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+44:22: sintax ERROR, mismatched input '.' expecting ';'
+
+
+
+'sayX' the function doesnt not match | line : 45
+
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting ';'
+
+
+
+
+'miFlotante' is not defined | line : 18
+
+
+
+
+
+11:8: sintax ERROR, mismatched input 'function' expecting '}'
+
+
+
+
+16:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+16:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+13:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+21:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'initial' is not a class | line : 46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+76:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+76:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+
+
+
+
+
+71:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+71:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+72:8: sintax ERROR, missing ';' at 'arr'
+
+
+72:8: sintax ERROR, missing ';' at 'arr'
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14:8: sintax ERROR, extraneous input 'int' expecting ID
+
+
+15:25: sintax ERROR, no viable alternative at input 'i+'
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:8: sintax ERROR, mismatched input 'int' expecting '}'
+
+
+18:16: sintax ERROR, mismatched input '.' expecting '='
+
+
+'michi' var is not defined | line : 17
+
+
+'car' class doesnt exists | line : 15
+
+
+'michi' var is not defined | line : 18
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+
+
+11:4: sintax ERROR, mismatched input 'private' expecting '}'
+
+
+
+
+
+
+'initial' attribute not declared inside the class | line : 13
+
+
+
+
+'initial' is not defined | line : 10
+
+
+
+
+
+
+'initial' attribute not declared inside the class | line : 17
+
+
+
+
+'initial' attribute not declared inside the class | line : 17
+
+
+
+'getEdad' method not declared | line : 21
+
+
+
+
+'getEdad' method not declared | line : 21
+
+
+'getEdad' method not declared | line : 21
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'x' is not a attribute | line : 35
+'edad' attribute not declared inside the class | line : 51
+
+
+'x' is not a attribute | line : 35
+'edad' attribute not declared inside the class | line : 51
+
+
+
+
+
+
+
+
+'x' is not a attribute | line : 30
+'edad' attribute not declared inside the class | line : 46
+
+
+'x' is not a attribute | line : 30
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'miChar' is not a attribute | line : 20
+'x' is not a attribute | line : 21
+'a' is not a attribute | line : 31
+'edad' attribute not declared inside the class | line : 32
+
+
+'miChar' is not a attribute | line : 20
+'x' is not a attribute | line : 21
+'a' is not a attribute | line : 31
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 44
+
+
+'xx' is not a attribute | line : 20
+'temp' is not a attribute | line : 44
+'a' is not a attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'xx' is not an attribute | line : 20
+'temp' is not an attribute | line : 44
+'a' is not an attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'edad' attribute not declared inside the class | line : 54
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

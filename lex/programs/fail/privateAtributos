@@ -1,0 +1,22 @@
+program ravioli; 
+
+class cat {
+    private:
+    var{
+        char initial;
+    }
+        func int getEdad(){
+            return 5;
+        }
+    public:
+        func void printInitial(){
+            print(initial);
+        }
+}
+main {
+var{
+    cat michi;
+    int x;
+}
+    x = michi.getEdad();
+}

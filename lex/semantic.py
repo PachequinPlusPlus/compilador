@@ -16,7 +16,6 @@ class semantics:
                     # consider just integers
     classes = []
 
-    memo = memoria(100000, 110000, 120000)
 
 
 
@@ -27,8 +26,6 @@ class semantics:
 
 
     
-    def getDireccion(self, base, pos):
-        return self.classes[base+pos]
 
 
 
@@ -40,8 +37,8 @@ class semantics:
         parsed2 = json.loads(parsed)
         #print(json.dumps(parsed2, indent=4, sort_keys=True))
 
-
-
+    #def getDireccion(self, dirr, pos):
+    #    return -1
 
     def getAddressGlobal(self, tipo, globalClass):
         #TODO(que hacer para las clases?)
@@ -52,43 +49,8 @@ class semantics:
         elif tipo == "char":
             return globalClass.memoriaGlobal.getChar() 
         else:
-            #it's a class! 
-            cl = self.getClase(tipo)
-            initial = len(self.classes)
-            sz = cl.getVariables()
-            while ( sz > 0):
-                sz = sz - 1
-                self.classes.append(0)
-
-            idx = int(initial)
-            for elem in cl.publicAtributos:
-                if elem.tipo == 'int':
-                    self.classes[idx] = (self.memo.getEntera())
-                elif elem.tipo == 'char':
-                    self.classes[idx] = (self.memo.getChar())
-                elif elem.tipo == 'float':
-                    self.classes[idx] = (self.memo.getFloat())
-                else:
-                    self.classes[idx] = getAddressGlobal(elem.tipo, globalClass)
-                    # it's a class, wtf?
-                idx = idx + 1
-
-            for elem in cl.privateAtributos:
-                if elem.tipo == 'int':
-                    self.classes[idx] = (self.memo.getEntera())
-                elif elem.tipo == 'char':
-                    self.classes[idx] = (self.memo.getChar())
-                elif elem.tipo == 'float':
-                    self.classes[idx] = (self.memo.getFloat())
-                else:
-                    self.classes[idx] = self.getAddressGlobal(elem.tipo, globalClass)
-                    # it's a class, wtf?
-                idx = idx + 1
-
-
-
-            return initial
-
+            # class
+            return -1
                 
     
     #TODO(correguir las address temporales)
@@ -102,42 +64,8 @@ class semantics:
         elif tipo == "char":
             return func.memory.getChar() 
         else:
-            #it's a class! 
-            cl = self.getClase(tipo)
-            initial = len(self.classes)
-            sz = cl.getVariables()
-            while ( sz > 0):
-                sz = sz - 1
-                self.classes.append(0)
-
-            idx = int(initial)
-            for elem in cl.publicAtributos:
-                if elem.tipo == 'int':
-                    self.classes[idx] = (self.memo.getEntera())
-                elif elem.tipo == 'char':
-                    self.classes[idx] = (self.memo.getChar())
-                elif elem.tipo == 'float':
-                    self.classes[idx] = (self.memo.getFloat())
-                else:
-                    self.classes[idx] = self.getAddressFunc(elem.tipo, func)
-                    # it's a class, wtf?
-                idx = idx + 1
-
-            for elem in cl.privateAtributos:
-                if elem.tipo == 'int':
-                    self.classes[idx] = (self.memo.getEntera())
-                elif elem.tipo == 'char':
-                    self.classes[idx] = (self.memo.getChar())
-                elif elem.tipo == 'float':
-                    self.classes[idx] = (self.memo.getFloat())
-                else:
-                    self.classes[idx] = self.getAddressFunc(elem.tipo, func)
-                    # it's a class, wtf?
-                idx = idx + 1
-
-
-
-            return initial
+            # class
+            return -1
 
              
 
@@ -182,14 +110,14 @@ class semantics:
 
 
     #TODO(checar que tenga el mismo numero de parametros)
-    def checkFunctionExists(self, clase, funcName, isPublic = True):
+    def checkFunctionExists(self, clase, funcName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
                 for func in cl.publicMetodos:
                     if func.name == funcName:
                         return True
                 for func in cl.privateMetodos:  
-                    if isPublic and func.name == funcName:
+                    if canPrivate and func.name == funcName:
                         return True
                 if cl.parent is not None:
                     return self.checkFunctionExists(self.getClase(cl.parent), funcName, False)
@@ -224,7 +152,7 @@ class semantics:
 
     #TODO(optimizar esto)
     # estamos mandando el nombre de la clase, en vez de mandar la instancia directamente duuhh
-    def existVariable(self, clase, funcName, varName):
+    def existVariable(self, clase, funcName, varName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
                 for func in cl.publicMetodos:
@@ -237,7 +165,7 @@ class semantics:
                                 return var
                         
                 for func in cl.privateMetodos:  
-                    if func.name == funcName:
+                    if canPrivate and func.name == funcName:
                         if func.name == funcName:
                             for param in func.params:
                                 if param.name == varName:
@@ -249,7 +177,7 @@ class semantics:
                     if atr.name == varName:
                         return atr
                 for atr in cl.privateAtributos:
-                    if atr.name == varName:
+                    if canPrivate and atr.name == varName:
                         return atr
 
 
@@ -288,17 +216,17 @@ class semantics:
 
     # add an attribute into a class
     def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic, arrSize):
-        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize, clase.getVariables()), isPublic)
+        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize,), isPublic, self)
 
     # add param into a function
     #is array is always suppose to be false!!
     def addParameter(self, func, name, tipo, direccion, isArray):
-        func.appendParam(variable(name, tipo, direccion, isArray, -1, func.numberParams))
+        func.appendParam(variable(name, tipo, direccion, isArray, -1))
 
 
     # add var into a function
     def addVarFunc(self, func, name, tipo, direccion, isArray, arrSize = -1):
-        func.appendVar(variable(name, tipo, direccion, isArray, arrSize, len(func.vars)))
+        func.appendVar(variable(name, tipo, direccion, isArray, arrSize, ), self)
 
     #-------------------------------------------------------------------------------
         
