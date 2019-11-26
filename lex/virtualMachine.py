@@ -8,16 +8,20 @@ localOffset = 3
 constantOffset = 6
 classOffset = 9
 direcciones = [1000,11000,21000,31000,41000,51000,61000,71000,81000,91000,101000,111000,121000,131000,141000,151000]
+
 class VM:
   def __init__(self):
     self.quadruples = []
     self.ip = [0]
     self.auxIp = 0
 
-    self.dict_params = {}
+    self.offset = [(0, 'global')]
+    self.dict_params = []
     self.global_memory = [[], [], []]
     self.local_memory = [[[], [], []]]
     self.constant_memory = [[], [], []]
+    self.class_global_memory = [[], [], []]
+    self.class_local_memory = [[[], [], []]]
 
   def get_type(self, direccion):
     for i in range(len(direcciones) - 1):
@@ -106,12 +110,13 @@ class VM:
           self.ip[len(self.ip)-1] = current_quad[3] - 1
       elif current_quad[0] == mappingQuads.PARAM_I:
         left_operand = self.convert_left(current_quad[1])
-        self.dict_params[current_quad[3]] = self.get_value(left_operand)
+        self.dict_params.append((current_quad[3], left_operand))
+      elif current_quad[0] == mappingQuads.ERA_I:
+        self.local_memory.append([[], [], []])
       elif current_quad[0] == mappingQuads.GOSUB_I:
         self.ip.append(current_quad[3] - 1)
-        self.local_memory.append([[], [], []])
-        for key, value in self.dict_params:
-          self.set_value(key, value)
+        for val in self.dict_params:
+          self.set_value(val[0], val[1])
       elif current_quad[0] == mappingQuads.ENDPROC_I:
         # get previous ip
         self.ip.pop()
@@ -119,6 +124,7 @@ class VM:
         self.local_memory.pop()
         # clear params
         self.params = {}
+        self.offset.pop()
       elif current_quad[0] == mappingQuads.CI_I:
         self.set_value(current_quad[3], int(current_quad[2]))
       elif current_quad[0] == mappingQuads.CF_I:
@@ -153,7 +159,19 @@ class VM:
         self.set_value(current_quad[3], left_operand + int(current_quad[2]))
       elif current_quad[0] == mappingQuads.IGUAL_I:
         right_operand = self.convert_right(current_quad[2])
+        typeOp = self.get_type(current_quad[2])
+        print(right_operand, typeOp)
+        if (typeOp == "float"):
+          right_operand = float(right_operand)
+        elif (typeOp == "int"):
+          right_operand = int(right_operand)
         self.set_value(current_quad[3], right_operand)
+      elif current_quad[0] == mappingQuads.SET_I:
+        right_operand = str(current_quad[2])
+        if self.offset[len(self.offset)-1][1] != right_operand:
+          self.offset.append((self.offset[len(self.offset)-1][0]+current_quad[3], right_operand))
+        else:
+          self.offset.append((self.offset[len(self.offset)-1][0], right_operand)) 
       else:
         raise KeyError(f"{current_quad[0]} is not handled")
 
