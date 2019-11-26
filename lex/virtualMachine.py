@@ -125,6 +125,7 @@ class VM:
         # clear params
         self.params = {}
         self.offset.pop()
+        self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]         
       elif current_quad[0] == mappingQuads.CI_I:
         self.set_value(current_quad[3], int(current_quad[2]))
       elif current_quad[0] == mappingQuads.CF_I:
@@ -160,7 +161,6 @@ class VM:
       elif current_quad[0] == mappingQuads.IGUAL_I:
         right_operand = self.convert_right(current_quad[2])
         typeOp = self.get_type(current_quad[2])
-        print(right_operand, typeOp)
         if (typeOp == "float"):
           right_operand = float(right_operand)
         elif (typeOp == "int"):
@@ -177,6 +177,7 @@ class VM:
 
       #next quad
       self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]+1 
+      
       # Keep adding quads
 
   def read_quadruples(self, quads):
