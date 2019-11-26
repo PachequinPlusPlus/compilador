@@ -9,6 +9,7 @@ func int factorial(int n) {
   } else {
     retorno = n*factorial(n-1);
   }
+  print(retorno);
   return retorno;
 }
 
