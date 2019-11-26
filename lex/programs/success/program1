@@ -9,5 +9,5 @@ var{
     int xx;
 }
 a = miFlotante + c;
-print(a);
+print(a, '\n', 'a');
 }

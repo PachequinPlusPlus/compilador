@@ -21,7 +21,7 @@ class VM:
 
   def get_type(self, direccion):
     for i in range(len(direcciones) - 1):
-      if (direccion > direcciones[i] and direccion < direcciones[i+1]):
+      if (direccion >= direcciones[i] and direccion < direcciones[i+1]):
         result = i%3
         if (result == 0):
           return "int"
@@ -56,7 +56,6 @@ class VM:
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
-      print(current_quad)
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
@@ -125,10 +124,21 @@ class VM:
       elif current_quad[0] == mappingQuads.CF_I:
         self.set_value(current_quad[3], float(current_quad[2]))
       elif current_quad[0] == mappingQuads.CC_I:
-        self.set_value(current_quad[3], str(current_quad[2]))
+        self.set_value(current_quad[3], current_quad[2])
         # self.constant_memory[current_quad[3]/sizeMemory - constantOffset][current_quad[3]%sizeMemory-initialOffset] = str(current_quad[2])
       elif current_quad[0] == mappingQuads.PRINT_I:
-        print(self.get_value(current_quad[3]), end='')
+          val =str(self.get_value(current_quad[3]))
+          if val[0] == "'":
+            val = val[1:len(val)-1]  
+            if(val == "\\n"):
+                sys.stdout.write('\n')
+            elif(val =="\\t"):
+                sys.stdout.write('\t')
+            else:
+                sys.stdout.write(val)
+          else:
+            sys.stdout.write(val)
+
       elif current_quad[0] == mappingQuads.VALID_I:
         try:
           left_operand = int(current_quad[1])
@@ -154,15 +164,15 @@ class VM:
   def read_quadruples(self, quads):
     with open(quads, 'rb') as file:
       self.quadruples = pickle.load(file)
-      print(self.quadruples)
 
   def get_value(self, direccion):
     memory_type = self.get_memory_type(direccion)
+    self.generateChunkMemory(direccion)
     if (memory_type == "global"):
       return self.global_memory[direccion//sizeMemory][direccion%sizeMemory-initialOffset]
     elif (memory_type == "local"):
       return self.local_memory[len(self.local_memory)-1][direccion//sizeMemory-localOffset][direccion%sizeMemory-initialOffset]
-    elif (memory_type == "char"):
+    elif (memory_type == "constant"):
       return self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset]  
     
   def set_value(self, direccion, value):
@@ -176,7 +186,7 @@ class VM:
       elif (tipo == "float"):
         newValue = float(value)
       elif (tipo == "char"):
-        if (type(value) == str and len(value) == 1):
+        if (type(value) == str and len(value) >= 1):
           newValue = value
         else:
           raise Exception()

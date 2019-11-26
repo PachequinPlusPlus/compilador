@@ -298,7 +298,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         elif tipo == 'char':
             op = 'CC'
             self.myCte[val] = self.constantes.getChar()
-
         self.pushCuadruplo(op, None , val, self.myCte[val])
         self.myCteB[self.myCte[val]] = val
         return self.myCte[val]
