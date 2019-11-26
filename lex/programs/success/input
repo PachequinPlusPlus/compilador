@@ -1,0 +1,23 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+class gato{
+    public:
+    var{
+        int edad;
+    }
+    func void printEdad(){
+        print(edad);
+    }
+}
+main {
+var{
+    int xx;
+    gato ravioli;
+}
+    input(xx, ravioli.edad, y[25]);
+    ravioli.printEdad();
+}

@@ -246,9 +246,10 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.pushError(self.tope(self.assStack), "is not declared", ctx.start.line, 499)
                 sys.exit(1)
             elif left.tipo != 'int' and left.tipo != 'char' and left.tipo != 'float':
-                print(left)
                 self.pushError(self.tope(self.assStack), "is not an attribute", ctx.start.line, 502)
 
+
+            tipazo = self.tope(self.tipoStack)
             if(len(self.assStack) > 1):
             # get the direction
                 direccion =  direccion + left.direccion 
@@ -279,7 +280,15 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.pushCuadruplo('VALID', 0 , size, sz)
 
                 self.push(self.expStack, rightValue)
+                self.push(self.tipoStack, 'void')
                 direccion = resultAddress
+
+
+            print(left.tipo, tipazo)
+            resultT = self.semantica.cube[left.tipo][tipazo]['='] 
+            if resultT == "err":
+                self.err.push("type mismatch : "+left.tipo+" and "+tipazo+" | line "+str(ctx.start.line), 403)
+                sys.exit(1)
 
 
 
@@ -287,6 +296,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
             # saco el EXP del stack
             self.pop(self.expStack)
+            self.pop(self.tipoStack)
 
             self.assStack = []
 
@@ -738,7 +748,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     self.push(self.tipoStack, resultT)
                 else:
                     self.err.push("type mismatch : "+leftT+" and "+rightT+" | line "+str(ctx.start.line), 403)
-                    sys.exit()
+                    sys.exit(1)
 
     def resolveTerm(self, ctx):
         if len(self.opStack) > 0:
