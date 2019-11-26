@@ -1,0 +1,59 @@
+program factRec;
+var{
+    int arreglo[100], n, i;
+}
+
+func void mergeSort(int l, int r) {
+    var {
+        int aux[100], m, left, right, k;
+    }
+    if(l < r){
+        m = (l + r) / 2;
+        mergeSort(l, m);
+        mergeSort(m+1, r);
+
+        left = 0;
+        right = m + 1;
+        k = 0;
+
+        while(left <= m && right <= r){
+           if( arreglo[left] <= arreglo[right] ){
+            aux[k] = arreglo[left]; 
+            left = left + 1;
+           }else{
+            aux[k] = arreglo[right];
+            right = right + 1;
+           }
+           k = k + 1;
+        }
+
+        while(left <= m){
+            aux[k] = arreglo[left]; 
+            left = left + 1;
+            k = k + 1;
+        }
+
+        while(right <= r){
+            aux[k] = arreglo[right];
+            right = right + 1;
+            k = k + 1;    
+        }
+        for(i = 0; i < k; i = i + 1){
+            arreglo[l+i] = aux[i];
+        }
+    }
+}
+
+main {
+  n = 2;
+  print(n, '\n');
+  for(i = 0; i < n; i = i + 1){
+    arreglo[i] = n - i;
+  }
+
+
+  for(i = 0; i < n; i = i + 1){
+    print(arreglo[i], ' ');
+  }
+    print('\n');
+}
