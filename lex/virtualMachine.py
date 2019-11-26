@@ -59,6 +59,7 @@ class VM:
   def execute(self, quads):
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
+      print(self.ip[len(self.ip)-1])
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
       print(self.ip[len(self.ip)-1], current_quad)
       # Start mapping of operations
