@@ -126,7 +126,7 @@ class VM:
         # clear params
         self.params = {}
         self.offset.pop()
-        self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]         
+        self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1] - 1         
       elif current_quad[0] == mappingQuads.CI_I:
         self.set_value(current_quad[3], int(current_quad[2]))
       elif current_quad[0] == mappingQuads.CF_I:
