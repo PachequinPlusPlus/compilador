@@ -7,8 +7,9 @@ initialOffset = 1000
 localOffset = 3
 constantOffset = 6
 classOffset = 9
+classLocalOffset = 12
 direcciones = [1000,11000,21000,31000,41000,51000,61000,71000,81000,91000,101000,111000,121000,131000,141000,151000]
-
+offsetClases = 1000000
 class VM:
   def __init__(self):
     self.quadruples = []
@@ -55,16 +56,26 @@ class VM:
     right_operand = self.get_value(right)
     return right_operand
 
+  def doOffset(self, direccion):
+    if (self.get_memory_type(direccion) == "global"):
+      return direccion
+    desplazo = 0
+    if self.offset[len(self.offset)-1][0] != 0:
+      desplazo = self.offset[len(self.offset)-1][0] - offsetClases
+    return desplazo + direccion
+
   # Main execution of the quadruples
   def execute(self, quads):
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
 
 #      print(self.ip[len(self.ip)-1])   
-
+      
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
+        left = self.doOffset(current_quad[1])
+        right = self.doOffset(current_quad[2])
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
         self.set_value(current_quad[3], left_operand + right_operand)
 
@@ -79,7 +90,7 @@ class VM:
       elif current_quad[0] == mappingQuads.DIV_I:
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
         if (right_operand == 0):
-          raise ZeroDivisionError("Cannot divide by 0 value")
+          raise ZeroDivisionError("PPC - Cannot divide by 0 value")
         if (self.get_type(current_quad[1]) == "int" and self.get_type(current_quad[2]) == "int"):
           self.set_value(current_quad[3], left_operand // right_operand)
         else:
@@ -158,7 +169,6 @@ class VM:
       elif current_quad[0] == mappingQuads.CC_I:
         self.set_value(current_quad[3], current_quad[2])
 
-        # self.constant_memory[current_quad[3]/sizeMemory - constantOffset][current_quad[3]%sizeMemory-initialOffset] = str(current_quad[2])
       elif current_quad[0] == mappingQuads.PRINT_I:
           val =str(self.get_value(current_quad[3]))
           if val[0] == "'":
@@ -180,7 +190,7 @@ class VM:
           if (index < left_operand or index >= right_operand):
             raise Exception()
         except:
-          raise IndexError(f"The index {index} is out of range")
+          raise IndexError(f"PPC The index {index} is out of range")
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
         left_operand = self.convert_left(current_quad[1])
         self.set_value(current_quad[3], self.get_value(left_operand + int(current_quad[2])))
@@ -201,7 +211,7 @@ class VM:
         else:
           self.offset.append((self.offset[len(self.offset)-1][0], right_operand)) 
       else:
-        raise KeyError(f"{current_quad[0]} is not handled")
+        raise KeyError(f"PPC {current_quad[0]} is not handled")
 
       #next quad
       self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]+1 
@@ -221,6 +231,8 @@ class VM:
       return self.local_memory[len(self.local_memory)-1][direccion//sizeMemory-localOffset][direccion%sizeMemory-initialOffset]
     elif (memory_type == "constant"):
       return self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset]  
+    elif (memory_type == "class"):
+      return self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset]  
     
   def set_value(self, direccion, value):
     self.generateChunkMemory(direccion)
@@ -236,10 +248,9 @@ class VM:
         if (type(value) == str and len(value) >= 1):
           newValue = value
         else:
-          raise Exception()
+          raise Exception
     except:
-      # TODO(CorrectError??)
-      raise ValueError(f"Failed at parsing value={value}")
+      raise ValueError(f"PPC - Failed at parsing value={value}")
 
     if (memory_type == "global"):
       self.global_memory[direccion//sizeMemory][direccion%sizeMemory-initialOffset] = newValue
@@ -247,7 +258,9 @@ class VM:
       self.local_memory[len(self.local_memory)-1][direccion//sizeMemory-localOffset][direccion%sizeMemory-initialOffset] = newValue
     elif (memory_type == "constant"):
       self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset] = newValue
-
+    elif (memory_type == "class"):
+      self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset] = newValue
+      
   def generateChunkMemory(self, direccion):
     memory_type = self.get_memory_type(direccion) 
     default = self.get_default_type(direccion)
@@ -260,6 +273,9 @@ class VM:
     elif (memory_type == "constant"):
       while(len(self.constant_memory[direccion//sizeMemory-constantOffset]) < direccion%sizeMemory-initialOffset+1):
         self.constant_memory[direccion//sizeMemory-constantOffset].append(default)
+    elif (memory_type == "class"):
+      while(len(self.class_global_memory[direccion//sizeMemory-classOffset]) < direccion%sizeMemory-initialOffset+1):
+        self.class_global_memory[direccion//sizeMemory-classOffset].append(default)
 
 
   def get_memory_type(self, direccion):
@@ -267,8 +283,12 @@ class VM:
       return "global"
     elif (direccion < direcciones[6]):
       return "local"
-    else:
+    elif (direccion < direcciones[9]):
       return "constant"
+    elif (direccion < direcciones[12]):
+      return "class"
+    else:
+      return "classLocal"
 
 
 def main(argv):
