@@ -81,10 +81,13 @@ def main(argv):
     fileName = DIR + "quad_"
     fileTemp = str(args.quad_file).split('/')
     fileName += fileTemp[len(fileTemp) -1] + "_"
+    fileName2 = fileName + "a"
     fileName += ".PPCDSALVC"
+    fileName2 += ".PPCDSALVC"
 
     ret = 0
     quadFile = open(fileName, 'wb')
+    quadFile2 = open(fileName2, 'w')
     quads = []
     for quad in printer.cuadruplos:
         quad.imprimirCuadruplo(fileName, ret, args.show_quads)
@@ -95,6 +98,7 @@ def main(argv):
                 aux = quad
                 aux.op = i
                 quads.append([aux.op, aux.left, aux.right, aux.result])
+                quadFile2.write(str([aux.op, aux.left, aux.right, aux.result]) + "\n")
                 maped = True
                 break
         if maped == False:
@@ -106,6 +110,7 @@ def main(argv):
 
 
     pickle.dump(quads, quadFile)
+    quadFile2.close()
     quadFile.close()
 
     log.close()
