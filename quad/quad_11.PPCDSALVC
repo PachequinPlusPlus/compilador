@@ -1,6 +1,0 @@
-0000 :            goto       None       None          3
-0001 :           print       None       None      91000
-0002 :         endproc       None       None       None
-0003 :           print       None       None      31000
-0004 :           print       None       None     121001
-0005 :           print       None       None     121002

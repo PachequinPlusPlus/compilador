@@ -32,11 +32,11 @@ mapQuadsList = [
   GOTO,  
   GOSUB,
   GOTOF,
+  IGUAL,
   CI,
   CF,
   CC,
   PRINT,
-  IGUAL,
   MAS,
   MENOS,
   MULT,
@@ -60,14 +60,14 @@ mapQuadsList = [
 
 GOTO_I = 0
 GOSUB_I = 1
-IGUAL_I = 2
-GOTOF_I = 3
-MAS_I = 4
-MENOS_I = 5 
+GOTOF_I = 2
+IGUAL_I = 3
 CI_I = 6
 CF_I = 7
 CC_I = 8
 PRINT_I = 9 
+MAS_I = 4
+MENOS_I = 5 
 MULT_I = 10
 DIV_I = 11
 PARAM_I = 12

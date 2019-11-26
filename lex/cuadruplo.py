@@ -1,4 +1,3 @@
-import pickle
 
 class cuadruplo:
     #op, left and right are integers
@@ -14,9 +13,6 @@ class cuadruplo:
         return val
 
     def imprimirCuadruplo(self, directory, ind, toConsole):
-        quad = open(directory, 'wb')
         myquad = f"{self.convert(ind):>04} : {self.convert(self.op):>15} {self.convert(self.left):>10} {self.convert(self.right):>10} {self.convert(self.result):>10}"
         if toConsole:
             print(myquad)
-        pickle.dump(myquad, quad)
-        quad.close()

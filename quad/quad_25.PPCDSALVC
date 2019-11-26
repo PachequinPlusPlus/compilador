@@ -1,9 +1,0 @@
-0000 :            goto       None       None          1
-0001 :              CI       None          5      61000
-0002 :               >      31000      61000      31001
-0003 :           gotof      31001       None          9
-0004 :           print       None       None       1000
-0005 :              CI       None          1      61001
-0006 :               +       1000      61001      31002
-0007 :               =       None      31002      31000
-0008 :            goto       None       None          1

@@ -8,6 +8,7 @@ from errorListener import errores
 
 import json
 import mappingQuads
+import pickle
 import sys
 import os
 import pprint
@@ -23,6 +24,7 @@ def main(argv):
     parser.add_argument("--logs", help = "path to logs", default="./../logs/err.txt")
     parser.add_argument("--programa", help = "path to program")
     parser.add_argument("--quads", help = "path to quads", default="./../quad/")
+    parser.add_argument("--quad_file", help = "specify the quad file name to generate")
     parser.add_argument("--show_quads", help = "if flag is on, show quads", action='store_true')
     parser.add_argument("--show_logs", help = "if flag is on, show logs", action='store_true')
 
@@ -77,7 +79,8 @@ def main(argv):
 
 
     fileName = DIR + "quad_"
-    fileName += str(len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))]))
+    fileTemp = str(args.quad_file).split('/')
+    fileName += fileTemp[len(fileTemp) -1] + "_"
     fileName += ".PPCDSALVC"
 
     ret = 0
@@ -91,7 +94,7 @@ def main(argv):
             if mappingQuads.mapQuadsList[i] == quad.op:
                 aux = quad
                 aux.op = i
-                quads.append(aux)
+                quads.append([aux.op, aux.left, aux.right, aux.result])
                 maped = True
                 break
         if maped == False:
@@ -102,7 +105,8 @@ def main(argv):
             sys.exit(1)
 
 
-   
+    pickle.dump(quads, quadFile)
+    quadFile.close()
 
     log.close()
 
