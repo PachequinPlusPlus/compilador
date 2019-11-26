@@ -193,8 +193,7 @@ class VM:
           raise IndexError(f"PPC The index {index} is out of range")
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
         left_operand = self.convert_left(current_quad[1])
-        print(left_operand, current_quad[2], current_quad[3])
-        self.set_value(current_quad[3], self.get_value(left_operand + int(current_quad[2])))
+        self.set_value(current_quad[3], (left_operand + int(current_quad[2]))*-1)
 
       elif current_quad[0] == mappingQuads.IGUAL_I:
         right_operand = self.convert_right(current_quad[2])
@@ -224,7 +223,8 @@ class VM:
       self.quadruples = pickle.load(file)
 
   def get_value(self, direccion):
-    direccion = int(direccion)
+    if (direccion < 0):
+      direccion = self.get_value(self, direccion*-1)
     memory_type = self.get_memory_type(direccion)
     self.generateChunkMemory(direccion)
     if (memory_type == "global"):
