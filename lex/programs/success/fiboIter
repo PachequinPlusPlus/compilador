@@ -10,7 +10,9 @@ func int fibonacciIt(int n){
     } elseif(n == 1 || n == 2) {
       retorno = 1;
     }
-    for(i = 3; i <= n; i = i + 1) {
+    num1 = 0;
+    num2 = 1;
+    for(i = 2; i <= n; i = i + 1) {
       retorno = num1 + num2;
       num1 = num2;
       num2 = retorno;
@@ -22,6 +24,6 @@ main {
     var{
         int n;
     }
-    n = 5;
+    n = 10;
     print(fibonacciIt(n), '\n');
 }
