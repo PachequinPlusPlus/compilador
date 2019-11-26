@@ -1,0 +1,21 @@
+program ravioli; 
+var {
+	int y[300];
+}
+
+func void printArr(int x){
+    print(x);
+}
+
+
+main {
+var{
+    int xx;
+    int i;
+}
+    for(i = 0; i < 300; i = i + 1){
+      y[i] = i;
+      printArr(y[i]);
+      print('\n');
+    }
+}
