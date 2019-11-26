@@ -14,23 +14,20 @@ class gato {
 	public:
 		func int getEdad(){
 			var{	
-				int x2;
+				int xx;
 			}
-			print(x);
-            miChar = 'b';
-			x = edad;
+			print(xx);
+			xx = edad;
 			return edad;
 		}
 }
 
+
+func void sayX(int xx){
+	print(xx);
+}
+
+
+
 main {
-	var {
-		gato ravioli;
-		int a;
-	}
-	a = 5;
-	while(a < ravioli.getEdad() && a < 100){
-		a = a + 123;
-		print(a);
-	}
 }

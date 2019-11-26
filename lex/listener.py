@@ -117,8 +117,9 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             if left is None:
                 self.pushError(self.tope(self.assStack), "is not declared", ctx.start.line, 499)
                 sys.exit(1)
-            elif left.tipo != 'int' or left.tipo != 'char' or left.tipo != 'float':
-                self.pushError(self.tope(self.assStack), "is not a attribute", ctx.start.line, 502)
+            elif left.tipo != 'int' and left.tipo != 'char' and left.tipo != 'float':
+                print(left)
+                self.pushError(self.tope(self.assStack), "is not an attribute", ctx.start.line, 502)
 
             if(len(self.assStack) > 1):
             # get the direction

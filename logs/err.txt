@@ -1745,3 +1745,369 @@ type mismatch : float and char | line 8
 'xx' is not a attribute | line : 20
 'edad' attribute not declared inside the class | line : 38
 
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 44
+
+
+'xx' is not a attribute | line : 20
+'temp' is not a attribute | line : 44
+'a' is not a attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'xx' is not an attribute | line : 20
+'temp' is not an attribute | line : 44
+'a' is not an attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'edad' attribute not declared inside the class | line : 54
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
