@@ -255,29 +255,38 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 direccion =  direccion + left.direccion 
 
             if ctx.LB() is not None:
+                #variable
                 rightValue = self.tope(self.expStack)
                 self.pop(self.expStack)
                 self.pop(self.tipoStack)
 
+                #var[sz]
                 sz = self.tope(self.expStack)
                 self.pop(self.expStack)
+                tip = self.tope(self.tipoStack)
                 self.pop(self.tipoStack)
 
                 if left.isArray is False:
                     self.pushError(elemento, "is not an array", ctx.start.line, 513)
                     sys.exit(1)
 
+                if tip != 'int':
+                    self.pushError(sz, "is not int", ctx.start.line, 515)
+                    sys.exit(1)
+
                 resultAddress = -1
+                size = -1
                 if sz >= 61000 and sz <= 71000:
-                    resultAddress = sz
+                    aux = sz
                     sz = int(self.myCteB[sz])
+                    resultAddress = direccion + sz
                 else:
                     resultAddress = self.getAddress('int')
+                    aux = sz
                     self.pushCuadruplo('+_val_address', sz, direccion,  resultAddress)
-                    sz = resultAddress
 
                 size = left.array.getSize()
-                self.pushCuadruplo('VALID', 0 , sz, resultAddress)
+                self.pushCuadruplo('VALID', 0 , size, aux)
 
                 self.push(self.expStack, rightValue)
                 self.push(self.tipoStack, 'void')
@@ -597,6 +606,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 sz = -1
                 if variable.array is not None:
                     sz  = variable.array.getSize()
+                self.lastType = variable.tipo
                 self.insertVar(variable.name, ctx, variable.isArray, sz)
                 if cl.parent == None:
                     return
