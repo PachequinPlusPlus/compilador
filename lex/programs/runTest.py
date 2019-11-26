@@ -36,7 +36,7 @@ def main():
         failed = False
         print(f"running test # {times}")
         print("expecting NOT to throw\n")
-        val = os.system(f"python3 {EXECUTABLE_PATH} --programa {arch} --logs {LOGS} --quads {QUADS}")
+        val = os.system(f"python3 {EXECUTABLE_PATH} --programa {arch} --logs {LOGS} --quads {QUADS} --quad_file {arch}")
         if val != 0:
             print('\33[41m'+ f"FAILURE TEST #{times}: the program failed but it wasnt suppose to throw, check logs. Program : {arch}\33[0m\n")
             failed = True

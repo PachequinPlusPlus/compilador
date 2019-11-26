@@ -1,9 +1,0 @@
-0000 :            goto       None       None          3
-0001 :           print       None       None      91000
-0002 :         endproc       None       None       None
-0003 :             ERA       None          0  printEdad
-0004 :             SET       None       None      30000
-0005 :           gosub  printEdad       None          1
-0006 :             ERA       None          0  printEdad
-0007 :             SET       None       None      30001
-0008 :           gosub  printEdad       None          1

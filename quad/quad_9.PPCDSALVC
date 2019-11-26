@@ -1,7 +1,0 @@
-0000 :            goto       None       None          5
-0001 :           print       None       None      31000
-0002 :               =       None      91000      31000
-0003 :               =       None      91000      91002
-0004 :         endproc       None       None       None
-0005 :              CI       None          5      61000
-0006 :               =       None      61000      31000

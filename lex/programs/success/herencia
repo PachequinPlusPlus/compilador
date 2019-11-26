@@ -1,0 +1,30 @@
+program ravioli; 
+var {
+	int x, y[300];
+	char miChar;
+	float miFlotante, c, a;
+}
+
+class mascota{
+    public:
+        var{
+            int edad;
+            char nombre[100];
+        }
+}
+class gato : mascota{
+    public:
+        var{
+            float x2;
+        }
+        func void sayMeow(){
+           var {
+            int xxxxx;
+           }
+        }
+}
+
+
+
+main {
+}

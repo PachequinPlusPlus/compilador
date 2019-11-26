@@ -298,7 +298,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         elif tipo == 'char':
             op = 'CC'
             self.myCte[val] = self.constantes.getChar()
-
         self.pushCuadruplo(op, None , val, self.myCte[val])
         self.myCteB[self.myCte[val]] = val
         return self.myCte[val]
@@ -451,6 +450,22 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
 
 
+    def insertVariablesPadres(self, ctx):
+        cl = self.tope(self.classStack)
+        parent = cl.parent
+        if(parent == 'global'):
+            return
+        cl = self.semantica.getClase(parent)
+        while( cl.name != 'global'):
+            for variable in cl.publicAtributos:
+                sz = -1
+                if variable.array is not None:
+                    sz  = variable.array.getSize()
+                self.insertVar(variable.name, ctx, variable.isArray, sz)
+                if cl.parent == None:
+                    return
+            cl = self.semantica.getClase(cl.parent)
+
 
     def enterClasses(self, ctx):
         self.isClass = True
@@ -459,6 +474,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             parent = str(ctx.ID(1))
             cl = self.tope(self.classStack)
             self.push(self.classStack, self.semantica.addClass(name, parent))
+            self.insertVariablesPadres(ctx)
         else:
             cl = self.tope(self.classStack)
             self.push(self.classStack, self.semantica.addClass(name, "global",))
@@ -499,7 +515,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                self.semantica.addVarFunc(self.tope(self.funcStack), varName, tipo, self.getAddress(tipo, isArray, arrSize), isArray, arrSize)
        else:
            topeClase = self.tope(self.classStack)
-           if self.semantica.existInClass(topeClase, varName) is not None:
+           if self.semantica.existInClass(topeClase, varName, False) is not None:
                self.pushError(varName, "is already declared", ctx.start.line, 455)
                sys.exit(1)
            #TODO(arreglar isArray)
