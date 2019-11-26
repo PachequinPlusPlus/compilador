@@ -7,6 +7,7 @@ from errorListener import myErrorListener
 from errorListener import errores
 
 import json
+import mappingQuads
 import sys
 import os
 import pprint
@@ -80,11 +81,28 @@ def main(argv):
     fileName += ".PPCDSALVC"
 
     ret = 0
+    quadFile = open(fileName, 'wb')
+    quads = []
     for quad in printer.cuadruplos:
         quad.imprimirCuadruplo(fileName, ret, args.show_quads)
         ret = ret + 1
+        maped = False
+        for i in range(len(mappingQuads.mapQuadsList)):
+            if mappingQuads.mapQuadsList[i] == quad.op:
+                aux = quad
+                aux.op = i
+                quads.append(aux)
+                maped = True
+                break
+        if maped == False:
+            print(quad.op + " is not defined")
+            log.write(quad.op+" is not defined\n")
+            log.write("\n")
+            log.close()
+            sys.exit(1)
 
 
+   
 
     log.close()
 

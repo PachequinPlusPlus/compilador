@@ -129,7 +129,7 @@ class semantics:
                 return cl
         return None
 
-    def existInClass(self, clase, varName):
+    def existInClass(self, clase, varName, checkParent = True):
         for cl in self.clases:
             if cl.name == clase.name:
                 for atr in cl.publicAtributos:
@@ -140,7 +140,8 @@ class semantics:
                         return atr
 
                 actual = cl
-
+                if checkParent is False:
+                    return
                 while actual.parent is not None:
                     actual = self.getClase(actual.parent)
                     for atr in actual.publicAtributos:
