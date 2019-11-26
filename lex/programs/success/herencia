@@ -11,6 +11,9 @@ class mascota{
             int edad;
             char nombre[100];
         }
+        func void printEdad(){
+            print(edad);
+        }
 }
 class gato : mascota{
     public:
@@ -24,7 +27,10 @@ class gato : mascota{
         }
 }
 
-
-
 main {
+    var{
+        gato ravioli;
+    }
+    ravioli.edad = 55;
+    ravioli.printEdad();
 }

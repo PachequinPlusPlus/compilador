@@ -145,10 +145,17 @@ imprimir:
     'print' PA exp multipleexp* PC;
 
 entrada:
-    'input' PA ID arreglo? attr? entradaaux* PC;
+    'input' PA ID arreglo entradaaux PC
+    | 'input' PA ID attr entradaaux PC
+    | 'input' PA ID entradaaux PC;
+
 
 entradaaux:
-    COMA ID arreglo? attr?;
+    COMA ID entradaaux
+    | COMA ID attr entradaaux
+    | COMA ID arreglo entradaaux
+    |;
+
 
 arreglo:
    LB exp RB;
