@@ -1,2671 +1,4 @@
 
-tmp, err
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-tmp, err
-
-
-
-
-
-
-tmp, err
-
-
-
-
-tmp, err
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-tmp, err
-
-
-
-
-
-
-tmp, err
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8:0: sintax ERROR, mismatched input '}' expecting {'var', 'while', 'for', 'print', 'input', 'if', ID}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9:4: sintax ERROR, extraneous input 'return' expecting {'var', 'while', 'for', 'print', 'input', 'if', ID}
-
-
-9:4: sintax ERROR, extraneous input 'return' expecting {'var', 'while', 'for', 'print', 'input', 'if', ID}
-
-
-9:4: sintax ERROR, extraneous input 'return' expecting {'var', 'while', 'for', 'print', 'input', 'if', ID}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13:4: sintax ERROR, mismatched input 'private' expecting '}'
-
-
-
-
-
-
-28:18: sintax ERROR, mismatched input ';' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14:0: sintax ERROR, missing ';' at '}'
-
-15:0: sintax ERROR, missing ';' at '}'
-
-
-
-
-
-
-
-
-
-
-
-
-
-54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
-
-
-
-
-
-
-49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-
-31:24: sintax ERROR, mismatched input '&&' expecting '('
-
-54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
-
-
-
-
-
-
-49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-
-31:24: sintax ERROR, mismatched input '&&' expecting '('
-
-54:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-38:17: sintax ERROR, no viable alternative at input 'print(mycat.getEdad());print(mycat.edad)'
-
-
-
-
-
-
-49:19: sintax ERROR, no viable alternative at input 'var{inttemp;}temp=mycat.edad*'
-
-
-31:24: sintax ERROR, mismatched input '&&' expecting '('
-
-31:24: sintax ERROR, mismatched input '&&' expecting '('
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 18
-
-
-
-
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 18
-
-
-
-
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'suma' the function doesnt not match | line : 18
-
-
-'suma' the function doesnt not match | line : 18
-
-
-
-
-
-
-'suma' the function doesnt not match | line : 18
-
-
-
-'suma' the function doesnt not match | line : 19
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' class not declared | line : 54
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'mycat' function not declared | line : 37
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'mycat' class not declared | line : 49
-
-
-
-'ravioli' class not declared | line : 31
-
-
-'mycat' function not declared | line : 37
-
-
-'mycat' class not declared | line : 37
-
-
-'mycat' class not declared | line : 37
-
-
-'mycat' class not declared | line : 37
-
-
-
-'mycat' variable not declared | line : 37
-
-
-'mycat' variable not declared | line : 37
-
-
-'mycat' variable not declared | line : 37
-
-
-
-
-
-
-
-
-
-'woaf' function not declared | line : 102
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-'rav' variable not declared | line : 21
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'woaf' function not declared | line : 96
-
-
-
-
-'rav' variable not declared | line : 21
-
-
-
-'woaf' function not declared | line : 102
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'woaf' function not declared | line : 96
-
-
-
-
-'suma' the function doesnt not match | line : 17
-
-
-'suma' the function doesnt not match | line : 17
-
-
-
-'woaf' function not declared | line : 102
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'woaf' function not declared | line : 96
-
-
-
-
-
-
-
-
-'woaf' function not declared | line : 102
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'woaf' function not declared | line : 96
-
-
-
-
-'d' is not defined | line : 24
-'uno' function not declared | line : 36
-
-
-'getDos' function not declared | line : 43
-
-
-'getEdad' function not declared | line : 43
-
-
-'uno' the function has type return void | line : 44
-
-
-'uno' the function has type return void | line : 44
-
-
-
-
-
-
-
-
-
-
-'mytoy' method is not defined | line : 56
-
-
-'mytoy' method is not defined | line : 56
-
-
-'juega' method is not defined | line : 56
-
-
-'juega' method is not defined | line : 56
-
-
-'juega' method is not defined | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-'juega' function not declared | line : 56
-
-
-
-
-
-
-
-
-
-'juega' the function doesnt not match | line : 56
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-4:17: sintax ERROR, mismatched input '=' expecting {',', ';'}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 5
-
-
-2:0: sintax ERROR, mismatched input 'variable' expecting {'main', 'func', 'var', 'class'}
-
-
-'pi' is already declared | line : 7
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-'x' is already declared | line : 17
-
-
-'a' is already declared | line : 16
-
-
-'x' is already declared | line : 17
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'x' is already declared | line : 17
-
-
-'a' is already declared | line : 16
-
-
-'x' is already declared | line : 17
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'x' is already declared | line : 17
-
-
-'a' is already declared | line : 16
-
-
-'x' is already declared | line : 17
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'x' is already declared | line : 17
-
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-'a' is already declared | line : 16
-
-
-'x' is already declared | line : 17
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-'x' is already declared | line : 17
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-'a' is already declared | line : 8
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 11
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 28
-
-
-'x' is already declared | line : 17
-
-
-'nombre' is already declared | line : 14
-
-
-'nombre' is already declared | line : 14
-
-
-'x' is already declared | line : 35
-
-
-'x' is already declared | line : 55
-
-
-
-'x' is already declared | line : 11
-
-
-'x2' is already declared | line : 34
-
-
-
-
-'x' is already declared | line : 30
-
-
-'x' is already declared | line : 50
-
-
-
-'x' is already declared | line : 28
-
-
-'y' is already declared | line : 30
-
-
-
-'x' is already declared | line : 38
-
-
-'x' is already declared | line : 38
-
-
-'x' is already declared | line : 42
-
-
-'x' is already declared | line : 46
-
-
-'x2' is already declared | line : 46
-
-
-'a' is already declared | line : 51
-
-
-'a' is already declared | line : 58
-
-
-'y' is already declared | line : 66
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-'x' is already declared | line : 17
-
-
-'x' is already declared | line : 17
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-'float' was found but the function is expecting to return int | line : 52
-
-
-
-'pi' is already declared | line : 7
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-12:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-
-
-
-
-
-
-
-
-
-
-12:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-'return' was found but the function is void | line : 8
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'x' is already declared | line : 3
-
-
-'x' is already declared | line : 3
-
-
-'x' is already declared | line : 3
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 12
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-type mismatch : char and int | line 8
-
-
-type mismatch : char and int | line 8
-
-
-type mismatch : char and int | line 8
-
-
-type mismatch : char and int | line 8
-
-
-'one' the function doesnt not match | line : 15
-
-
-
 'one' the function doesnt not match | line : 15
 
 
@@ -2679,1237 +12,2091 @@ type mismatch : char and int | line 8
 
 
 9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-'x' is already declared | line : 9
-
-
-
-
-
-
-
-
-'x' is already declared | line : 9
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-9:5: sintax ERROR, mismatched input ';' expecting ID
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-14:9: sintax ERROR, extraneous input 'else' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-14:9: sintax ERROR, extraneous input 'else' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-14:9: sintax ERROR, extraneous input 'else' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-14:9: sintax ERROR, extraneous input 'else' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-19:5: sintax ERROR, extraneous input 'else' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22:8: sintax ERROR, extraneous input 'elseif' expecting {'while', 'for', 'print', 'input', 'if', '}', ID}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'one' the function doesnt not match | line : 15
-
-
-'pi' is already declared | line : 7
-
-
-'int' was found but the function is expecting to return float | line : 8
-
-
-5:22: sintax ERROR, mismatched input '[' expecting ')'
-
-
-9:6: sintax ERROR, mismatched input ';' expecting ID
-
-
-type mismatch : float and char | line 8
-
-
-'return' was found but the function is void | line : 8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'miChar' is already declared | line : 8
-
-
-'miChar' is already declared | line : 8
-
-
-'x' is already declared | line : 8
-
-
-'y' is already declared | line : 8
-
-
-
-
-
-
-
-
-
-
-
-'getSquare' the function doesnt not match | line : 25
-
-
-'getSquare' the function doesnt not match | line : 25
-
-
-'getSquare' the function doesnt not match | line : 25
-
-
-
-
-'None' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
-
-
-'edad' is not declared | line : 40
 
 
 'ravs' is not declared | line : 40
 
 
-'ravs' is not declared | line : 40
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+
+
+
+
+
+
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
 
 
 'ravs' is not declared | line : 40
 
 
-'ravs' is not declared | line : 40
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+5:33: sintax ERROR, no viable alternative at input 'var{intretorno,i,num1,num2;;'
+
+
+
+
+
+
+
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+20:4: sintax ERROR, missing ';' at 'fibo'
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
 
 
 'ravs' is not declared | line : 40
 
 
+type mismatch : float and char | line 8
 
+
+'return' was found but the function is void | line : 8
+
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+25:4: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'fibo1' is not defined | line : 13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22:0: sintax ERROR, mismatched input '}' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+22:0: sintax ERROR, mismatched input '}' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+
+
+
+
+
+
+
+22:4: sintax ERROR, extraneous input 'print' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+22:4: sintax ERROR, extraneous input 'print' expecting {'!', INT, FLOAT, CHAR, '+', '-', '(', ID}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
 
 
 'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+11:4: sintax ERROR, no viable alternative at input 'var{inti,retorno;}if(n==0){retorno=0;}else{retorno=1for'
+
+
+11:4: sintax ERROR, no viable alternative at input 'var{inti,retorno;}if(n==0){retorno=0;}else{retorno=1for'
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+23:2: sintax ERROR, missing ';' at 'print'
+
+
+23:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+22:2: sintax ERROR, missing ';' at 'print'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'ravs' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'xx' is not declared | line : 30
+
+
+'xx' is not declared | line : 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'juguete' class doesnt exists | line : 40
+
+
+
+
+
+
+
+
+
+
+'mascota' is not declared | line : 45
+
+
+
+
+
+
+
+
+
+45:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+44:22: sintax ERROR, mismatched input '.' expecting ';'
+
+
+
+'sayX' the function doesnt not match | line : 45
+
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+46:25: sintax ERROR, mismatched input '.' expecting ';'
+
+
+
+
+'miFlotante' is not defined | line : 18
+
+
+
+
+
+11:8: sintax ERROR, mismatched input 'function' expecting '}'
+
+
+
+
+16:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+16:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+13:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+21:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
 
 
 'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'initial' is not a class | line : 46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+76:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+76:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+
+
+
+
+
+71:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+71:17: sintax ERROR, mismatched input '[' expecting ')'
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+72:8: sintax ERROR, missing ';' at 'arr'
+
+
+72:8: sintax ERROR, missing ';' at 'arr'
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14:8: sintax ERROR, extraneous input 'int' expecting ID
+
+
+15:25: sintax ERROR, no viable alternative at input 'i+'
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5:8: sintax ERROR, mismatched input 'int' expecting '}'
+
+
+18:16: sintax ERROR, mismatched input '.' expecting '='
+
+
+'michi' var is not defined | line : 17
+
+
+'car' class doesnt exists | line : 15
+
+
+'michi' var is not defined | line : 18
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+'michi' var is not defined | line : 17
+
+
+
+
+11:4: sintax ERROR, mismatched input 'private' expecting '}'
+
+
+
+
+
+
+'initial' attribute not declared inside the class | line : 13
+
+
+
+
+'initial' is not defined | line : 10
+
+
+
+
+
+
+'initial' attribute not declared inside the class | line : 17
+
+
+
+
+'initial' attribute not declared inside the class | line : 17
+
+
+
+'getEdad' method not declared | line : 21
+
+
+
+
+'getEdad' method not declared | line : 21
+
+
+'getEdad' method not declared | line : 21
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'x' is not a attribute | line : 35
+'edad' attribute not declared inside the class | line : 51
+
+
+'x' is not a attribute | line : 35
+'edad' attribute not declared inside the class | line : 51
+
+
+
+
+
+
+
+
+'x' is not a attribute | line : 30
+'edad' attribute not declared inside the class | line : 46
+
+
+'x' is not a attribute | line : 30
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'miChar' is not a attribute | line : 20
+'x' is not a attribute | line : 21
+'a' is not a attribute | line : 31
+'edad' attribute not declared inside the class | line : 32
+
+
+'miChar' is not a attribute | line : 20
+'x' is not a attribute | line : 21
+'a' is not a attribute | line : 31
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 38
+
+
+'xx' is not a attribute | line : 20
+'edad' attribute not declared inside the class | line : 44
+
+
+'xx' is not a attribute | line : 20
+'temp' is not a attribute | line : 44
+'a' is not a attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'xx' is not an attribute | line : 20
+'temp' is not an attribute | line : 44
+'a' is not an attribute | line : 53
+'edad' attribute not declared inside the class | line : 54
+
+
+'edad' attribute not declared inside the class | line : 54
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+'edad' attribute not declared inside the class | line : 51
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+'edad' attribute not declared inside the class | line : 61
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+'edad' attribute not declared inside the class | line : 46
+
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+'edad' attribute not declared inside the class | line : 32
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+'edad' attribute not declared inside the class | line : 80
+
+
+
+
+
+
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+'edad' attribute not declared inside the class | line : 75
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'pi' is already declared | line : 7
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+type mismatch : float and char | line 8
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

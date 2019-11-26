@@ -1,6 +1,7 @@
 from variable import variable
 from clases import clase
 from funcion import funcion
+from memory import memoria
 
 import json
 
@@ -11,10 +12,20 @@ class semantics:
     funcs = []
 
 
+
+                    # consider just integers
+    classes = []
+
+
+
+
+
+
     def __init__(self):
         self.clases = []
 
 
+    
 
 
 
@@ -24,8 +35,10 @@ class semantics:
         parsed = parsed.replace("True", 'true')
         parsed = parsed.replace("None", '"None"')
         parsed2 = json.loads(parsed)
-        #print(json.dumps(parsed2, indent=4))
+        #print(json.dumps(parsed2, indent=4, sort_keys=True))
 
+    #def getDireccion(self, dirr, pos):
+    #    return -1
 
     def getAddressGlobal(self, tipo, globalClass):
         #TODO(que hacer para las clases?)
@@ -35,8 +48,10 @@ class semantics:
             return globalClass.memoriaGlobal.getFlotante()
         elif tipo == "char":
             return globalClass.memoriaGlobal.getChar() 
-
-
+        else:
+            # class
+            return -1
+                
     
     #TODO(correguir las address temporales)
     #TODO(agregar memoria para los metodos con return?)
@@ -48,6 +63,11 @@ class semantics:
             return func.memory.getFlotante()
         elif tipo == "char":
             return func.memory.getChar() 
+        else:
+            # class
+            return -1
+
+             
 
 
     def reverseStack(self, stack):
@@ -90,14 +110,14 @@ class semantics:
 
 
     #TODO(checar que tenga el mismo numero de parametros)
-    def checkFunctionExists(self, clase, funcName, isPublic = True):
+    def checkFunctionExists(self, clase, funcName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
                 for func in cl.publicMetodos:
                     if func.name == funcName:
                         return True
                 for func in cl.privateMetodos:  
-                    if isPublic and func.name == funcName:
+                    if canPrivate and func.name == funcName:
                         return True
                 if cl.parent is not None:
                     return self.checkFunctionExists(self.getClase(cl.parent), funcName, False)
@@ -132,7 +152,7 @@ class semantics:
 
     #TODO(optimizar esto)
     # estamos mandando el nombre de la clase, en vez de mandar la instancia directamente duuhh
-    def existVariable(self, clase, funcName, varName):
+    def existVariable(self, clase, funcName, varName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
                 for func in cl.publicMetodos:
@@ -145,7 +165,7 @@ class semantics:
                                 return var
                         
                 for func in cl.privateMetodos:  
-                    if func.name == funcName:
+                    if canPrivate and func.name == funcName:
                         if func.name == funcName:
                             for param in func.params:
                                 if param.name == varName:
@@ -157,7 +177,7 @@ class semantics:
                     if atr.name == varName:
                         return atr
                 for atr in cl.privateAtributos:
-                    if atr.name == varName:
+                    if canPrivate and atr.name == varName:
                         return atr
 
 
@@ -196,7 +216,7 @@ class semantics:
 
     # add an attribute into a class
     def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic, arrSize):
-        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize), isPublic)
+        clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize,), isPublic, self)
 
     # add param into a function
     #is array is always suppose to be false!!
@@ -206,7 +226,7 @@ class semantics:
 
     # add var into a function
     def addVarFunc(self, func, name, tipo, direccion, isArray, arrSize = -1):
-        func.appendVar(variable(name, tipo, direccion, isArray, arrSize))
+        func.appendVar(variable(name, tipo, direccion, isArray, arrSize, ), self)
 
     #-------------------------------------------------------------------------------
         

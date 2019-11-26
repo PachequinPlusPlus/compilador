@@ -2,7 +2,8 @@ program fiboIter;
 
 func int fibonacciIt(int n){
     var {
-      int retorno, i, num1, num2;;
+      int retorno, i, num1, num2;
+      int fibo1, fibo2;
     }
     if (n == 0) {
       retorno = 0;

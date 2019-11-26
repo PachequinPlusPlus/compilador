@@ -4,11 +4,7 @@ func int fibonacci(int n){
     var {
         int retorno;
     }
-    if(n == 0 || n == 1){
-        retorno = n;
-    } else {
-        retorno = fibonacci(n-2) + fibonacci(n-1);
-    }
+    retorno = fibonacci(n-2) + fibonacci(n-1);
     return retorno;
 }
 
@@ -18,6 +14,4 @@ main {
     }
     n = 5;
     fibo = fibonacci(n);
-    print('\n');
-    print(fibo);
 }

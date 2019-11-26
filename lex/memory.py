@@ -4,10 +4,13 @@ class memoria:
         self.enteras = enteras
         self.flotantes = flotantes
         self.chars = chars
+
         self.i = 0
         self.f = 0
         self.c = 0
 
+    
+   
     def getEntera(self):
         self.i = self.i+1
         return self.enteras + self.i - 1

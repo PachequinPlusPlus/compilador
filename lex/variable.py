@@ -6,6 +6,8 @@ class variable:
         self.direccion = direccion
         self.isArray = isArray
         self.array = None
+        # es una instanci
+
         if self.isArray:
             self.array = arreglo(size)
 

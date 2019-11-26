@@ -48,7 +48,7 @@ func int getEdadSquare(gato mycat){
 	var {
 		int temp;
 	}
-	temp = mycat.edad * mycat.getEdad();
+	temp = mycat.getEdad() * mycat.getEdad();
 	return temp;
 }
 
@@ -58,7 +58,7 @@ func void sayX(int xx){
 
 func void printEdad(gato mycat){
 	print(mycat.getEdad());
-	print(mycat.edad);
+	print(mycat.getEdad());
 }
 
 
@@ -77,7 +77,7 @@ main {
         arr[i] = arr[i/2] + 1;
     }
 	a = 5;
-	while(a < ravioli.edad && a < 100){
+	while(a < ravioli.getEdad() && a < 100){
 		a = a + 123;
 		print(a);
 	}

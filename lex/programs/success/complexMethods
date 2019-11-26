@@ -20,6 +20,7 @@ class gato{
             owner own;
         }
         func int getEdad(){
+            print(own.initial);
             return edad;
         }
         func void sayX(int xx){
