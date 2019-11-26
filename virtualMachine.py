@@ -142,6 +142,8 @@ class VM:
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
         left_operand = convert_left(current_quad[1])
         self.set_value(current_quad[3], left_operand + int(current_quad[2]))
+      else:
+        raise KeyError(f"{current_quad[0]} is not handled")
 
       #next quad
       self.ip[len(self.ip)] = self.ip[len(self.ip)]+1 

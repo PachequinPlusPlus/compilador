@@ -24,6 +24,7 @@ IGUALQUE = "=="
 DIFERENTE = "!="
 VALID = "VALID"
 SUM_VAL_ADDRESS = "+_val_address"
+SET = "SET"
 # TODO(Do we have return)
 
 
@@ -53,7 +54,8 @@ mapQuadsList = [
   IGUALQUE,
   DIFERENTE,
   VALID,
-  SUM_VAL_ADDRESS
+  SUM_VAL_ADDRESS,
+  SET
 ]
 
 GOTO_I = 0
@@ -82,3 +84,4 @@ IGUALQUE_I = 22
 DIFERENTE_I = 23
 VALID_I = 24
 SUM_VAL_ADDRESS_I = 25
+SET_I = 26
