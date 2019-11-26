@@ -1,0 +1,51 @@
+program ravioli; 
+
+class owner{
+    public:
+        var {
+            int edad;
+            char initial;
+        }
+        func void sayHI(){
+            print(edad);
+        }
+}
+
+class gato{
+    public:
+        var {
+            int edad;
+            owner dad, mom;
+        }
+        
+        func void sayX(int xx){
+            print(dad.initial);
+            print(mom.initial);
+        }
+        func int getEdad(){
+            print(dad.initial);
+            print(mom.initial);
+            sayX(4);
+            return edad;
+        }
+}
+
+
+class juguete{
+    public:
+        var {
+            gato mascota;
+        }
+}
+
+main {
+var{
+    juguete pelota;
+    juguete pelota2;
+    int x;
+    char aux;
+}
+    pelota2.mascota.mom.initial = 'a';  
+    pelota2.mascota.getEdad();
+    
+}

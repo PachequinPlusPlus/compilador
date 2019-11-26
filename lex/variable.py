@@ -1,12 +1,13 @@
 from arreglo import arreglo
 class variable:
-    def __init__(self, name, tipo, direccion, isArray, size, pos):
+    def __init__(self, name, tipo, direccion, isArray, size):
         self.name = name
         self.tipo = tipo
         self.direccion = direccion
         self.isArray = isArray
         self.array = None
-        self.pos = pos
+        # es una instanci
+
         if self.isArray:
             self.array = arreglo(size)
 

@@ -2,6 +2,9 @@ class arreglo:
     def __init__(self, up):
         self.up = up 
 
+    def getSize(self):
+        return self.up
+
     def __str__(self):
         return str(self.__dict__)
     
