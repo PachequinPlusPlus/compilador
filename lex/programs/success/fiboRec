@@ -14,10 +14,9 @@ func int fibonacci(int n){
 
 main {
     var{
-        int n, fibo;
+        int n;
     }
-    n = 5;
-    fibo = fibonacci(n);
+    n = 10;
+    print(fibonacci(n));
     print('\n');
-    print(fibo);
 }

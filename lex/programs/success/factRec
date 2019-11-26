@@ -3,13 +3,13 @@ program factRec;
 func int factorial(int n) {
   var {
     int retorno;
+    int y;
   }
   if (n <= 1) {
     retorno = 1;
   } else {
-    retorno = n*factorial(n-1);
+    retorno = n*factorial(n-1); 
   }
-  print(retorno);
   return retorno;
 }
 
