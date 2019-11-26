@@ -251,6 +251,7 @@ class semantics:
                             '>' : 'int',
                             '>=' : 'int',
                             '==' : 'int',
+                            '=' : 'int',
                             '!=' : 'int',
                             '&&' : 'int',
                             '||' : 'int'
@@ -265,6 +266,7 @@ class semantics:
                             '>' : 'int',
                             '>=' : 'int',
                             '==' : 'int',
+                            '=' : 'int',
                             '!=' : 'int',
                             '&&' : 'err',
                             '||' : 'err'
@@ -279,6 +281,7 @@ class semantics:
                             '>' : 'err',
                             '>=' : 'err',
                             '==' : 'err',
+                            '=' : 'err',
                             '!=' : 'err',
                             '&&' : 'err',
                             '||' : 'err'
@@ -295,6 +298,8 @@ class semantics:
                             '>' : 'int',
                             '>=' : 'int',
                             '==' : 'int',
+                            '==' : 'int',
+                            '=' : 'int',
                             '!=' : 'int',
                             '&&' : 'err',
                             '||' : 'err'
@@ -309,6 +314,7 @@ class semantics:
                             '>' : 'int',
                             '>=' : 'int',
                             '==' : 'int',
+                            '=' : 'int',
                             '!=' : 'int',
                             '&&' : 'err',
                             '||' : 'err'
@@ -323,6 +329,7 @@ class semantics:
                             '>' : 'err',
                             '>=' : 'err',
                             '==' : 'err',
+                            '=' : 'err',
                             '!=' : 'err',
                             '&&' : 'err',
                             '||' : 'err'
@@ -339,6 +346,7 @@ class semantics:
                             '>' : 'err',
                             '>=' : 'err',
                             '==' : 'err',
+                            '=' : 'err',
                             '!=' : 'err',
                             '&&' : 'err',
                             '||' : 'err'
@@ -353,6 +361,7 @@ class semantics:
                             '>' : 'err',
                             '>=' : 'err',
                             '==' : 'err',
+                            '=' : 'err',
                             '!=' : 'err',
                             '&&' : 'err',
                             '||' : 'err'
@@ -367,6 +376,7 @@ class semantics:
                             '>' : 'int',
                             '>=' : 'int',
                             '==' : 'int',
+                            '=' : 'int',
                             '!=' : 'int',
                             '&&' : 'err',
                             '||' : 'err'

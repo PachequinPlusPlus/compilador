@@ -1,0 +1,8 @@
+program ravioli; 
+var {
+    int x, y[300];
+    char letra;
+}
+main {
+    letra = y[3] + x;
+}
