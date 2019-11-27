@@ -234,7 +234,9 @@ class VM:
     elif (memory_type == "constant"):
       return self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset]  
     elif (memory_type == "class"):
-      return self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset]  
+      return self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset] 
+    elif (memory_type == "classLocal"):
+      return self.class_local_memory[direccion//sizeMemory - classLocalOffset][direccion%sizeMemory-initialOffset] 
     
   def set_value(self, direccion, value):
     self.generateChunkMemory(direccion)
@@ -262,6 +264,9 @@ class VM:
       self.constant_memory[direccion//sizeMemory - constantOffset][direccion%sizeMemory-initialOffset] = newValue
     elif (memory_type == "class"):
       self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset] = newValue
+    elif (memory_type == "classLocal"):
+      self.class_local_memory[direccion//sizeMemory - classLocalOffset][direccion%sizeMemory-initialOffset] 
+
       
   def generateChunkMemory(self, direccion):
     memory_type = self.get_memory_type(direccion) 
@@ -278,6 +283,9 @@ class VM:
     elif (memory_type == "class"):
       while(len(self.class_global_memory[direccion//sizeMemory-classOffset]) < direccion%sizeMemory-initialOffset+1):
         self.class_global_memory[direccion//sizeMemory-classOffset].append(default)
+    elif (memory_type == "classLocal"):
+      while(len(self.class_local_memory[direccion//sizeMemory-classLocalOffset]) < direccion%sizeMemory-initialOffset+1):
+        self.class_local_memory[direccion//sizeMemory-classLocalOffset].append(default)
 
 
   def get_memory_type(self, direccion):
