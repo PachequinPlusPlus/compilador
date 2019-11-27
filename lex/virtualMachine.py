@@ -10,7 +10,6 @@ constantOffset = 6
 classOffset = 9
 classLocalOffset = 12
 direcciones = [1000,11000,21000,31000,41000,51000,61000,71000,81000,91000,101000,111000,121000,131000,141000,151000]
-offsetClases = 1000000
 class VM:
   def __init__(self):
     self.quadruples = []
@@ -23,7 +22,7 @@ class VM:
     self.local_memory = [[[], [], []]]
     self.constant_memory = [[], [], []]
     self.class_global_memory = [[], [], []]
-    self.class_local_memory = [[[], [], []]]
+    self.class_local_memory = [[], [], []]
 
   def get_type(self, direccion):
     for i in range(len(direcciones) - 1):
@@ -43,7 +42,7 @@ class VM:
     elif (tipo == "float"):
       return 0.0
     else:
-      return ''
+      return ' '
 
   def convert_both(self, left, right):
     # convert left and right operands
@@ -60,9 +59,7 @@ class VM:
   def doOffset(self, direccion):
     if (self.get_memory_type(direccion) == "global"):
       return direccion
-    desplazo = 0
-    if self.offset[len(self.offset)-1][0] != 0:
-      desplazo = self.offset[len(self.offset)-1][0] - offsetClases
+    desplazo = self.offset[len(self.offset)-1][0]
     return desplazo + direccion
 
   def notAssignment(self, quad):
@@ -89,8 +86,6 @@ class VM:
 
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
-        left = self.doOffset(current_quad[1])
-        right = self.doOffset(current_quad[2])
         [left_operand, right_operand] = self.convert_both(current_quad[1], current_quad[2])
         self.set_value(current_quad[3], left_operand + right_operand)
 
@@ -185,7 +180,7 @@ class VM:
         self.set_value(current_quad[3], current_quad[2])
 
       elif current_quad[0] == mappingQuads.PRINT_I:
-          val =str(self.get_value(current_quad[3]))
+          val = str(self.get_value(current_quad[3]))
           if val[0] == "'":
             val = val[1:len(val)-1]  
             if(val == "\\n"):
@@ -246,6 +241,7 @@ class VM:
     if (direccion < 0):
        return self.get_value(direccion*-1)
 
+    direccion = self.doOffset(direccion)
     memory_type = self.get_memory_type(direccion)
     self.generateChunkMemory(direccion)
     if (memory_type == "global"):
@@ -287,12 +283,12 @@ class VM:
     elif (memory_type == "class"):
       self.class_global_memory[direccion//sizeMemory - classOffset][direccion%sizeMemory-initialOffset] = newValue
     elif (memory_type == "classLocal"):
-      self.class_local_memory[direccion//sizeMemory - classLocalOffset][direccion%sizeMemory-initialOffset] 
+      self.class_local_memory[direccion//sizeMemory - classLocalOffset][direccion%sizeMemory-initialOffset] = newValue
 
       
   def generateChunkMemory(self, direccion):
     direccion = int(direccion)
-    memory_type = self.get_memory_type(direccion) 
+    memory_type = self.get_memory_type(direccion)
     default = self.get_default_type(direccion)
     if (memory_type == "global"):
       while len(self.global_memory[direccion//sizeMemory]) < direccion%sizeMemory-initialOffset+1:

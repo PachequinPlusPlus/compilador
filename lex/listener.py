@@ -622,6 +622,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.insertVar(variable.name, ctx, variable.isArray, sz)
                 if cl.parent == None:
                     return
+            # TODO (SAM28: Remove this line maybe?)
             cl = self.semantica.getClase(cl.parent)
 
 
