@@ -13,7 +13,6 @@ class semantics:
 
 
 
-                    # consider just integers
     classes = []
 
 
@@ -35,11 +34,10 @@ class semantics:
         parsed = parsed.replace("True", 'true')
         parsed = parsed.replace("None", '"None"')
         parsed2 = json.loads(parsed)
-#        print(json.dumps(parsed2, indent=4, sort_keys=True))
+        #print(json.dumps(parsed2, indent=4, sort_keys=True))
 
-    #def getDireccion(self, dirr, pos):
-    #    return -1
 
+    # return the next global addres
     def getAddressGlobal(self, tipo, globalClass):
         #TODO(que hacer para las clases?)
         if tipo == "int":
@@ -49,14 +47,12 @@ class semantics:
         elif tipo == "char":
             return globalClass.memoriaGlobal.getChar() 
         else:
-            # class
+            # class set it to -1 for now
             return -1
                 
     
-    #TODO(correguir las address temporales)
-    #TODO(agregar memoria para los metodos con return?)
+    # this function returns the next local address for the function
     def getAddressFunc(self, tipo, func):
-        #TODO(que hacer para las clases?)
         if tipo == "int":
             return func.memory.getEntera()
         elif tipo == "float":
@@ -64,12 +60,14 @@ class semantics:
         elif tipo == "char":
             return func.memory.getChar() 
         else:
-            # class
+            # class, set it to -1 for now
             return -1
 
              
 
 
+    # reverse the stack
+    # just an utility function
     def reverseStack(self, stack):
         reversed = []
         while len(stack) > 0:
@@ -108,8 +106,7 @@ class semantics:
         return True
 
 
-
-    #TODO(checar que tenga el mismo numero de parametros)
+    # check if a function exist within a className
     def checkFunctionExists(self, clase, funcName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
@@ -123,12 +120,14 @@ class semantics:
                     return self.checkFunctionExists(self.getClase(cl.parent), funcName, False)
         return False
 
+    # return a class with the className
     def getClase(self, className):
         for cl in self.clases:
             if cl.name == className:
                 return cl
         return None
 
+    # check if varName exist inside the class and its scope
     def existInClass(self, clase, varName, checkParent = True):
         for cl in self.clases:
             if cl.name == clase.name:
@@ -151,8 +150,7 @@ class semantics:
 
 
 
-    #TODO(optimizar esto)
-    # estamos mandando el nombre de la clase, en vez de mandar la instancia directamente duuhh
+    # check if the variable exist within this scope
     def existVariable(self, clase, funcName, varName, canPrivate = True):
         for cl in self.clases:
             if cl.name == clase.name:
@@ -192,6 +190,7 @@ class semantics:
                             return atr
         return None
        
+    # utility function to get top of stack
     def tope(self, lista):
         if len(lista) == 0:
             return -1
@@ -200,14 +199,21 @@ class semantics:
 
     # new functions
     #-------------------------------------------------------------------------------
+
+    # append a class into our class stack
+    # it receives the class itself
     def appendClass(self, clase):
         self.clases.append(clase)
 
+    # add a class to the current class abstract logic
+    # it receives the className and the parent to the class
+    # if the class doesnt has a parent, it will be global
     def addClass(self, className, parent):
         self.clases.append(clase(className, parent))
         return self.tope(self.clases)
 
     # add a function into a class
+    #it receives the class where it will be hold, if it's public, the funcName, the return type and the instruction pointer
     def addFunction(self, clase, isPublic, funcName, tipoRetorno, ip):
         for cls in self.clases:
             if clase == cls:
@@ -216,16 +222,20 @@ class semantics:
 
 
     # add an attribute into a class
+    # it receives the class itself, the varname, the type, address, if it's ana array, if it public or private
+    # and its arraySize if any
     def addAtributo(self, clase, varName, tipo, direccion, isArray, isPublic, arrSize):
         clase.appendAtributo(variable(varName, tipo, direccion, isArray, arrSize,), isPublic, self)
 
     # add param into a function
-    #is array is always suppose to be false!!
+    # is array is always suppose to be false because we never allow arrays parameters
+    # receives the function, the var name, type, its address, and whetever is an array or not
     def addParameter(self, func, name, tipo, direccion, isArray):
         func.appendParam(variable(name, tipo, direccion, isArray, -1))
 
 
     # add var into a function
+    #receives a class func, a name, a type, an address, if it an array, and ist size
     def addVarFunc(self, func, name, tipo, direccion, isArray, arrSize = -1):
         func.appendVar(variable(name, tipo, direccion, isArray, arrSize, ), self)
 

@@ -25,7 +25,6 @@
 [3, None, 61003, 31000]
 [4, None, '10', 61003]
 [13, None, 3, 'factorial']
-[26, None, 'global', 0]
 [12, 61003, None, 31000]
 [1, 'factorial', None, 1]
 [3, None, 1000, 31001]

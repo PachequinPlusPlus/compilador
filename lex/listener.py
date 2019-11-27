@@ -221,6 +221,10 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             # x = exp
             #TODO(check?)
             left = self.semantica.existVariable(cls, func, self.assStack[0])
+            if left is None:
+                self.pushError(self.assStack[0], "is not declared", ctx.start.line, 499)
+                sys.exit(1)
+
             direccion  = left.direccion # direccion Base 
             # cls will contain the final class to get the variable
             cls = self.semantica.getClase(left.tipo)
@@ -432,7 +436,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             self.pop(self.expStack)
             self.pop(self.tipoStack)
 
-            print(ctx.start.line)
             self.pushCuadruplo('=', None, right, addr)
         
 
@@ -485,9 +488,12 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             if myFunc.tipoRetorno == 'void':
                 return
 
-
-            self.push(self.expStack, self.getReturnAddrs(myFunc.name, self.semantica.getClase(self.mClass))) # myFunc.getReturnDir())
+            resultAddress = self.getAddress('int')
+            self.pushCuadruplo('sume_address_set', None , self.getReturnAddrs(myFunc.name, self.semantica.getClase(self.mClass)), resultAddress)
+            self.push(self.expStack, -resultAddress) # myFunc.getReturnDir())
             self.push(self.tipoStack, myFunc.tipoRetorno)
+            self.pushCuadruplo('UNSET', None , None, None)
+
 
 
 
@@ -499,7 +505,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             self.offSet = 0
 
             myVar = self.semantica.existVariable(self.tope(self.classStack), self.tope(self.funcStack).name, self.methodStack[0])
-            self.offSet = self.offSet + myVar.direccion
+            self.offSet =  myVar.direccion
 
             if myVar is None:
                 self.pushError(self.methodStack[0], "var is not defined", ctx.start.line, 401)
@@ -622,7 +628,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 self.insertVar(variable.name, ctx, variable.isArray, sz)
                 if cl.parent == None:
                     return
-            # TODO (SAM28: Remove this line maybe?)
             cl = self.semantica.getClase(cl.parent)
 
 
@@ -651,7 +656,10 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     def exitParameters(self, ctx):
         self.isParameter = False
 
-    
+    def insertReturn(self, varName, tipo):
+                #should be global
+        add = self.semantica.getAddressGlobal(tipo, self.classStack[0])
+        self.semantica.addAtributo(self.classStack[0], varName, tipo, add, False, True, -1)
     
     def insertVar(self, varName, ctx, isArray = False, arrSize = -1):
        tipo = self.lastType
@@ -669,7 +677,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                sys.exit(1)
 
            if self.isParameter:
-               self.semantica.addParameter(self.tope(self.funcStack), varName, tipo, self.getAddress(tipo), False)
+                self.semantica.addParameter(self.tope(self.funcStack), varName, tipo, self.getAddress(tipo), False)
            else:
                self.semantica.addVarFunc(self.tope(self.funcStack), varName, tipo, self.getAddress(tipo, isArray, arrSize), isArray, arrSize)
        else:
@@ -727,9 +735,19 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
 
     
-    def enterFactor(self, ctx):
-        pass       
+    def exitFactor(self, ctx):
+        if ctx.signosunarios() is not None:
+            op = str(ctx.signosunarios().getChild(0))
+            tope = self.tope(self.expStack)
+            tmp = self.getAddress(self.tope(self.tipoStack))
+            if op == '!':
+                self.pushCuadruplo('not', None, tope, tmp)
+            elif op == '-':
+                self.pushCuadruplo('negate', None, tope, tmp)
+            self.pop(self.expStack)
+            self.push(self.expStack, tmp)
 
+            
     
 
     def getAddress(self, tipo, isArray = False, arraySize = 0):
@@ -985,15 +1003,14 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             #create function
             myFunc = self.semantica.getFunc(self.tope(self.classStack),  str(ctx.ID()))
             self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
-
-            dirr = self.tope(self.classStack).offSet
+            
+            #dirr = self.tope(self.classStack).dirr
             # set offset back to zero
-            self.pushCuadruplo('SET', None , self.tope(self.classStack).name, dirr)
+            #self.pushCuadruplo('SET', None , self.tope(self.classStack).name, dirr)
 
             if self.compareFunctions(myFunc) == False:
                 self.pushError(str(ctx.ID()), "the function doesnt not match", ctx.start.line, 409)
                 sys.exit(1)
-
 
 
 
@@ -1009,7 +1026,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                 #ok, it does exist, but is it the same?
                 myFunc = self.semantica.getFunc(self.tope(self.classStack), str(ctx.ID(0)))
                 self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
-                self.pushCuadruplo('SET', None , self.tope(self.classStack).name, self.tope(self.classStack).offSet)
+                #self.pushCuadruplo('SET', None , self.tope(self.classStack).name, self.offSet)
                 if self.compareFunctions(myFunc) == False:
                     self.pushError(str(ctx.ID(0)), "the function doesnt not match", ctx.start.line, 409)
                     sys.exit(1)
@@ -1061,7 +1078,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     myFunc = self.semantica.getFunc(cls, metodoName)
 
                     self.pushCuadruplo('ERA', None , myFunc.size, myFunc.name)
-                    self.pushCuadruplo('SET', None , cls.name, cls.offSet)
+                    self.pushCuadruplo('SET', None , cls.name, myVar.direccion)
                     if self.compareFunctions(myFunc) == False:
                         self.pushError(metodoName, "the function doesnt not match", ctx.start.line, 409)
                         sys.exit(1)
@@ -1070,8 +1087,13 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                         self.pushError(metodoName, "the method has type return void", ctx.start.line, 408)
                         sys.exit(1)
                     else:
-                        self.push(self.expStack, self.getReturnAddrs(myFunc.name, cls))
+
+                        resultAddress = self.getAddress('int')
+                        self.pushCuadruplo('sume_address_set', None , self.getReturnAddrs(myFunc.name, cls), resultAddress)
+                        self.push(self.expStack, -resultAddress)
                         self.push(self.tipoStack, myFunc.tipoRetorno)
+
+                        self.pushCuadruplo('UNSET', None , None, None)
             else:
                 #atributo
                 attrName = str(ctx.ID(1))
@@ -1192,7 +1214,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         if self.returnType != 'void':
             #i need a global variable named the same
             self.lastType = self.returnType
-            self.insertVar('r_'+nameFunction, ctx, False, 0)
+            self.insertReturn('r_'+nameFunction, self.lastType)
         self.isFunction = True
         self.push(self.funcStack, self.semantica.addFunction(self.tope(self.classStack), self.isPublic, nameFunction, self.returnType, self.getActualIP()))
 

@@ -1,0 +1,41 @@
+program ravioli; 
+
+class gato{
+    public:
+        var {
+            int edad;
+            char initial;
+        }
+        
+        func int getEdad(){
+            print(edad, '\n');
+            return edad;
+        }
+}
+
+
+class juguete{
+    public:
+        var {
+            gato mascota;
+        }
+        func int getInitialMascota(){
+            return mascota.getEdad();
+        }
+}
+
+main {
+var{
+    juguete pelota;
+    juguete pelota2;
+    gato ravioli;
+}
+
+    pelota2.mascota.edad = 31;
+    pelota.mascota.edad = 101;
+    ravioli.edad = 37;
+
+    print(pelota2.getInitialMascota(), '\n');
+    print(pelota.getInitialMascota(), '\n');
+    print(ravioli.getEdad(), '\n');
+}

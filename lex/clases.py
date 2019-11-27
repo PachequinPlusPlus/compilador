@@ -4,7 +4,7 @@ from memory import memoria
 
 class clase:
 
-    contador = [100000]
+    contador = [0]
 
     def __init__(self, name, parent):
         self.name = name

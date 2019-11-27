@@ -7384,3 +7384,384 @@ type mismatch : char and int | line 7
 
 
 
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'global' is not declared | line : 18
+
+
+
+'aBuscar' is not declared | line : 18
+
+
+
+
+
+
+
+
+
+
+
+54:21: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+54:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+54:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+53:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+'mom' is not declared | line : 54
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+type mismatch : char and int | line 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'inital' is not defined | line : 11
+
+
+
+
+'pelota1' variable not declared | line : 36
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+
+negate is not defined
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

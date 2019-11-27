@@ -30,7 +30,8 @@ class funcion:
             self.size = self.size + 1
         else:
             # var A es una clase
-            varA.direccion = self.classOffset + self.size
+            print(varA.name, self.size)
+            varA.direccion = self.size
             self.size = self.size + semantica.getClase(varA.tipo).size
             
 
