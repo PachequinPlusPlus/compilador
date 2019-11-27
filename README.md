@@ -64,7 +64,7 @@ main {
 
 Fact
 <pre><code>
-program factRec;
+program factorial;
 
 func int factorial(int n) {
   var {
@@ -93,7 +93,7 @@ main {
 
 Merge Sort
 <pre><code>
-program factRec;
+program mergeSort;
 var{
     int arreglo[55], n, i;
 }
