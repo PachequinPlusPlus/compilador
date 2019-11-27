@@ -127,7 +127,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                                                             # what is in this address  sumaselo a esto  to this one y ponlo aqui
                         self.pushCuadruplo('+_val_address', self.tope(self.expStack), elemento.direccion,  resultAddress)
                         self.pop(self.expStack)
-                        pos = resultAddress
+                        pos = -resultAddress
 
                     self.pushCuadruplo('READ', None , None, pos)
                 else:
@@ -190,7 +190,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                                                             # what is in this address  sumaselo a esto  to this one y ponlo aqui
                         self.pushCuadruplo('+_val_address', self.tope(self.expStack), elemento.direccion,  resultAddress)
                         self.pop(self.expStack)
-                        pos = resultAddress
+                        pos = -resultAddress
 
                     self.pushCuadruplo('READ', None , None, pos)
                 else:
@@ -219,6 +219,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             # x.y.z = exp
             # this is X
             # x = exp
+            #TODO(check?)
             left = self.semantica.existVariable(cls, func, self.assStack[0])
             direccion  = left.direccion # direccion Base 
             # cls will contain the final class to get the variable
@@ -276,6 +277,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
                 resultAddress = -1
                 size = -1
+                mult = 1
                 if sz >= 61000 and sz <= 71000:
                     aux = sz
                     sz = int(self.myCteB[sz])
@@ -284,13 +286,14 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                     resultAddress = self.getAddress('int')
                     aux = sz
                     self.pushCuadruplo('+_val_address', sz, direccion,  resultAddress)
+                    mult = -1
 
                 size = left.array.getSize()
                 self.pushCuadruplo('VALID', 0 , size, aux)
 
                 self.push(self.expStack, rightValue)
                 self.push(self.tipoStack, 'void')
-                direccion = resultAddress
+                direccion = resultAddress*mult
 
 
            # print(left, left.tipo, tipazo)
@@ -353,7 +356,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         
 
     #quiero sacar de la pila a donde empieza la cond
-    def exitfciclo(self, ctx):
+    def exitFciclo(self, ctx):
         self.pop(self.jmpLoop)
 
 
@@ -383,16 +386,18 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
     def exitFcicloupd(self, ctx):
         jmp = self.jmpLoop[len(self.jmpLoop) - 4]
         self.pushCuadruplo('goto', None, None, jmp)
+        del self.jmpLoop[-4]
+
         
 
     def enterFciclobody(self, ctx):
         jmp = self.jmpLoop[len(self.jmpLoop) - 2]
+        del self.jmpLoop[-2]
+
         self.cuadruplos[jmp].result = len(self.cuadruplos)
         
     def exitFciclobody(self, ctx):
         jmp = self.jmpLoop[len(self.jmpLoop) - 1]
-
-        self.pop(self.jmpLoop);
         self.pop(self.jmpLoop);
         self.pushCuadruplo('goto', None, None, jmp)
 
@@ -435,17 +440,23 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
 
 
     def getCteDir(self, val, tipo):
-        if self.myCte.get(val) is not None:
-            return self.myCte[val]
-        if tipo == 'int':
+        if self.myCte.get(val) is None  and tipo == 'int':
             op = 'CI'
             self.myCte[val] = self.constantes.getEntera()
-        elif tipo == 'float':
+        elif self.myCte.get(val) is None and tipo == 'float':
             op = 'CF'
             self.myCte[val] = self.constantes.getFlotante()
-        elif tipo == 'char':
+        elif self.myCte.get(val) is None and tipo == 'char':
             op = 'CC'
             self.myCte[val] = self.constantes.getChar()
+
+        if tipo == 'int':
+            op = 'CI'
+        elif tipo == 'float':
+            op = 'CF'
+        elif tipo == 'char':
+            op = 'CC'
+
         self.pushCuadruplo(op, None , val, self.myCte[val])
         self.myCteB[self.myCte[val]] = val
         return self.myCte[val]
@@ -956,7 +967,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
         
         if self.semantica.canUseFunction(funcA, myParameters, myTypes):
             for i in range(len(myParameters)):
-                self.pushCuadruplo('param', myParameters[i], None, funcA.params[i].direccion)
+                self.pushCuadruplo('param', myParameters[i], None, funcA.params[len(myParameters) - i - 1].direccion)
 
             self.pushCuadruplo('gosub', funcA.name, None, funcA.ip)
             return True
@@ -1112,7 +1123,7 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
                                                             # what is in this address  sumaselo a esto  to this one y ponlo aqui
                         self.pushCuadruplo('+_val_address', self.tope(self.expStack), elemento.direccion,  resultAddress)
                         self.pop(self.expStack)
-                        pos = resultAddress
+                        pos = -resultAddress
 
                     self.push(self.expStack, pos) # str(ctx.ID(0)))
                     self.push(self.tipoStack, elemento.tipo)

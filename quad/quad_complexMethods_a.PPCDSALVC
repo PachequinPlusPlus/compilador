@@ -18,6 +18,7 @@
 [7, None, None, 81002]
 [7, None, None, 81003]
 [14, None, None, None]
+[6, None, "'a'", 81003]
 [3, None, 81003, 141001]
 [13, None, 0, 'getEdad']
 [26, None, 'gato', 100001]
