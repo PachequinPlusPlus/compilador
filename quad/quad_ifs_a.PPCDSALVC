@@ -19,5 +19,6 @@
 [0, None, None, 21]
 [6, None, "'n'", 81002]
 [7, None, None, 81002]
-[0, None, None, 23]
+[0, None, None, 24]
+[4, None, '4', 61000]
 [7, None, None, 61000]

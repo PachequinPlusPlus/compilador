@@ -1,0 +1,17 @@
+program factRec;
+var{
+    int arreglo[100], n, i;
+}
+
+main {
+  n = 2;
+  print(n, '\n');
+  for(i = 0; i < n; i = i + 1){
+    arreglo[i] = n - i;
+  }
+
+  for(i = 0; i < n; i = i + 1){
+    print(arreglo[i], ' ');
+  }
+    print('\n');
+}
