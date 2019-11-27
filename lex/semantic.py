@@ -7,11 +7,6 @@ import json
 
 # nombre | direcion
 class semantics:
-    scopes = ["global"]
-    types = []
-    funcs = []
-
-
 
     classes = []
 
