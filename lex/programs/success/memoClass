@@ -3,11 +3,14 @@ program ravioli;
 class owner{
     public:
         var {
-            int edad;
+            int edad, edad2;
             char initial;
         }
         func void sayHI(){
-            print(edad);
+            print(edad, '\n');
+        }
+        func int getInitial(){
+            return edad2;
         }
 }
 
@@ -23,10 +26,13 @@ class gato{
             print(mom.initial);
         }
         func int getEdad(){
-            print(dad.initial);
-            print(mom.initial);
+            print(dad.initial, '\n');
+            print(mom.initial, '\n');
             sayX(4);
             return edad;
+        }
+        func int getDadInitial(){
+            return dad.getInitial();
         }
 }
 
@@ -36,16 +42,17 @@ class juguete{
         var {
             gato mascota;
         }
+        func int getInitialMascota(){
+            return mascota.getDadInitial();
+        }
 }
 
 main {
 var{
     juguete pelota;
     juguete pelota2;
-    int x;
-    char aux;
 }
-    pelota2.mascota.mom.initial = 'a';  
-    pelota2.mascota.getEdad();
-    
+    pelota2.mascota.dad.edad2 = 123;
+
+    print(pelota2.getInitialMascota(), '\n');
 }

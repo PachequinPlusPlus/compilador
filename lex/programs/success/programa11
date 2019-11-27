@@ -1,0 +1,8 @@
+program ravioli; 
+main {
+var{
+    int xx;
+}
+    xx = 23;
+    print(-xx, '\n', !xx, '\n', !0, '\n');
+}

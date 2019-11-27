@@ -36,7 +36,6 @@
 [4, None, '10', 61003]
 [3, None, 61003, 31000]
 [13, None, 7, 'fibonacciIt']
-[26, None, 'global', 0]
 [12, 31000, None, 31000]
 [1, 'fibonacciIt', None, 1]
 [3, None, 1000, 31001]

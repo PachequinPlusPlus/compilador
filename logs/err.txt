@@ -7408,3 +7408,360 @@ type mismatch : char and int | line 7
 
 
 
+
+
+
+
+
+
+54:21: sintax ERROR, mismatched input '.' expecting {')', ','}
+
+
+54:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+54:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+53:21: sintax ERROR, mismatched input '.' expecting ';'
+
+
+'mom' is not declared | line : 54
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+'sayHi' method is not defined | line : 60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+type mismatch : char and int | line 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'inital' is not defined | line : 11
+
+
+
+
+'pelota1' variable not declared | line : 36
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3:0: sintax ERROR, mismatched input '}' expecting {TYPES, ID}
+
+
+
+
+
+
+
+
+negate is not defined
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'one' the function doesnt not match | line : 15
+
+
+'int' was found but the function is expecting to return float | line : 8
+
+
+'getEdad' method not declared | line : 21
+
+
+5:22: sintax ERROR, mismatched input '[' expecting ')'
+
+
+9:6: sintax ERROR, mismatched input ';' expecting ID
+
+
+'datos' is not declared | line : 40
+
+
+'pi' is already declared | line : 7
+
+
+type mismatch : float and char | line 8
+
+
+type mismatch : char and int | line 7
+
+
+'return' was found but the function is void | line : 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

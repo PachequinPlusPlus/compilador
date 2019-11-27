@@ -26,6 +26,10 @@ VALID = "VALID"
 SUM_VAL_ADDRESS = "+_val_address"
 SET = "SET"
 READ = "READ"
+UNSET = "UNSET"
+SUM_ADDRESS_SET = "sume_address_set"
+NEGATE = "negate"
+NOT = "not"
 # TODO(Do we have return)
 
 
@@ -57,7 +61,11 @@ mapQuadsList = [
   VALID,
   SUM_VAL_ADDRESS,
   SET,
-  READ
+  READ,
+  UNSET,
+  SUM_ADDRESS_SET,
+  NEGATE,
+  NOT
 ]
 
 GOTO_I = 0
@@ -88,3 +96,7 @@ VALID_I = 24
 SUM_VAL_ADDRESS_I = 25
 SET_I = 26
 READ_I = 27
+UNSET_I = 28
+SUM_ADDRESS_SET_I = 29
+NEGATE_I = 30
+NOT_I = 31
