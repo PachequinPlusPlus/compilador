@@ -20,10 +20,9 @@ func void sayHi(int xx, char cc){
 main {
 var{
     int xx;
-    int x;
 }
     sayHi(xx, 'a');
-        print(getSquare(5));
+        print(getSquare(5, 'a'));
         if ( getSquare(5, 'c') > x ) {
             print('j');
         }else{

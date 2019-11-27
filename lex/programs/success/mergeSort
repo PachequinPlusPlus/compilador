@@ -1,21 +1,20 @@
 program factRec;
 var{
-    int arreglo[100], n, i;
+    int arreglo[55], n, i;
 }
 
 func void mergeSort(int l, int r) {
     var {
-        int aux[100], m, left, right, k;
+        int aux[55], m, left, right, k;
     }
-    if(l < r){
+    if(l < r && l >= 0 && r < n){
         m = (l + r) / 2;
         mergeSort(l, m);
         mergeSort(m+1, r);
 
-        left = 0;
+        left = l;
         right = m + 1;
         k = 0;
-
         while(left <= m && right <= r){
            if( arreglo[left] <= arreglo[right] ){
             aux[k] = arreglo[left]; 
@@ -39,18 +38,18 @@ func void mergeSort(int l, int r) {
             k = k + 1;    
         }
         for(i = 0; i < k; i = i + 1){
-            arreglo[l+i] = aux[i];
+            arreglo[i + l] = aux[i];
         }
-    }
-}
+    }}
 
 main {
-  n = 2;
+  n = 55;
   print(n, '\n');
   for(i = 0; i < n; i = i + 1){
     arreglo[i] = n - i;
   }
 
+  mergeSort(0, n-1);
 
   for(i = 0; i < n; i = i + 1){
     print(arreglo[i], ' ');

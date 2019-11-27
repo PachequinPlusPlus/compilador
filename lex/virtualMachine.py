@@ -1,5 +1,6 @@
 import sys
 import pickle
+import copy
 import mappingQuads
 
 sizeMemory = 10000
@@ -64,14 +65,28 @@ class VM:
       desplazo = self.offset[len(self.offset)-1][0] - offsetClases
     return desplazo + direccion
 
+  def notAssignment(self, quad):
+      if quad == mappingQuads.CC_I or quad==mappingQuads.CF_I or quad==mappingQuads.CI_I or quad==mappingQuads.ERA_I or quad==mappingQuads.SET_I or quad==mappingQuads.GOSUB_I or quad==mappingQuads.GOTOF_I:
+          return False
+      return True
+
+
   # Main execution of the quadruples
   def execute(self, quads):
     self.read_quadruples(quads)
     while(self.ip[len(self.ip)-1] != len(self.quadruples)):
 
-     # print(self.ip[len(self.ip)-1])   
-      
+#      print(self.ip[len(self.ip)-1])   
       current_quad = self.quadruples[self.ip[len(self.ip)-1]]
+      tmpQuad = copy.copy(current_quad)
+      changed = False
+      for i in range(3):
+          if(current_quad[i+1] and self.notAssignment(current_quad[0]) and current_quad[i+1] < 0 ):
+              changed = True
+              current_quad[i+1] = self.get_value(-current_quad[i+1])
+        
+      #print(self.local_memory)
+
       # Start mapping of operations
       if current_quad[0] == mappingQuads.MAS_I:
         left = self.doOffset(current_quad[1])
@@ -193,7 +208,7 @@ class VM:
           raise IndexError(f"PPC The index {index} is out of range")
       elif current_quad[0] == mappingQuads.SUM_VAL_ADDRESS_I:
         left_operand = self.convert_left(current_quad[1])
-        self.set_value(current_quad[3], (left_operand + int(current_quad[2]))*-1)
+        self.set_value(current_quad[3], (left_operand + int(current_quad[2])))
 
       elif current_quad[0] == mappingQuads.IGUAL_I:
         right_operand = self.convert_right(current_quad[2])
@@ -212,6 +227,11 @@ class VM:
           self.offset.append((self.offset[len(self.offset)-1][0], right_operand)) 
       else:
         raise KeyError(f"PPC {current_quad[0]} is not handled")
+      
+      if changed:
+      #dont delete this
+          self.quadruples[self.ip[len(self.ip)-1]] = tmpQuad
+
 
       #next quad
       self.ip[len(self.ip)-1] = self.ip[len(self.ip)-1]+1 
@@ -224,7 +244,8 @@ class VM:
 
   def get_value(self, direccion):
     if (direccion < 0):
-      direccion = self.get_value(self, direccion*-1)
+       return self.get_value(direccion*-1)
+
     memory_type = self.get_memory_type(direccion)
     self.generateChunkMemory(direccion)
     if (memory_type == "global"):

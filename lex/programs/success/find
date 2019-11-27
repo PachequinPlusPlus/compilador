@@ -1,0 +1,39 @@
+program factRec;
+var{
+    int arreglo[55], n, i, busca, encontrado, j;
+}
+
+main {
+ var{
+    int buscados[33], aBuscar;
+ }
+  n = 55;
+  print(n, '\n');
+  print('m', 'y', ' ', 'l', 'i', 's', 't', '\n');
+  for(i = 0; i < n; i = i + 1){
+    arreglo[i] = n - i;
+    print(arreglo[i], ' ');
+  }
+  print('\n');
+  aBuscar = 2;
+  buscados[0] = 33;
+  buscados[1] = 64;
+    
+  for(j = 0; j < aBuscar; j = j + 1){
+      encontrado = 0;
+      busca = buscados[j];
+          for(i = 0; i < n; i = i + 1){
+            if(arreglo[i] == busca){
+                print(busca, ' ', 'i', 's', ' ', 'f','o','u','n','d');
+                print('\n');
+                encontrado = 1;
+            }
+          }
+      if(encontrado == 0){
+        print(busca, ' ', 'i', 's', ' ', 'n', 'o', 't', ' ', 'f', 'o' ,'u' ,'n' ,'d');
+        print('\n');
+      }
+  }
+
+  
+}
