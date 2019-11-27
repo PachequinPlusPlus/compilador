@@ -221,6 +221,10 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             # x = exp
             #TODO(check?)
             left = self.semantica.existVariable(cls, func, self.assStack[0])
+            if left is None:
+                self.pushError(self.assStack[0], "is not declared", ctx.start.line, 499)
+                sys.exit(1)
+
             direccion  = left.direccion # direccion Base 
             # cls will contain the final class to get the variable
             cls = self.semantica.getClase(left.tipo)
@@ -432,7 +436,6 @@ class PPCDSALVCCustomListener(PPCDSALVCListener):
             self.pop(self.expStack)
             self.pop(self.tipoStack)
 
-            print(ctx.start.line)
             self.pushCuadruplo('=', None, right, addr)
         
 

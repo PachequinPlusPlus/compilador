@@ -7384,3 +7384,27 @@ type mismatch : char and int | line 7
 
 
 
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'{'name': 'global', 'parent': None, 'publicMetodos': [{'name': 'main', 'tipoRetorno': 'void', 'numberParams': 0, 'params': [], 'vars': [{'name': 'buscados', 'tipo': 'int', 'direccion': 31000, 'isArray': True, 'array': {'up': 33}}, {'name': 'abuscar', 'tipo': 'int', 'direccion': 31034, 'isArray': False, 'array': None}], 'size': 2, 'memory': {'enteras': 31000, 'flotantes': 41000, 'chars': 51000, 'i': 40, 'f': 0, 'c': 0}, 'ip': 1, 'classOffset': 30000}], 'publicAtributos': [{'name': 'arreglo', 'tipo': 'int', 'direccion': 1000, 'isArray': True, 'array': {'up': 55}}, {'name': 'n', 'tipo': 'int', 'direccion': 1056, 'isArray': False, 'array': None}, {'name': 'i', 'tipo': 'int', 'direccion': 1057, 'isArray': False, 'array': None}, {'name': 'busca', 'tipo': 'int', 'direccion': 1058, 'isArray': False, 'array': None}, {'name': 'encontrado', 'tipo': 'int', 'direccion': 1059, 'isArray': False, 'array': None}, {'name': 'j', 'tipo': 'int', 'direccion': 1060, 'isArray': False, 'array': None}], 'privateMetodos': [], 'privateAtributos': [], 'memoriaGlobal': {'enteras': 1000, 'flotantes': 11000, 'chars': 21000, 'i': 61, 'f': 0, 'c': 0}, 'offSet': 0, 'size': 6}' is not declared | line : 18
+
+
+'global' is not declared | line : 18
+
+
+
+'aBuscar' is not declared | line : 18
+
+
+
+
+
