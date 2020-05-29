@@ -1,7 +1,7 @@
 # Compilador
 Proyecto final de compiladores
 
-El lenguaje PPCDSALVC (Python Programming Compiler) es un lenguaje para que las personas que son nuevas al concepto de Objetos y a la programación imperativa puedan empezar a aprender. Se necesita tener instalado ANTLR4 para poder compilar el programa
+El lenguaje PPCDSALVC (Python Programming Compiler Daniel SAmuel Luis Vazquez Cantu) es un lenguaje para que las personas que son nuevas al concepto de Objetos y a la programación imperativa puedan empezar a aprender. Se necesita tener instalado ANTLR4 para poder compilar el programa
 
 Para poder correr usar nuestro compilador se tiene que usar el comando
 
